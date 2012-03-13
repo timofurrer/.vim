@@ -169,15 +169,14 @@ endif
 
 " set statusline=%1*%F%m%r%h%w\ [TYPE=%Y\ %{&ff}]\ [%l/%L\ (%p%%)]
 " highlight User1 ctermfg=White ctermbg=LightGrey
-hi! User1 ctermfg=LightGrey cterm=bold     ctermbg=52 guifg=Black guibg=#665555
-hi! User2 ctermfg=DarkGreen cterm=bold ctermbg=52 guifg=Green guibg=#443333
-hi! User3 ctermfg=DarkCyan cterm=bold  ctermbg=52 guifg=Cyan  guibg=#443333
-hi! User4 ctermfg=DarkCyan cterm=bold  ctermbg=52 guifg=Cyan  guibg=#443333
+hi! User1 ctermfg=LightGrey cterm=bold  ctermbg=52 guifg=Black guibg=#665555
+hi! User2 ctermfg=DarkGreen cterm=bold  ctermbg=52 guifg=Green guibg=#443333
+hi! User3 ctermfg=DarkCyan  cterm=bold  ctermbg=52 guifg=Cyan  guibg=#443333
+hi! User4 ctermfg=DarkCyan  cterm=bold  ctermbg=52 guifg=Cyan  guibg=#443333
 
 " Informative status line
 set laststatus=2
 set statusline=%4*---%1*\ %F%m%r%h%w\ %2*%{fugitive#statusline()}%1*\ %{&ff}\ %Y\ \[0x\%02.2B=\%03.3b]\ [%l,%v\ %p%%\ %Lb]\ %3*\[%F\]%1*
-" set statusline=%4*---%1*\ %F%m%r%h%w\ %{&ff}\ %Y\ \[0x\%02.2B=\%03.3b]\ [%l,%v\ %p%%\ %Lb]\ %3*\[%F\]%1*\
 
 " Syntax highlighting
 syntax on
