@@ -41,6 +41,12 @@ Bundle 'Shebang'
 " ctrlp
 Bundle 'kien/ctrlp.vim'
 
+" Align
+Bundle 'Align'
+
+" vim-ipython
+Bundle 'vim-scripts/vim-ipython'
+
 " enable 256 colors
 set t_Co=256
 
