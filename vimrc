@@ -47,6 +47,9 @@ Bundle 'Align'
 " vim-ipython
 Bundle 'vim-scripts/vim-ipython'
 
+" A.vim - Alternate Files quickly (.c --> .h etc)
+Bundle 'a.vim'
+
 " enable 256 colors
 set t_Co=256
 
@@ -108,6 +111,9 @@ imap <F3> <ESC>:NERDTreeToggle<CR>
 
 " shebang
 map <F6> :call SetExecutable()<CR>
+
+" A.vim
+map <F2> :A<CR>
 
 " Taglist
 map <F4> :TlistToggle<CR><C-W><a-right>
