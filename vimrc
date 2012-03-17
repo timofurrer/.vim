@@ -50,6 +50,9 @@ Bundle 'vim-scripts/vim-ipython'
 " A.vim - Alternate Files quickly (.c --> .h etc)
 Bundle 'a.vim'
 
+" Gist.vim
+Bundle 'vim-scripts/Gist.vim'
+
 " enable 256 colors
 set t_Co=256
 
