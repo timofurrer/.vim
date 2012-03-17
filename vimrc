@@ -77,12 +77,6 @@ set incsearch
 set ignorecase
 set smartcase
 
-" Enable indent folding
-"set foldenable
-"set fdm=indent
-" Set space to toggle a fold
-"nnoremap <space> za
-
 " Change window
 nnoremap <leader>1 1
 nnoremap <leader>2 2
