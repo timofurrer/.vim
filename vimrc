@@ -53,6 +53,9 @@ Bundle 'a.vim'
 " Gist.vim
 Bundle 'vim-scripts/Gist.vim'
 
+" SQLComplete.vim
+Bundle 'SQLComplete.vim'
+
 " enable 256 colors
 set t_Co=256
 
