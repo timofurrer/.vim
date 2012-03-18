@@ -44,20 +44,14 @@ Bundle 'kien/ctrlp.vim'
 " Align
 Bundle 'Align'
 
-" vim-ipython
-Bundle 'vim-scripts/vim-ipython'
-
 " A.vim - Alternate Files quickly (.c --> .h etc)
 Bundle 'a.vim'
 
-" Gist.vim
-Bundle 'vim-scripts/Gist.vim'
-
-" SQLComplete.vim
-Bundle 'SQLComplete.vim'
-
 " enable 256 colors
 set t_Co=256
+
+" Map leader key to comma (,)
+let mapleader = ","
 
 " Tab settings
 set expandtab
