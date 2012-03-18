@@ -3,15 +3,16 @@
 
 # Which plugins are installed?
 
-* vundle
-* nerd-commenter
-* omnicppcomplete
-* taglist
-* xmledit
-* python-indent
-* localvimrc
-* fugitive
-* doxygen
-* ctlrp
+* gmarik/vundle
+* vim-fugitive
+* nerdcommenter
 * nerdtree
-* shebang
+* OmniCppComplete
+* taglist.vim
+* xmledit
+* localvimrc
+* DoxygenToolkit.vim
+* Shebang
+* ctrlp.vim
+* Align
+* a.vim
