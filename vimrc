@@ -108,6 +108,7 @@ map <F6> :call SetExecutable()<CR>
 
 " A.vim
 map <F2> :A<CR>
+imap <F2> <ESC>:A<CR>
 
 " Taglist
 map <F4> :TlistToggle<CR><C-W><a-right>
