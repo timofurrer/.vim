@@ -20,26 +20,26 @@ Bundle 'scrooloose/nerdcommenter'
 " nerdtree
 Bundle 'scrooloose/nerdtree'
 
+" ctrlp
+Bundle 'kien/ctrlp.vim'
+
 " omnicppcomplete
-Bundle 'vim-scripts/OmniCppComplete'
+Bundle 'OmniCppComplete'
 
 " taglist
-Bundle 'vim-scripts/taglist.vim'
+Bundle 'taglist.vim'
 
 " xmledit
-Bundle 'vim-scripts/xmledit'
+Bundle 'xmledit'
 
 " localvimrc
-Bundle 'vim-scripts/localvimrc'
+Bundle 'localvimrc'
 
 " DoxygenToolKit
 Bundle 'DoxygenToolkit.vim'
 
 " shebang
 Bundle 'Shebang'
-
-" ctrlp
-Bundle 'kien/ctrlp.vim'
 
 " Align
 Bundle 'Align'
