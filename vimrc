@@ -105,6 +105,7 @@ imap <F3> <ESC>:NERDTreeToggle<CR>
 
 " shebang
 map <F6> :call SetExecutable()<CR>
+imap <F6> <ESC>:call SetExecutable()<CR>
 
 " A.vim
 map <F2> :A<CR>
