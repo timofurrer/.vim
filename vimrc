@@ -173,6 +173,9 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
+" Delete .netrwhist ( netrw history file ) after leaving vim
+au VimLeave * if filereadable("[path here]/.netrwhist") | call delete("[path here]/.netrwhist") | endif
+
 " set statusline=%1*%F%m%r%h%w\ [TYPE=%Y\ %{&ff}]\ [%l/%L\ (%p%%)]
 " highlight User1 ctermfg=White ctermbg=LightGrey
 hi! User1 ctermfg=LightGrey cterm=bold  ctermbg=52 guifg=Black guibg=#665555
