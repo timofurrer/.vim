@@ -1,7 +1,7 @@
 " Be iMproved
 set nocompatible
 
-" Required for vundle - will be set correctly at the end
+" Required for vundle - will be set correctly after vundle settings
 filetype off
 
 " vundle
@@ -47,6 +47,12 @@ Bundle 'Align'
 " A.vim - Alternate Files quickly (.c --> .h etc)
 Bundle 'a.vim'
 
+" Syntax highlighting
+syntax on
+
+" Get filetype automatically
+filetype plugin indent on
+
 " enable 256 colors
 set t_Co=256
 
@@ -59,6 +65,7 @@ set shiftwidth=2
 set softtabstop=2
 
 " Indenting
+set cindent
 set autoindent
 set smartindent
 
@@ -187,11 +194,5 @@ hi! User3 ctermfg=DarkCyan  cterm=bold  ctermbg=52 guifg=Cyan  guibg=#443333
 hi! User4 ctermfg=DarkCyan  cterm=bold  ctermbg=52 guifg=Cyan  guibg=#443333
 
 " Informative status line
-set laststatus=2
+set laststatus=2 " Always show the statusline
 set statusline=%4*---%1*\ %F%m%r%h%w\ %2*%{fugitive#statusline()}%1*\ %{&ff}\ %Y\ \[0x\%02.2B=\%03.3b]\ [%l,%v\ %p%%\ %Lb]\ %3*\[%F\]%1*
-
-" Syntax highlighting
-syntax on
-
-" Get filetype automatically
-filetype plugin indent on
