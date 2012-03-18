@@ -7,7 +7,7 @@
 
 First you have to clone this repository with the following command:
 
-    $ git clone git://github.com/timofurrer/vimfiles.git ~/.vim
+    $ git clone git://github.com/timofurrer/.vim.git ~/.vim
 
 If this worked correctly you should have this repo, but `vundle` has to be initialized as a git submodule:
 
