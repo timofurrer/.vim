@@ -82,7 +82,7 @@ nnoremap <leader>4 4
 
 " Set tag locations
 set tags=tags;/
-set tags+=~/.vim/stl_tags
+set tags+=~/.vim/tag/stl_tags
 
 " ctags
 map <F8> :!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --links=no .<CR>
