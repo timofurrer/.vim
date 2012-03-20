@@ -44,6 +44,9 @@ Bundle 'Shebang'
 " Align
 Bundle 'Align'
 
+" scope_plus
+Bundle 'csope_plus.vim'
+
 " A.vim - Alternate Files quickly (.c --> .h etc)
 Bundle 'a.vim'
 
@@ -117,6 +120,9 @@ imap <F6> <ESC>:call SetExecutable()<CR>
 " A.vim
 map <F2> :A<CR>
 imap <F2> <ESC>:A<CR>
+
+" :Align =
+map <F10> :Align =<CR>
 
 " Taglist
 map <F4> :TlistToggle<CR><C-W><a-right>
