@@ -60,7 +60,7 @@ filetype plugin indent on
 set t_Co=256
 
 " Map leader key to comma (,)
-let mapleader = ","
+let mapleader = "$"
 
 " Tab settings
 set expandtab
