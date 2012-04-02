@@ -44,9 +44,6 @@ Bundle 'Shebang'
 " Align
 Bundle 'Align'
 
-" scope_plus
-Bundle 'csope_plus.vim'
-
 " A.vim - Alternate Files quickly (.c --> .h etc)
 Bundle 'a.vim'
 
