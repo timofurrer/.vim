@@ -103,8 +103,8 @@ imap <F7> <ESC>:Dox<CR>
 let g:ctrlp_map = '<c-p>'
 
 " make
-map <F5> :make<CR>
-imap <F5> <ESC>:make<CR>
+map <F5> :w<CR>:make<CR>
+imap <F5> <ESC>:w<CR>:make<CR>
 
 " nerdtree
 map <F3> :NERDTreeToggle<CR>
@@ -199,3 +199,6 @@ hi! User4 ctermfg=DarkCyan  cterm=bold  ctermbg=52 guifg=Cyan  guibg=#443333
 " Informative status line
 set laststatus=2 " Always show the statusline
 set statusline=%4*---%1*\ %F%m%r%h%w\ %2*%{fugitive#statusline()}%1*\ %{&ff}\ %Y\ \[0x\%02.2B=\%03.3b]\ [%l,%v\ %p%%\ %Lb]\ %3*\[%F\]%1*
+
+" Wildignore
+set wildignore+=*.o,*.obj,.git,*.pyc
