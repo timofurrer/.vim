@@ -57,7 +57,7 @@ filetype plugin indent on
 set t_Co=256
 
 " Map leader key to comma (,)
-let mapleader = "$"
+let mapleader = ","
 
 " Tab settings
 set expandtab
@@ -100,7 +100,7 @@ map <F7> :Dox<CR>
 imap <F7> <ESC>:Dox<CR>
 
 " ctrlp
-let g:ctrlp_map = '<c-p>'
+"let g:ctrlp_map = '<c-p>'
 
 " make
 map <F5> :w<CR>:make<CR>
@@ -119,11 +119,15 @@ map <F2> :A<CR>
 imap <F2> <ESC>:A<CR>
 
 " :Align =
-map <F10> :Align =<CR>
+map <S-F10> :Align =<CR>
 
 " Taglist
 map <F4> :TlistToggle<CR><C-W><a-right>
 imap <F4> <ESC>:TlistOpen<CR><C-W><a-right>
+
+" Next error to F10
+map <F10> :cn<CR>
+imap <F10> <ESC>:cn<CR>
 
 let Tlist_Use_Right_Window = 1
 let Tlist_WinWidth = 60
@@ -171,8 +175,8 @@ inoremap <silent> <Home> <C-O>:call SmartHome()<CR>
 " remove trailing whitespace on write
 autocmd BufWritePre * :%s/\s\+$//e
 
-" copy up to 500 lines from one file to another
-set viminfo='100,<500,s10,h
+" copy up to 1000 lines from one file to another
+set viminfo='1000,\"2000,s2000,h
 
 map <F9> :set spell!<CR>
 imap <F9> <ESC>:set spell!<CR>
@@ -201,4 +205,4 @@ set laststatus=2 " Always show the statusline
 set statusline=%4*---%1*\ %F%m%r%h%w\ %2*%{fugitive#statusline()}%1*\ %{&ff}\ %Y\ \[0x\%02.2B=\%03.3b]\ [%l,%v\ %p%%\ %Lb]\ %3*\[%F\]%1*
 
 " Wildignore
-set wildignore+=*.o,*.obj,.git,*.pyc
+set wildignore+=*.o,*.obj,.git,*.pyc,*.so
