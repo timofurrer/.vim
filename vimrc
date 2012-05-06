@@ -206,4 +206,7 @@ set laststatus=2 " Always show the statusline
 set statusline=%4*---%1*\ %F%m%r%h%w\ %2*%{fugitive#statusline()}%1*\ %{&ff}\ %Y\ \[0x\%02.2B=\%03.3b]\ [%l,%v\ %p%%\ %Lb]\ %3*\[%F\]%1*
 
 " Wildignore
-set wildignore+=*.o,*.obj,.git,*.pyc,*.so
+set wildignore+=*.o,*.obj,.git,*.pyc,*.so,*/.git/*
+
+" Ignore some directories and files in ctrlp plugin
+let g:ctrlp_custom_ignore='\.git/*'
