@@ -24,16 +24,16 @@ Thus, open vim and run `:BundleInstall` in command mode.
 
 ## Which plugins will be installed?
 
--> vundle
--> vim-fugitive
--> nerdcommenter
--> nerdtree
--> OmniCppComplete
--> taglist.vim
--> xmledit
--> localvimrc
--> DoxygenToolkit.vim
--> Shebang
--> ctrlp.vim
--> Align
--> a.vim
+-> vundle<br />
+-> vim-fugitive<br />
+-> nerdcommenter<br />
+-> nerdtree<br />
+-> OmniCppComplete<br />
+-> taglist.vim<br />
+-> xmledit<br />
+-> localvimrc<br />
+-> DoxygenToolkit.vim<br />
+-> Shebang<br />
+-> ctrlp.vim<br />
+-> Align<br />
+-> a.vim<br />
