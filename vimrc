@@ -57,7 +57,7 @@ filetype plugin indent on
 set t_Co=256
 
 " Map leader key to comma (,)
-let mapleader = ","
+let mapleader=","
 
 " Tab settings
 set expandtab
@@ -71,10 +71,6 @@ set smartindent
 
 " Set c1ipboard to x-windows selection
 set clipboard=unnamed
-
-" Shortcut to auto indent entire file
-nmap <F11> 1G=G''
-imap <F11> <ESC>1G=Ga''
 
 " Turn on incremental search with ignore case (except explicit caps)
 set incsearch
@@ -91,47 +87,53 @@ nnoremap <leader>4 4
 set tags=tags;/
 set tags+=~/.vim/tag/stl_tags
 
-" ctags
-map <F8> :!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --links=no .<CR>
-imap <F8> <ESC>:!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --links=no .<CR>
-
-" Doxygen
-map <F7> :Dox<CR>
-imap <F7> <ESC>:Dox<CR>
-
-" ctrlp
-"let g:ctrlp_map = '<c-p>'
-
-" make
-map <F5> :w<CR>:make<CR>
-imap <F5> <ESC>:w<CR>:make<CR>
-
-" nerdtree
-map <F3> :NERDTreeToggle<CR>
-imap <F3> <ESC>:NERDTreeToggle<CR>
-
-" shebang
-map <F6> :call SetExecutable()<CR>
-imap <F6> <ESC>:call SetExecutable()<CR>
-
 " A.vim
-map <F2> :A<CR>
+map  <F2>      :A<CR>
 imap <F2> <ESC>:A<CR>
 
-" :Align =
-map <S-F10> :Align =<CR>
+" nerdtree
+map  <F3>      :NERDTreeToggle<CR>
+imap <F3> <ESC>:NERDTreeToggle<CR>
 
 " Taglist
-map <F4> :TlistToggle<CR><C-W><a-right>
+map  <F4>      :TlistToggle<CR><C-W><a-right>
 imap <F4> <ESC>:TlistOpen<CR><C-W><a-right>
 
+" make
+map  <F5>      :w<CR>:make<CR>
+imap <F5> <ESC>:w<CR>:make<CR>
+
+" shebang
+map  <F6>      :call SetExecutable()<CR>
+imap <F6> <ESC>:call SetExecutable()<CR>
+
+" Doxygen
+map  <F7>      :Dox<CR>
+imap <F7> <ESC>:Dox<CR>
+
+" ctags
+map  <F8>      :!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --links=no .<CR>
+imap <F8> <ESC>:!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --links=no .<CR>
+
+" Spelling
+map  <F9>      :set spell!<CR>
+imap <F9> <ESC>:set spell!<CR>
+
 " Next error to F10
-map <F10> :cn<CR>
+map  <F10>      :cn<CR>
 imap <F10> <ESC>:cn<CR>
 
+" Shortcut to auto indent entire file
+nmap <F11>      1G=G''
+imap <F11> <ESC>1G=Ga''
+
+" :Align =
+map  <S-F10>      :Align =<CR>
+imap <S-F10> <ESC>:Align =<CR>
+
 let Tlist_Use_Right_Window = 1
-let Tlist_WinWidth = 60
-let Tlist_Close_On_Select = 1
+let Tlist_WinWidth         = 60
+let Tlist_Close_On_Select  = 1
 
 " Window changing
 map <a-left> :bp<CR>
@@ -154,12 +156,12 @@ highlight PmenuSel      ctermfg=0 ctermbg=7
 highlight PmenuSbar     ctermfg=7 ctermbg=0
 highlight PmenuThumb    ctermfg=0 ctermbg=7
 
+" Remap code completion to Ctrl+Space
+inoremap <Nul> <C-x><C-o>
+
 " automatically open and close the popup menu / preview window
 au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 set completeopt=menuone,menu,longest,preview
-
-"inoremap <Nul> <C-n>
-inoremap <Nul> <C-x><C-o>
 
 " Smart home
 function! SmartHome()
@@ -178,12 +180,11 @@ autocmd BufWritePre * :%s/\s\+$//e
 " copy up to 1000 lines from one file to another
 set viminfo='1000,\"2000,s2000,h
 
-map <F9> :set spell!<CR>
-imap <F9> <ESC>:set spell!<CR>
+" Set spell language
 set spelllang=de_ch
 
 " support local vim config in .lvimrc
-let g:localvimrc_ask=0 "dont ask
+let g:localvimrc_ask=0
 
 " Open files at the last opened position
 if has("autocmd")

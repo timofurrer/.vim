@@ -3,7 +3,7 @@
 
 ***
 
-# How to use?
+## How to use?
 
 First you have to clone this repository with the following command:
 
@@ -22,18 +22,18 @@ When you have done the previous steps you have to link the vimrc from the cloned
 After this you can install the plugins which are prepared for vundle in the `vimrc`:
 Thus, open vim and run `:BundleInstall` in command mode.
 
-# Which plugins will be installed?
+## Which plugins will be installed?
 
-* vundle
-* vim-fugitive
-* nerdcommenter
-* nerdtree
-* OmniCppComplete
-* taglist.vim
-* xmledit
-* localvimrc
-* DoxygenToolkit.vim
-* Shebang
-* ctrlp.vim
-* Align
-* a.vim
+-> vundle
+-> vim-fugitive
+-> nerdcommenter
+-> nerdtree
+-> OmniCppComplete
+-> taglist.vim
+-> xmledit
+-> localvimrc
+-> DoxygenToolkit.vim
+-> Shebang
+-> ctrlp.vim
+-> Align
+-> a.vim
