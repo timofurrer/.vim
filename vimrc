@@ -136,9 +136,9 @@ let Tlist_WinWidth         = 60
 let Tlist_Close_On_Select  = 1
 
 " Window changing
-map <a-left> :bp<CR>
-map <a-right> :bn<CR>
-imap <a-left> <ESC>:bp<CR>
+map  <a-left>       :bp<CR>
+imap <a-left>  <ESC>:bp<CR>
+map  <a-right>      :bn<CR>
 imap <a-right> <ESC>:bn<CR>
 
 " OmniCompletion
@@ -194,7 +194,6 @@ endif
 " Delete .netrwhist ( netrw history file ) after leaving vim
 au VimLeave * if filereadable("[path here]/.netrwhist") | call delete("[path here]/.netrwhist") | endif
 
-" set statusline=%1*%F%m%r%h%w\ [TYPE=%Y\ %{&ff}]\ [%l/%L\ (%p%%)]
 " highlight User1 ctermfg=White ctermbg=LightGrey
 hi! User1 ctermfg=LightGrey cterm=bold  ctermbg=52 guifg=Black guibg=#665555
 hi! User2 ctermfg=DarkGreen cterm=bold  ctermbg=52 guifg=Green guibg=#443333
