@@ -47,6 +47,10 @@ Bundle 'Align'
 " A.vim - Alternate Files quickly (.c --> .h etc)
 Bundle 'a.vim'
 
+" errormarker.vim : Highlights and sets error markers for lines with compile
+" errors
+Bundle 'timofurrer/errormarker.vim'
+
 " Syntax highlighting
 syntax on
 
@@ -68,6 +72,9 @@ set softtabstop=2
 set cindent
 set autoindent
 set smartindent
+
+" Folding
+set nofoldenable
 
 " Set c1ipboard to x-windows selection
 set clipboard=unnamed
@@ -209,3 +216,6 @@ set wildignore+=*.o,*.obj,.git,*.pyc,*.so,*/.git/*
 
 " Ignore some directories and files in ctrlp plugin
 let g:ctrlp_custom_ignore='\.git/*'
+
+" Format for errormarker
+let &errorformat="%f:%l:%c: %t%*[^:]:%m,%f:%l: %t%*[^:]:%m," . &errorformat
