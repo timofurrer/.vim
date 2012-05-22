@@ -49,7 +49,7 @@ Bundle 'a.vim'
 
 " errormarker.vim : Highlights and sets error markers for lines with compile
 " errors
-Bundle 'timofurrer/errormarker.vim'
+Bundle 'errormarker.vim'
 
 " Syntax highlighting
 syntax on
@@ -95,48 +95,52 @@ set tags=tags;/
 set tags+=~/.vim/tag/stl_tags
 
 " A.vim
-map  <F2>      :A<CR>
-imap <F2> <ESC>:A<CR>
+map  <F2>    :A<CR>
+imap <F2>    <ESC>:A<CR>
 
 " nerdtree
-map  <F3>      :NERDTreeToggle<CR>
-imap <F3> <ESC>:NERDTreeToggle<CR>
+map  <F3>    :NERDTreeToggle<CR>
+imap <F3>    <ESC>:NERDTreeToggle<CR>
 
 " Taglist
-map  <F4>      :TlistToggle<CR><C-W><a-right>
-imap <F4> <ESC>:TlistOpen<CR><C-W><a-right>
+map  <F4>    :TlistToggle<CR><C-W><a-right>
+imap <F4>    <ESC>:TlistOpen<CR><C-W><a-right>
 
 " make
-map  <F5>      :w<CR>:make<CR>
-imap <F5> <ESC>:w<CR>:make<CR>
+map  <F5>    :w<CR>:make<CR>
+imap <F5>    <ESC>:w<CR>:make<CR>
+
+" errormarker
+map  <S-F5>  :ErrorAtCursor<CR>
+imap <S-F5>  <ESC>:ErrorAtCursor<CR>
 
 " shebang
-map  <F6>      :call SetExecutable()<CR>
-imap <F6> <ESC>:call SetExecutable()<CR>
+map  <F6>    :call SetExecutable()<CR>
+imap <F6>    <ESC>:call SetExecutable()<CR>
 
 " Doxygen
-map  <F7>      :Dox<CR>
-imap <F7> <ESC>:Dox<CR>
+map  <F7>    :Dox<CR>
+imap <F7>    <ESC>:Dox<CR>
 
 " ctags
-map  <F8>      :!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --links=no .<CR>
-imap <F8> <ESC>:!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --links=no .<CR>
+map  <F8>    :!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --links=no .<CR>
+imap <F8>    <ESC>:!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --links=no .<CR>
 
 " Spelling
-map  <F9>      :set spell!<CR>
-imap <F9> <ESC>:set spell!<CR>
+map  <F9>    :set spell!<CR>
+imap <F9>    <ESC>:set spell!<CR>
 
 " Next error to F10
-map  <F10>      :cn<CR>
-imap <F10> <ESC>:cn<CR>
-
-" Shortcut to auto indent entire file
-nmap <F11>      1G=G''
-imap <F11> <ESC>1G=Ga''
+map  <F10>   :cn<CR>
+imap <F10>   <ESC>:cn<CR>
 
 " :Align =
-map  <S-F10>      :Align =<CR>
+map  <S-F10> :Align =<CR>
 imap <S-F10> <ESC>:Align =<CR>
+
+" Shortcut to auto indent entire file
+nmap <F11>   1G=G''
+imap <F11>   <ESC>1G=Ga''
 
 let Tlist_Use_Right_Window = 1
 let Tlist_WinWidth         = 60
@@ -217,5 +221,9 @@ set wildignore+=*.o,*.obj,.git,*.pyc,*.so,*/.git/*
 " Ignore some directories and files in ctrlp plugin
 let g:ctrlp_custom_ignore='\.git/*'
 
-" Format for errormarker and ignore ansi colors
+" errormarker settings
+let errormarker_errorgroup="ErrorMsg"
+let errormarker_warninggroup="Todo"
+
+" errorformat for make and errormarker
 let &errorformat="%*[^/]%f:%l:%c: %t%*[^:]:%m,%*[^/]%f:%l: %t%*[^:]:%m," . &errorformat
