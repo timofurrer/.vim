@@ -217,5 +217,5 @@ set wildignore+=*.o,*.obj,.git,*.pyc,*.so,*/.git/*
 " Ignore some directories and files in ctrlp plugin
 let g:ctrlp_custom_ignore='\.git/*'
 
-" Format for errormarker
-let &errorformat="%f:%l:%c: %t%*[^:]:%m,%f:%l: %t%*[^:]:%m," . &errorformat
+" Format for errormarker and ignore ansi colors
+let &errorformat="%*[^/]%f:%l:%c: %t%*[^:]:%m,%*[^/]%f:%l: %t%*[^:]:%m," . &errorformat
