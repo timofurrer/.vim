@@ -1,3 +1,6 @@
 # Ignore bundles, but not vundle in bundles
 bundle/*
 !bundle/vundle
+
+# vim swap files
+*.swp
