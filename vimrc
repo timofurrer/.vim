@@ -203,7 +203,7 @@ if has("autocmd")
 endif
 
 " Delete .netrwhist ( netrw history file ) after leaving vim
-au VimLeave * if filereadable("[path here]/.netrwhist") | call delete("[path here]/.netrwhist") | endif
+au VimLeave * if filereadable(".netrwhist") | call delete(".netrwhist") | endif
 
 " highlight User1 ctermfg=White ctermbg=LightGrey
 hi! User1 ctermfg=LightGrey cterm=bold  ctermbg=52 guifg=Black guibg=#665555
