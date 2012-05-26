@@ -139,7 +139,7 @@ map  <S-F10> :Align =<CR>
 imap <S-F10> <ESC>:Align =<CR>
 
 " Shortcut to auto indent entire file
-nmap <F11>   1G=G''
+map  <F11>   1G=G''
 imap <F11>   <ESC>1G=Ga''
 
 let Tlist_Use_Right_Window = 1
