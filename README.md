@@ -29,6 +29,18 @@ When you have done the previous steps you have to link the vimrc from the cloned
 After this you can install the plugins which are prepared for vundle in the `vimrc`:
 Thus, open vim and run `:BundleInstall` in command mode.
 
+### Copy & Paste Installation
+
+```bash
+mv ~/.vim ~/.vim.old
+mv ~/.vimrc ~/.vimrc.old
+git clone git://github.com/timofurrer/.vim.git ~/.vim
+cd ~/.vim
+git submodule init
+git submodule update
+ln -s ~/.vim/vimrc ~/.vimrc
+```
+
 ## Which plugins will be installed?
 
 For more details see [the next section](https://github.com/timofurrer/.vim#each-plugin-in-detail).
