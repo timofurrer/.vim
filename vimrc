@@ -138,19 +138,20 @@ imap <F10>   <ESC>:cn<CR>
 map  <S-F10> :Align =<CR>
 imap <S-F10> <ESC>:Align =<CR>
 
-" Shortcut to auto indent entire file
+" shortcut to auto indent entire file
 map  <F11>   1G=G''
 imap <F11>   <ESC>1G=Ga''
-
-let Tlist_Use_Right_Window = 1
-let Tlist_WinWidth         = 60
-let Tlist_Close_On_Select  = 1
 
 " Window changing
 map  <a-left>       :bp<CR>
 imap <a-left>  <ESC>:bp<CR>
 map  <a-right>      :bn<CR>
 imap <a-right> <ESC>:bn<CR>
+
+" taglist configuration
+let Tlist_Use_Right_Window = 1
+let Tlist_WinWidth         = 60
+let Tlist_Close_On_Select  = 1
 
 " OmniCompletion
 let OmniCpp_NamespaceSearch   = 1
@@ -167,14 +168,12 @@ highlight PmenuSel      ctermfg=0 ctermbg=7
 highlight PmenuSbar     ctermfg=7 ctermbg=0
 highlight PmenuThumb    ctermfg=0 ctermbg=7
 
-" Remap code completion to Ctrl+Space
-inoremap <Nul> <C-x><C-o>
-
-" automatically open and close the popup menu / preview window
-au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 set completeopt=menuone,menu,longest,preview
 
-" Smart home
+" remap code completion to Ctrl+Space
+inoremap <Nul> <C-x><C-o>
+
+" smart home
 function! SmartHome()
   let s:col = col(".")
   normal! ^
@@ -185,9 +184,6 @@ endfunction
 nnoremap <silent> <Home> :call SmartHome()<CR>
 inoremap <silent> <Home> <C-O>:call SmartHome()<CR>
 
-" remove trailing whitespace on write
-autocmd BufWritePre * :%s/\s\+$//e
-
 " copy up to 1000 lines from one file to another
 set viminfo='1000,\"2000,s2000,h
 
@@ -197,13 +193,17 @@ set spelllang=de_ch
 " support local vim config in .lvimrc
 let g:localvimrc_ask=0
 
-" Open files at the last opened position
-if has("autocmd")
-  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-endif
+" open files at the last opened position
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+" automatically open and close the popup menu / preview window
+au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 
 " Delete .netrwhist ( netrw history file ) after leaving vim
 au VimLeave * if filereadable(".netrwhist") | call delete(".netrwhist") | endif
+
+" remove trailing whitespace on write
+au BufWritePre * :%s/\s\+$//e
 
 " highlight User1 ctermfg=White ctermbg=LightGrey
 hi! User1 ctermfg=LightGrey cterm=bold  ctermbg=52 guifg=Black guibg=#665555
@@ -211,14 +211,14 @@ hi! User2 ctermfg=DarkGreen cterm=bold  ctermbg=52 guifg=Green guibg=#443333
 hi! User3 ctermfg=DarkCyan  cterm=bold  ctermbg=52 guifg=Cyan  guibg=#443333
 hi! User4 ctermfg=DarkCyan  cterm=bold  ctermbg=52 guifg=Cyan  guibg=#443333
 
-" Informative status line
+" informative status line
 set laststatus=2 " Always show the statusline
 set statusline=%4*---%1*\ %F%m%r%h%w\ %2*%{fugitive#statusline()}%1*\ %{&ff}\ %Y\ \[0x\%02.2B=\%03.3b]\ [%l,%v\ %p%%\ %Lb]\ %3*\[%F\]%1*
 
-" Wildignore
+" wildignore
 set wildignore+=*.o,*.obj,.git,*.pyc,*.so,*/.git/*
 
-" Ignore some directories and files in ctrlp plugin
+" ignore some directories and files in ctrlp plugin
 let g:ctrlp_custom_ignore='\.git/*'
 
 " errormarker settings
