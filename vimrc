@@ -213,7 +213,7 @@ if has("autocmd")
   autocmd BufWritePre * :%s/\s\+$//e
 
   " source the vimrc file after saving it
-  autocmd BufWritePost .vimrc source $MYVIMRC
+  autocmd BufWritePost .\=vimrc source $MYVIMRC
 endif
 
 " highlight User1 ctermfg=White ctermbg=LightGrey
