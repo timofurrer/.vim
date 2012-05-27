@@ -101,7 +101,7 @@ Some more useful commands which are provided:
 [vim-fugitive on GitHub](https://github.com/tpope/vim-fugitive)
 The author of `vim-fugitive` descripes this plugin like these:
 
-*I'm not going to lie to you; fugitive.vim may very well be the best Git wrapper of all time.
+*I'm not going to lie to you; fugitive.vim may very well be the best Git wrapper of all time.*
 
 ... I think it's true ;)
 
