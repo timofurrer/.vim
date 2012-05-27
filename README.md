@@ -31,6 +31,8 @@ Thus, open vim and run `:BundleInstall` in command mode.
 
 ## Which plugins will be installed?
 
+For more details see [the next section](https://github.com/timofurrer/.vim#each-plugin-in-detail).
+
 | plugin name | short description |
 |:--|:--|:--|
 | vundle | bundle manager |
@@ -52,7 +54,7 @@ Thus, open vim and run `:BundleInstall` in command mode.
 
 ### vundle
 [vundle on GitHub](https://github.com/gmarik/vundle)
-Vundle is a plugin manager. You can easily configure a set of vim plugins you want to use in your `vimrc`.
+`vundle` is a plugin manager. You can easily configure a set of vim plugins you want to use in your `vimrc`.
 The plugins must be available in a git repository.
 Specify your plugins like this in your `vimrc`:
 
@@ -71,29 +73,35 @@ Bundle 'git://git.wincent.com/command-t.git'
 
 After you have specified the plugins you want, open an empty vim instance and call ...
 
-    :BundleInstall
+```VimL
+:BundleInstall
+```
 
 ... to install the plugins in your vimrc. The plugins will be loaded automatically in each startup.
 You are be able to update the all the plugins as well with the following command:
 
-    :BundleInstall!
+```VimL
+:BundleInstall!
+```
 
 Some more useful commands which are provided:
 
-    " List all configured bundles
-    :BundleList
+```VimL
+" List all configured bundles
+:BundleList
 
-    " search (or refresh cache first) for a plugin (for example for plugin 'foo')
-    :BundleSearch(!) foo
+" search (or refresh cache first) for a plugin (for example for plugin 'foo')
+:BundleSearch(!) foo
 
-    " confirm (or auto-approve) removal of unused bundles
-    :BundleClean(!)
+" confirm (or auto-approve) removal of unused bundles
+:BundleClean(!)
+```
 
 ### vim-fugitive
 [vim-fugitive on GitHub](https://github.com/tpope/vim-fugitive)
 The author of `vim-fugitive` descripes this plugin like these:
 
-    *I'm not going to lie to you; fugitive.vim may very well be the best Git wrapper of all time.*
+*I'm not going to lie to you; fugitive.vim may very well be the best Git wrapper of all time.
 
 ... I think it's true ;)
 
