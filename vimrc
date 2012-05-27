@@ -1,7 +1,7 @@
-" Be iMproved
+" be iMproved
 set nocompatible
 
-" Required for vundle - will be set correctly after vundle settings
+" required for vundle - will be set correctly after vundle settings
 filetype off
 
 " vundle
@@ -44,57 +44,60 @@ Bundle 'Shebang'
 " Align
 Bundle 'Align'
 
-" A.vim - Alternate Files quickly (.c --> .h etc)
+" a.vim - Alternate Files quickly (.c --> .h etc)
 Bundle 'a.vim'
 
 " errormarker.vim : Highlights and sets error markers for lines with compile
 " errors
 Bundle 'errormarker.vim'
 
-" Syntax highlighting
+" syntax highlighting
 syntax on
 
-" Get filetype automatically
+" get filetype automatically
 filetype plugin indent on
 
 " enable 256 colors
 set t_Co=256
 
-" Map leader key to comma (,)
+" map leader key to comma (,)
 let mapleader=","
 
-" Tab settings
+" tab settings
 set expandtab
 set shiftwidth=2
 set softtabstop=2
 
-" Indenting
+" indenting
 set cindent
 set autoindent
 set smartindent
 
-" Folding
+" folding
 set nofoldenable
 
-" Set c1ipboard to x-windows selection
+" set c1ipboard to x-windows selection
 set clipboard=unnamed
 
-" Turn on incremental search with ignore case (except explicit caps)
+" turn on incremental search with ignore case (except explicit caps)
 set incsearch
 set ignorecase
 set smartcase
 
-" Change window
+" disable backup files
+set nobackup
+
+" change window
 nnoremap <leader>1 1
 nnoremap <leader>2 2
 nnoremap <leader>3 3
 nnoremap <leader>4 4
 
-" Set tag locations
+" set tag locations
 set tags=tags;/
 set tags+=~/.vim/tag/stl_tags
 
-" A.vim
+" a.vim
 map  <F2>    :A<CR>
 imap <F2>    <ESC>:A<CR>
 
@@ -114,7 +117,7 @@ imap <F5>    <ESC>:w<CR>:make<CR>
 map  <S-F5>  :ErrorAtCursor<CR>
 imap <S-F5>  <ESC>:ErrorAtCursor<CR>
 
-" shebang
+" Shebang
 map  <F6>    :call SetExecutable()<CR>
 imap <F6>    <ESC>:call SetExecutable()<CR>
 
@@ -142,7 +145,7 @@ imap <S-F10> <ESC>:Align =<CR>
 map  <F11>   1G=G''
 imap <F11>   <ESC>1G=Ga''
 
-" Window changing
+" window changing
 map  <a-left>       :bp<CR>
 imap <a-left>  <ESC>:bp<CR>
 map  <a-right>      :bn<CR>
@@ -193,17 +196,25 @@ set spelllang=de_ch
 " support local vim config in .lvimrc
 let g:localvimrc_ask=0
 
-" open files at the last opened position
-au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+if has("autocmd")
+  " open files at the last opened position
+  autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
-" automatically open and close the popup menu / preview window
-au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
+  " delete fugitive buffer with git objects befor opening a new one
+  autocmd BufReadPost fugitive://* set bufhidden=delete
 
-" Delete .netrwhist ( netrw history file ) after leaving vim
-au VimLeave * if filereadable(".netrwhist") | call delete(".netrwhist") | endif
+  " automatically open and close the popup menu / preview window
+  autocmd CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 
-" remove trailing whitespace on write
-au BufWritePre * :%s/\s\+$//e
+  " Delete .netrwhist ( netrw history file ) after leaving vim
+  autocmd VimLeave * if filereadable(".netrwhist") | call delete(".netrwhist") | endif
+
+  " remove trailing whitespace on write
+  autocmd BufWritePre * :%s/\s\+$//e
+
+  " source the vimrc file after saving it
+  autocmd BufWritePost .vimrc source $MYVIMRC
+endif
 
 " highlight User1 ctermfg=White ctermbg=LightGrey
 hi! User1 ctermfg=LightGrey cterm=bold  ctermbg=52 guifg=Black guibg=#665555
