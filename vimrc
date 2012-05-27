@@ -44,11 +44,10 @@ Bundle 'Shebang'
 " Align
 Bundle 'Align'
 
-" a.vim - Alternate Files quickly (.c --> .h etc)
+" a.vim
 Bundle 'a.vim'
 
-" errormarker.vim : Highlights and sets error markers for lines with compile
-" errors
+" errormarker.vim
 Bundle 'errormarker.vim'
 
 " syntax highlighting
@@ -95,61 +94,65 @@ nnoremap <leader>4 4
 
 " set tag locations
 set tags=tags;/
-set tags+=~/.vim/tag/stl_tags
+set tags+=~/.vim/tags/stl_tags
 
 " a.vim
-map  <F2>    :A<CR>
-imap <F2>    <ESC>:A<CR>
+map  <F2>      :A<CR>
+imap <F2>      <ESC>:A<CR>
 
 " nerdtree
-map  <F3>    :NERDTreeToggle<CR>
-imap <F3>    <ESC>:NERDTreeToggle<CR>
+map  <F3>      :NERDTreeToggle<CR>
+imap <F3>      <ESC>:NERDTreeToggle<CR>
 
 " Taglist
-map  <F4>    :TlistToggle<CR><C-W><a-right>
-imap <F4>    <ESC>:TlistOpen<CR><C-W><a-right>
+map  <F4>      :TlistToggle<CR><C-W><a-right>
+imap <F4>      <ESC>:TlistOpen<CR><C-W><a-right>
 
 " make
-map  <F5>    :w<CR>:make<CR>
-imap <F5>    <ESC>:w<CR>:make<CR>
+map  <F5>      :w<CR>:make<CR>
+imap <F5>      <ESC>:w<CR>:make<CR>
 
 " errormarker
-map  <S-F5>  :ErrorAtCursor<CR>
-imap <S-F5>  <ESC>:ErrorAtCursor<CR>
+map  <S-F5>    :ErrorAtCursor<CR>
+imap <S-F5>    <ESC>:ErrorAtCursor<CR>
 
 " Shebang
-map  <F6>    :call SetExecutable()<CR>
-imap <F6>    <ESC>:call SetExecutable()<CR>
+map  <F6>      :call SetExecutable()<CR>
+imap <F6>      <ESC>:call SetExecutable()<CR>
 
 " Doxygen
-map  <F7>    :Dox<CR>
-imap <F7>    <ESC>:Dox<CR>
+map  <F7>      :Dox<CR>
+imap <F7>      <ESC>:Dox<CR>
 
 " ctags
-map  <F8>    :!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --links=no .<CR>
-imap <F8>    <ESC>:!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --links=no .<CR>
+map  <F8>      :!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --links=no .<CR>
+imap <F8>      <ESC>:!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --links=no .<CR>
 
 " Spelling
-map  <F9>    :set spell!<CR>
-imap <F9>    <ESC>:set spell!<CR>
+map  <F9>      :set spell!<CR>
+imap <F9>      <ESC>:set spell!<CR>
 
 " Next error to F10
-map  <F10>   :cn<CR>
-imap <F10>   <ESC>:cn<CR>
+map  <F10>     :cn<CR>
+imap <F10>     <ESC>:cn<CR>
 
 " :Align =
-map  <S-F10> :Align =<CR>
-imap <S-F10> <ESC>:Align =<CR>
+map  <S-F10>   :Align =<CR>
+imap <S-F10>   <ESC>:Align =<CR>
 
 " shortcut to auto indent entire file
-map  <F11>   1G=G''
-imap <F11>   <ESC>1G=Ga''
+map  <F11>     1G=G''
+imap <F11>     <ESC>1G=Ga''
 
 " window changing
 map  <a-left>       :bp<CR>
 imap <a-left>  <ESC>:bp<CR>
 map  <a-right>      :bn<CR>
 imap <a-right> <ESC>:bn<CR>
+
+" smart home function
+nnoremap <silent> <Home> :call SmartHome()<CR>
+inoremap <silent> <Home> <C-O>:call SmartHome()<CR>
 
 " taglist configuration
 let Tlist_Use_Right_Window = 1
@@ -176,7 +179,8 @@ set completeopt=menuone,menu,longest,preview
 " remap code completion to Ctrl+Space
 inoremap <Nul> <C-x><C-o>
 
-" smart home
+" smart home - if you press the home key it will jump to the first nonblank character
+" on the line
 function! SmartHome()
   let s:col = col(".")
   normal! ^
@@ -184,8 +188,6 @@ function! SmartHome()
     normal! 0
   endif
 endfunction
-nnoremap <silent> <Home> :call SmartHome()<CR>
-inoremap <silent> <Home> <C-O>:call SmartHome()<CR>
 
 " copy up to 1000 lines from one file to another
 set viminfo='1000,\"2000,s2000,h
