@@ -1,5 +1,5 @@
 # Vim Files
-> This is my vim configuration folder, with all my installed plugins
+> The perfect vim configuration
 
 ***
 
@@ -66,8 +66,8 @@ For more details see [the next section](https://github.com/timofurrer/.vim#each-
 
 ### vundle
 [vundle on GitHub](https://github.com/gmarik/vundle)
-`vundle` is a plugin manager. You can easily configure a set of vim plugins you want to use in your `vimrc`.
-The plugins must be available in a git repository.
+`vundle` is a plugin manager. You can easily configure a set of bundles in your `vimrc` you want to use in your daily life.
+Note: The plugins must be available in a git repository.
 Specify your plugins like this in your `vimrc`:
 
 ```VimL
@@ -89,8 +89,8 @@ After you have specified the plugins you want, open an empty vim instance and ca
 :BundleInstall
 ```
 
-... to install the plugins in your vimrc. The plugins will be loaded automatically in each startup.
-You are be able to update the all the plugins as well with the following command:
+... to install the plugins in your vimrc. The plugins will be loaded automatically during each startup.
+You are be able to update all the plugins as well with the following command:
 
 ```VimL
 :BundleInstall!
@@ -111,13 +111,13 @@ Some more useful commands which are provided:
 
 ### vim-fugitive
 [vim-fugitive on GitHub](https://github.com/tpope/vim-fugitive)
-The author of `vim-fugitive` descripes this plugin like these:
+The author of `vim-fugitive` descripes his plugin like this:
 
 *I'm not going to lie to you; fugitive.vim may very well be the best Git wrapper of all time.*
 
 ... I think it's true ;)
 
-With the this plugin you can do all useful things with git directly in vim. Thus, you can whatch `git diff` with `:Gdiff` or see the output of `git status` with `:Gstatus`.
+With this plugin you can do all things with git directly in vim. Thus, you can watch `git diff` with `:Gdiff` or see the output of `git status` with `:Gstatus`.
 Check out all the feature on the `GitHub page` of `vim-fugitive`
 
 ### nerdcommenter
@@ -128,7 +128,8 @@ Check out the full manual on the link above.
 
 ### nerdtree
 [nerdtree on GitHub](https://github.com/scrooloose/nerdtree)
-The NERD tree allows you to explore your filesystem and to open files and directories. It presents the filesystem to you in the form of a tree which you manipulate with the keyboard and/or mouse. It also allows you to perform simple filesystem operations.
+The NERDtree allows you to explore your filesystem and to open files and directories.
+It presents the filesystem to you in the form of a tree which you manipulate with the keyboard and/or mouse. It also allows you to perform simple filesystem operations.
 To show the `nerdtree` you can simply press `F3` if you are using the `vimrc` from this repository.
 
 ### OmniCppComplete
