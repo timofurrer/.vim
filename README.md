@@ -3,6 +3,8 @@
 
 ***
 
+**Homepage:** [the perfect vim configuration](http://timofurrer.github.com/.vim/)
+
 ## How to use?
 
 First you have to install the `exuberant-ctags`. It's needed in some plugins which we'll install later.
