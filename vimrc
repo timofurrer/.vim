@@ -50,6 +50,9 @@ Bundle 'a.vim'
 " errormarker.vim
 Bundle 'errormarker.vim'
 
+" vim-markdown
+Bundle 'tpope/vim-markdown'
+
 " syntax highlighting
 syntax on
 
