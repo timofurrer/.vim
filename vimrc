@@ -206,23 +206,23 @@ if has("autocmd")
   autocmd BufReadPost fugitive://* set bufhidden=delete
 
   " automatically open and close the popup menu / preview window
-  autocmd CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
-
-  " Delete .netrwhist ( netrw history file ) after leaving vim
-  autocmd VimLeave * if filereadable(".netrwhist") | call delete(".netrwhist") | endif
+  autocmd CursorMovedI,InsertLeave * if pumvisible() == 0 | silent! pclose | endif
 
   " remove trailing whitespace on write
   autocmd BufWritePre * :%s/\s\+$//e
 
   " source the vimrc file after saving it
   autocmd BufWritePost .\=vimrc source $MYVIMRC
+
+  " Delete .netrwhist ( netrw history file ) after leaving vim
+  autocmd VimLeave * if filereadable(".netrwhist") | call delete(".netrwhist") | endif
 endif
 
 " highlight User1 ctermfg=White ctermbg=LightGrey
-hi! User1 ctermfg=LightGrey cterm=bold  ctermbg=52 guifg=Black guibg=#665555
-hi! User2 ctermfg=DarkGreen cterm=bold  ctermbg=52 guifg=Green guibg=#443333
-hi! User3 ctermfg=DarkCyan  cterm=bold  ctermbg=52 guifg=Cyan  guibg=#443333
-hi! User4 ctermfg=DarkCyan  cterm=bold  ctermbg=52 guifg=Cyan  guibg=#443333
+hi! User1 ctermfg=LightGrey cterm=bold ctermbg=52 guifg=Black guibg=#665555
+hi! User2 ctermfg=DarkGreen cterm=bold ctermbg=52 guifg=Green guibg=#443333
+hi! User3 ctermfg=DarkCyan  cterm=bold ctermbg=52 guifg=Cyan  guibg=#443333
+hi! User4 ctermfg=DarkCyan  cterm=bold ctermbg=52 guifg=Cyan  guibg=#443333
 
 " informative status line
 set laststatus=2 " Always show the statusline
