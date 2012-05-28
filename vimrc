@@ -1,8 +1,17 @@
+" ---------------------------------------
+" ---- The perfect vim configuration ----
+" --------------------------------------
+
 " be iMproved
 set nocompatible
 
 " required for vundle - will be set correctly after vundle settings
 filetype off
+
+
+" -----------------
+" ---- Bundles ----
+" -----------------
 
 " vundle
 set rtp+=~/.vim/bundle/vundle/
@@ -13,6 +22,9 @@ Bundle 'gmarik/vundle'
 
 " vim-fugitive
 Bundle 'tpope/vim-fugitive'
+
+" vim-markdown
+Bundle 'tpope/vim-markdown'
 
 " nerdcommenter
 Bundle 'scrooloose/nerdcommenter'
@@ -50,11 +62,16 @@ Bundle 'a.vim'
 " errormarker.vim
 Bundle 'errormarker.vim'
 
-" vim-markdown
-Bundle 'tpope/vim-markdown'
+
+" --------------------------
+" ---- General settings ----
+" --------------------------
 
 " syntax highlighting
 syntax on
+
+" clear highlighting
+highlight clear
 
 " get filetype automatically
 filetype plugin indent on
@@ -89,15 +106,73 @@ set smartcase
 " disable backup files
 set nobackup
 
+" show list instead of just completing
+set wildmenu
+
+" complete options
+set completeopt=menuone,menu,longest,preview
+
+" set tag locations
+set tags=tags;/
+set tags+=~/.vim/tags/stl_tags
+
+" copy up to 1000 lines from one file to another
+set viminfo='1000,\"2000,s2000,h
+
+" Set spell language
+set spelllang=de_ch
+
+" wildignore
+set wildignore+=*.o,*.obj,.git,*.pyc,*.so,*/.git/*
+
+" status line settings
+set laststatus=2 " Always show the statusline
+set statusline=%4*---%1*\ %F%m%r%h%w\ %2*%{fugitive#statusline()}%1*\ %{&ff}\ %Y\ \[0x\%02.2B=\%03.3b]\ [%l,%v\ %p%%\ %Lb]\ %3*\[%F\]%1*
+
+" status line coloring
+hi! User1 ctermfg=LightGrey cterm=bold ctermbg=52 guifg=Black guibg=#665555
+hi! User2 ctermfg=DarkGreen cterm=bold ctermbg=52 guifg=Green guibg=#443333
+hi! User3 ctermfg=DarkCyan  cterm=bold ctermbg=52 guifg=Cyan  guibg=#443333
+hi! User4 ctermfg=DarkCyan  cterm=bold ctermbg=52 guifg=Cyan  guibg=#443333
+
+" errorformat for make and errormarker
+let &errorformat="%*[^/]%f:%l:%c: %t%*[^:]:%m,%*[^/]%f:%l: %t%*[^:]:%m," . &errorformat
+
+
+" ----------------------
+" ---- Autocommands ----
+" ----------------------
+
+if has("autocmd")
+  " open files at the last opened position
+  autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+  " delete fugitive buffer with git objects befor opening a new one
+  autocmd BufReadPost fugitive://* set bufhidden=delete
+
+  " automatically open and close the popup menu / preview window
+  autocmd CursorMovedI,InsertLeave * if pumvisible() == 0 | silent! pclose | endif
+
+  " remove trailing whitespace on write
+  autocmd BufWritePre * :%s/\s\+$//e
+
+  " source the vimrc file after saving it
+  autocmd BufWritePost .\=vimrc source $MYVIMRC
+
+  " Delete .netrwhist ( netrw history file ) after leaving vim
+  autocmd VimLeave * if filereadable(".netrwhist") | call delete(".netrwhist") | endif
+endif
+
+
+" ------------------
+" ---- Mappings ----
+" ------------------
+
 " change window
 nnoremap <leader>1 1
 nnoremap <leader>2 2
 nnoremap <leader>3 3
 nnoremap <leader>4 4
-
-" set tag locations
-set tags=tags;/
-set tags+=~/.vim/tags/stl_tags
 
 " a.vim
 map  <F2>      :A<CR>
@@ -153,9 +228,17 @@ imap <a-left>  <ESC>:bp<CR>
 map  <a-right>      :bn<CR>
 imap <a-right> <ESC>:bn<CR>
 
+" remap code completion to Ctrl+Space
+inoremap <Nul> <C-x><C-o>
+
 " smart home function
 nnoremap <silent> <Home> :call SmartHome()<CR>
 inoremap <silent> <Home> <C-O>:call SmartHome()<CR>
+
+
+" -----------------------
+" ---- Plugin config ----
+" -----------------------
 
 " taglist configuration
 let Tlist_Use_Right_Window = 1
@@ -171,16 +254,21 @@ let OmniCpp_MayCompleteArrow  = 1
 let OmniCpp_MayCompleteScope  = 1
 let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
 
-highlight clear
+" completion highlighting
 highlight Pmenu         ctermfg=0 ctermbg=2
 highlight PmenuSel      ctermfg=0 ctermbg=7
 highlight PmenuSbar     ctermfg=7 ctermbg=0
 highlight PmenuThumb    ctermfg=0 ctermbg=7
 
-set completeopt=menuone,menu,longest,preview
+" support local vim config in .lvimrc
+let g:localvimrc_ask=0
 
-" remap code completion to Ctrl+Space
-inoremap <Nul> <C-x><C-o>
+" ignore some directories and files in ctrlp plugin
+let g:ctrlp_custom_ignore='\.git/*'
+
+" errormarker settings
+let errormarker_errorgroup   = "ErrorMsg"
+let errormarker_warninggroup = "Todo"
 
 " smart home - if you press the home key it will jump to the first nonblank character
 " on the line
@@ -191,55 +279,3 @@ function! SmartHome()
     normal! 0
   endif
 endfunction
-
-" copy up to 1000 lines from one file to another
-set viminfo='1000,\"2000,s2000,h
-
-" Set spell language
-set spelllang=de_ch
-
-" support local vim config in .lvimrc
-let g:localvimrc_ask=0
-
-if has("autocmd")
-  " open files at the last opened position
-  autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-
-  " delete fugitive buffer with git objects befor opening a new one
-  autocmd BufReadPost fugitive://* set bufhidden=delete
-
-  " automatically open and close the popup menu / preview window
-  autocmd CursorMovedI,InsertLeave * if pumvisible() == 0 | silent! pclose | endif
-
-  " remove trailing whitespace on write
-  autocmd BufWritePre * :%s/\s\+$//e
-
-  " source the vimrc file after saving it
-  autocmd BufWritePost .\=vimrc source $MYVIMRC
-
-  " Delete .netrwhist ( netrw history file ) after leaving vim
-  autocmd VimLeave * if filereadable(".netrwhist") | call delete(".netrwhist") | endif
-endif
-
-" highlight User1 ctermfg=White ctermbg=LightGrey
-hi! User1 ctermfg=LightGrey cterm=bold ctermbg=52 guifg=Black guibg=#665555
-hi! User2 ctermfg=DarkGreen cterm=bold ctermbg=52 guifg=Green guibg=#443333
-hi! User3 ctermfg=DarkCyan  cterm=bold ctermbg=52 guifg=Cyan  guibg=#443333
-hi! User4 ctermfg=DarkCyan  cterm=bold ctermbg=52 guifg=Cyan  guibg=#443333
-
-" informative status line
-set laststatus=2 " Always show the statusline
-set statusline=%4*---%1*\ %F%m%r%h%w\ %2*%{fugitive#statusline()}%1*\ %{&ff}\ %Y\ \[0x\%02.2B=\%03.3b]\ [%l,%v\ %p%%\ %Lb]\ %3*\[%F\]%1*
-
-" wildignore
-set wildignore+=*.o,*.obj,.git,*.pyc,*.so,*/.git/*
-
-" ignore some directories and files in ctrlp plugin
-let g:ctrlp_custom_ignore='\.git/*'
-
-" errormarker settings
-let errormarker_errorgroup="ErrorMsg"
-let errormarker_warninggroup="Todo"
-
-" errorformat for make and errormarker
-let &errorformat="%*[^/]%f:%l:%c: %t%*[^:]:%m,%*[^/]%f:%l: %t%*[^:]:%m," . &errorformat
