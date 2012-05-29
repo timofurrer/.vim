@@ -65,6 +65,9 @@ Bundle 'errormarker.vim'
 " TaskList.vim
 Bundle 'TaskList.vim'
 
+" python indenting - http://www.vim.org/scripts/script.php?script_id=974
+Bundle 'gg/python.vim'
+
 
 " --------------------------
 " ---- General settings ----
