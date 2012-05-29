@@ -62,6 +62,9 @@ Bundle 'a.vim'
 " errormarker.vim
 Bundle 'errormarker.vim'
 
+" TaskList.vim
+Bundle 'TaskList.vim'
+
 
 " --------------------------
 " ---- General settings ----
@@ -279,10 +282,10 @@ let OmniCpp_MayCompleteScope  = 1
 let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
 
 " support local vim config in .lvimrc
-let g:localvimrc_ask=0
+let g:localvimrc_ask = 0
 
 " ignore some directories and files in ctrlp plugin
-let g:ctrlp_custom_ignore='\.git/*'
+let g:ctrlp_custom_ignore = '\.git/*'
 
 " errormarker settings
 let errormarker_errorgroup   = "ErrorMsg"
