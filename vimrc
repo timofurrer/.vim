@@ -129,14 +129,31 @@ set wildignore+=*.o,*.obj,.git,*.pyc,*.so,*/.git/*
 set laststatus=2 " Always show the statusline
 set statusline=%4*---%1*\ %F%m%r%h%w\ %2*%{fugitive#statusline()}%1*\ %{&ff}\ %Y\ \[0x\%02.2B=\%03.3b]\ [%l,%v\ %p%%\ %Lb]\ %3*\[%F\]%1*
 
-" status line coloring
-hi! User1 ctermfg=LightGrey cterm=bold ctermbg=52 guifg=Black guibg=#665555
-hi! User2 ctermfg=DarkGreen cterm=bold ctermbg=52 guifg=Green guibg=#443333
-hi! User3 ctermfg=DarkCyan  cterm=bold ctermbg=52 guifg=Cyan  guibg=#443333
-hi! User4 ctermfg=DarkCyan  cterm=bold ctermbg=52 guifg=Cyan  guibg=#443333
-
 " errorformat for make and errormarker
 let &errorformat="%*[^/]%f:%l:%c: %t%*[^:]:%m,%*[^/]%f:%l: %t%*[^:]:%m," . &errorformat
+
+
+" ----------------------
+" ---- Highlighting ----
+" ----------------------
+
+" diff highlighting
+highlight DiffAdd    cterm=none ctermfg=Black ctermbg=Green   gui=none guifg=Black guibg=Green
+highlight DiffDelete cterm=none ctermfg=Black ctermbg=Red     gui=none guifg=Black guibg=Red
+highlight DiffChange cterm=none ctermfg=Black ctermbg=Yellow  gui=none guifg=Black guibg=Yellow
+highlight DiffText   cterm=none ctermfg=Black ctermbg=Magenta gui=none guifg=Black guibg=Magenta
+
+" status line highlighting
+highlight! User1 ctermfg=LightGrey cterm=bold ctermbg=52 guifg=Black guibg=#665555
+highlight! User2 ctermfg=DarkGreen cterm=bold ctermbg=52 guifg=Green guibg=#443333
+highlight! User3 ctermfg=DarkCyan  cterm=bold ctermbg=52 guifg=Cyan  guibg=#443333
+highlight! User4 ctermfg=DarkCyan  cterm=bold ctermbg=52 guifg=Cyan  guibg=#443333
+
+" completion highlighting
+highlight Pmenu         ctermfg=0 ctermbg=2
+highlight PmenuSel      ctermfg=0 ctermbg=7
+highlight PmenuSbar     ctermfg=7 ctermbg=0
+highlight PmenuThumb    ctermfg=0 ctermbg=7
 
 
 " ----------------------
@@ -253,12 +270,6 @@ let OmniCpp_MayCompleteDot    = 1
 let OmniCpp_MayCompleteArrow  = 1
 let OmniCpp_MayCompleteScope  = 1
 let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
-
-" completion highlighting
-highlight Pmenu         ctermfg=0 ctermbg=2
-highlight PmenuSel      ctermfg=0 ctermbg=7
-highlight PmenuSbar     ctermfg=7 ctermbg=0
-highlight PmenuThumb    ctermfg=0 ctermbg=7
 
 " support local vim config in .lvimrc
 let g:localvimrc_ask=0
