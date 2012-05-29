@@ -176,6 +176,9 @@ if has("autocmd")
   " source the vimrc file after saving it
   autocmd BufWritePost .\=vimrc source $MYVIMRC
 
+  " update taglist
+  autocmd BufWritePost * :TlistUpdate
+
   " Delete .netrwhist ( netrw history file ) after leaving vim
   autocmd VimLeave * if filereadable(".netrwhist") | call delete(".netrwhist") | endif
 endif
@@ -222,6 +225,10 @@ imap <F7>      <ESC>:Dox<CR>
 " ctags
 map  <F8>      :!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --links=no .<CR>
 imap <F8>      <ESC>:!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --links=no .<CR>
+
+" taglist update
+map  <S-F8>    :TlistUpdate<CR>
+imap <S-F8>    <ESC>:TlistUpdate<CR>
 
 " Spelling
 map  <F9>      :set spell!<CR>
