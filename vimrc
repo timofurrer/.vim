@@ -8,6 +8,9 @@ set nocompatible
 " required for vundle - will be set correctly after vundle settings
 filetype off
 
+" Do you want to use the colorscheme solarized? Thus, set to 1 else to 0
+let use_cs_solarized = 0
+
 
 " -----------------
 " ---- Bundles ----
@@ -67,6 +70,9 @@ Bundle 'TaskList.vim'
 
 " python indenting - http://www.vim.org/scripts/script.php?script_id=974
 Bundle 'gg/python.vim'
+
+" colorscheme solarized
+Bundle 'altercation/vim-colors-solarized'
 
 
 " --------------------------
@@ -137,6 +143,23 @@ set statusline=%4*---%1*\ %F%m%r%h%w\ %2*%{fugitive#statusline()}%1*\ %{&ff}\ %Y
 
 " errorformat for make and errormarker
 let &errorformat="%*[^/]%f:%l:%c: %t%*[^:]:%m,%*[^/]%f:%l: %t%*[^:]:%m," . &errorformat
+
+" ---------------------
+" ---- Colorscheme ----
+" ---------------------
+
+if use_cs_solarized == 1
+  "let g:solarized_termtrans=1
+
+  " set termcolors to 256 instead of std 16
+  let g:solarized_termcolors=256
+
+  " set dark background
+  set background=dark
+
+  " use colorscheme solarized
+  colorscheme solarized
+endif
 
 
 " ----------------------
