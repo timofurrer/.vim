@@ -149,10 +149,15 @@ let &errorformat="%*[^/]%f:%l:%c: %t%*[^:]:%m,%*[^/]%f:%l: %t%*[^:]:%m," . &erro
 " ---------------------
 
 if use_cs_solarized == 1
-  "let g:solarized_termtrans=1
+  "let g:solarized_termtrans                = 1
 
   " set termcolors to 256 instead of std 16
-  let g:solarized_termcolors=256
+  let g:solarized_termcolors                = 256
+
+  " set bold, underline and italic enable
+  let g:solarized_bold                      = 1
+  let g:solarized_underline                 = 1
+  let g:solarized_italic                    = 1
 
   " set dark background
   set background=dark
