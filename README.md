@@ -245,5 +245,5 @@ This plugin provieds better code indentation for python source files.
 ### solarized
 [solarized on GitHub](http://github.com/altercation/vim-colors-solarized)
 
-**Screenshot:**
+**Screenshot:**<br />
 ![solarized dark](https://github.com/altercation/solarized/raw/master/img/solarized-vim.png)
