@@ -1,6 +1,6 @@
 " ---------------------------------------
 " ---- The perfect vim configuration ----
-" --------------------------------------
+" ---------------------------------------
 
 " be iMproved
 set nocompatible
@@ -172,22 +172,22 @@ endif
 " ----------------------
 
 " diff highlighting
-highlight DiffAdd    cterm=none ctermfg=Black ctermbg=Green   gui=none guifg=Black guibg=Green
-highlight DiffDelete cterm=none ctermfg=Black ctermbg=Red     gui=none guifg=Black guibg=Red
-highlight DiffChange cterm=none ctermfg=Black ctermbg=Yellow  gui=none guifg=Black guibg=Yellow
-highlight DiffText   cterm=none ctermfg=Black ctermbg=Magenta gui=none guifg=Black guibg=Magenta
+highlight DiffAdd          cterm=none ctermfg=Black     ctermbg=Green   gui=none guifg=Black guibg=Green
+highlight DiffDelete       cterm=none ctermfg=Black     ctermbg=Red     gui=none guifg=Black guibg=Red
+highlight DiffChange       cterm=none ctermfg=Black     ctermbg=Yellow  gui=none guifg=Black guibg=Yellow
+highlight DiffText         cterm=none ctermfg=Black     ctermbg=Magenta gui=none guifg=Black guibg=Magenta
 
 " status line highlighting
-highlight! User1 ctermfg=LightGrey cterm=bold ctermbg=52 guifg=Black guibg=#665555
-highlight! User2 ctermfg=DarkGreen cterm=bold ctermbg=52 guifg=Green guibg=#443333
-highlight! User3 ctermfg=DarkCyan  cterm=bold ctermbg=52 guifg=Cyan  guibg=#443333
-highlight! User4 ctermfg=DarkCyan  cterm=bold ctermbg=52 guifg=Cyan  guibg=#443333
+highlight! User1           cterm=bold ctermfg=LightGrey ctermbg=52               guifg=Black guibg=#665555
+highlight! User2           cterm=bold ctermfg=DarkGreen ctermbg=52               guifg=Green guibg=#443333
+highlight! User3           cterm=bold ctermfg=DarkCyan  ctermbg=52               guifg=Cyan  guibg=#443333
+highlight! User4           cterm=bold ctermfg=DarkCyan  ctermbg=52               guifg=Cyan  guibg=#443333
 
 " completion highlighting
-highlight Pmenu         ctermfg=0 ctermbg=2
-highlight PmenuSel      ctermfg=0 ctermbg=7
-highlight PmenuSbar     ctermfg=7 ctermbg=0
-highlight PmenuThumb    ctermfg=0 ctermbg=7
+highlight Pmenu                       ctermfg=0         ctermbg=2
+highlight PmenuSel                    ctermfg=0         ctermbg=7
+highlight PmenuSbar                   ctermfg=7         ctermbg=0
+highlight PmenuThumb                  ctermfg=0         ctermbg=7
 
 
 " ----------------------

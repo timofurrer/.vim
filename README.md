@@ -50,7 +50,8 @@ For more details see [the next section](https://github.com/timofurrer/.vim#each-
 | plugin name | short description |
 |:--|:--|:--|
 | vundle | bundle manager |
-| vim-fugitive | git wrapper for vim |
+| vim-fugitive | git wrapper |
+| vim-markdown | markdown syntax |
 | nercommenter | (un)comment lines in current buffer |
 | nerdtree | show directory structure and manipulate simple file settings |
 | OmniCppComplete | complete C and C++ source code |
@@ -63,6 +64,35 @@ For more details see [the next section](https://github.com/timofurrer/.vim#each-
 | Align | align code to specified characters |
 | a.vim | switch between source code and header files |
 | errormarker.vim | mark compiler errors with signs and highlighted lines |
+| TaskList.vim | provide a tag-based tasklist |
+| python.vim | indentation for python source code files |
+
+There are some color schemes included as well:
+
+| name |
+|:--|
+| solarized |
+
+## Key mappings
+| shortcut | description |
+|:--|:--|
+| `F2` | change between source and header file in C, C++, etc. `(see plugin a.vim)` |
+| `F3` | toggle the nerd tree `(see plugin nerdtree)` |
+| `F4` | toggle the taglist `(see plugin taglist)` |
+| `F5` | save current file and execute `make` |
+| `Shift + F5` | show the error at the current cursor position `(see plugin errormarker.vim)` |
+| `F6` | make file executable and insert shebang `(see plugin Shebang)` |
+| `F7` | insert doxygen comment skeleton `(see plugin DoxygenToolkit.vim)` |
+| `F8` | generate exuberant-ctags |
+| `Shift + F8` | update taglist `(see plugin taglist)` |
+| `F9` | check spelling |
+| `F10` | jump to next error of make `(see vim command :cn)` |
+| `Shift + F10` | align selected lines by the `=` `(see plugin Align)` |
+| `F11` | indent entiry source file |
+| `Alt+Left-Arrow` / `Alt+Right-Arrow` | show previous/next buffer `(see vim commands :bp and :bn)` |
+| `Ctrl+Space` | show completion buffer |
+
+*Note: maybe some more keys are mapped by the plugins itself*
 
 ## Each plugin in detail
 
@@ -121,6 +151,10 @@ The author of `vim-fugitive` descripes his plugin like this:
 
 With this plugin you can do all things with git directly in vim. Thus, you can watch `git diff` with `:Gdiff` or see the output of `git status` with `:Gstatus`.
 Check out all the feature on the `GitHub page` of `vim-fugitive`
+
+### vim-markdown
+[vim-markdown on GitHub](https://github.com/tpope/vim-markdown)
+This is not a real plugin - It's just a better syntax highlighting for markdown files as vim provieds by default.
 
 ### nerdcommenter
 [nerdcommenter on GitHub](https://github.com/scrooloose/nerdcommenter)
@@ -196,3 +230,20 @@ There are also some more variants to switch between these two files, like `:AS -
 [errormarker.vim on GitHub](https://github.com/vim-scripts/errormarker.vim)
 Hooks the make quickfix command and converts all compiler errors into signs that are placed next to the line with the error. Additionally, lines with errors are highlighted.
 The `make` command is mapped to `F5` and to jump to the next error simply press `Shift + F5` or `F10`.
+
+### TaskList.vim
+[TaskList.vim on GitHub](https://github.com/vim-scripts/TaskList.vim)
+TaskList.vim is a very useful plugin. It searches for strings like "FIXME" and "TODO" and shows the found lines in a seperate buffer.
+You can move over this list and jump to the correspondent line in the source file.
+
+### python.vim
+[python.vim on GitHub](https://github.com/gg/python.vim)
+This plugin provieds better code indentation for python source files.
+
+## Colorschemes
+
+### solarized
+[solarized on GitHub](http://github.com/altercation/vim-colors-solarized)
+
+**Screenshot:**
+![solarized dark](https://github.com/altercation/solarized/raw/master/img/solarized-vim.png)
