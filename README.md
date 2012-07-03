@@ -77,6 +77,7 @@ There are some color schemes included as well:
 | shortcut | description |
 |:--|:--|
 | `F2` | change between source and header file in C, C++, etc. `(see plugin a.vim)` |
+| `Shift + F2` | clear search highlighting |
 | `F3` | toggle the nerd tree `(see plugin nerdtree)` |
 | `F4` | toggle the taglist `(see plugin taglist)` |
 | `F5` | save current file and execute `make` |

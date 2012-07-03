@@ -110,7 +110,9 @@ set nofoldenable
 " set c1ipboard to x-windows selection
 set clipboard=unnamed
 
-" turn on incremental search with ignore case (except explicit caps)
+" turn on incremental search with ignore case (except explicit caps) and
+" highlighting
+set hlsearch
 set incsearch
 set ignorecase
 set smartcase
@@ -195,6 +197,9 @@ highlight PmenuThumb                  ctermfg=0         ctermbg=7
 " ----------------------
 
 if has("autocmd")
+  " set filetypes
+  autocmd BufNewFile,BufRead *.gv set filetype=dot
+
   " open files at the last opened position
   autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
@@ -231,6 +236,10 @@ nnoremap <leader>4 4
 " a.vim
 map  <F2>      :A<CR>
 imap <F2>      <ESC>:A<CR>
+
+" clear search pattern
+map  <S-F2>     :let @/ = ""<CR>
+imap <S-F2>     <ESC>:let @/ = ""<CR>
 
 " nerdtree
 map  <F3>      :NERDTreeToggle<CR>
