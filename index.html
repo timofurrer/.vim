@@ -1,0 +1,457 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>.vim by timofurrer</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>.vim</h1>
+        <p>The perfect vim configuration</p>
+
+        <p class="view"><a href="https://github.com/timofurrer/.vim">View the Project on GitHub <small>timofurrer/.vim</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/timofurrer/.vim/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/timofurrer/.vim/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/timofurrer/.vim">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>Vim Files</h1>
+
+<blockquote>
+<p>The perfect vim configuration</p>
+</blockquote>
+
+<hr><h2>How to use?</h2>
+
+<p>First you have to install the <code>exuberant-ctags</code>. It's needed in some plugins which we'll install later.
+When you have done this you have to clone this repository with the following command:</p>
+
+<pre><code>git clone git://github.com/timofurrer/.vim.git ~/.vim
+</code></pre>
+
+<p>If this worked correctly you should have now this repository in your home at: <code>~/.vim</code>.
+So lets change in this directory:</p>
+
+<pre><code>cd ~/.vim
+</code></pre>
+
+<p>To install and update all the plugins you must initialize the <code>git submodules</code> to get <code>vundle</code>:</p>
+
+<pre><code>git submodule init
+git submodule update
+</code></pre>
+
+<p>Now you got <code>vundle</code> in <code>bundle/vundle</code> directory.
+When you have done the previous steps you have to link the vimrc from the cloned repository into your home directory:
+<strong>Note:</strong> if you have an old vimrc, delete (<code>rm -f ~/.vimrc</code>) or move (<code>mv ~/.vimrc ~/.vimrc.old</code>) it first.</p>
+
+<pre><code>ln -s ~/.vim/vimrc ~/.vimrc
+</code></pre>
+
+<p>After this you can install the plugins which are prepared for vundle in the <code>vimrc</code>:
+Thus, open vim and run <code>:BundleInstall</code> in command mode.</p>
+
+<h3>Copy &amp; Paste Installation</h3>
+
+<div class="highlight">
+<pre>mv ~/.vim ~/.vim.old
+mv ~/.vimrc ~/.vimrc.old
+git clone git://github.com/timofurrer/.vim.git ~/.vim
+<span class="nb">cd</span> ~/.vim
+git submodule init
+git submodule update
+ln -s ~/.vim/vimrc ~/.vimrc
+</pre>
+</div>
+
+
+<h2>Which plugins will be installed?</h2>
+
+<p>For more details see <a href="https://github.com/timofurrer/.vim#each-plugin-in-detail">the next section</a>.</p>
+
+<table>
+<tr>
+<th align="left">plugin name</th>
+<th align="left">short description</th>
+</tr>
+<tr>
+<td align="left">vundle</td>
+<td align="left">bundle manager</td>
+</tr>
+<tr>
+<td align="left">vim-fugitive</td>
+<td align="left">git wrapper</td>
+</tr>
+<tr>
+<td align="left">vim-markdown</td>
+<td align="left">markdown syntax</td>
+</tr>
+<tr>
+<td align="left">nercommenter</td>
+<td align="left">(un)comment lines in current buffer</td>
+</tr>
+<tr>
+<td align="left">nerdtree</td>
+<td align="left">show directory structure and manipulate simple file settings</td>
+</tr>
+<tr>
+<td align="left">OmniCppComplete</td>
+<td align="left">complete C and C++ source code</td>
+</tr>
+<tr>
+<td align="left">taglist.vim</td>
+<td align="left">browser through your source code</td>
+</tr>
+<tr>
+<td align="left">xmledit</td>
+<td align="left">help in writting xml files - auto close tags, jumping etc.</td>
+</tr>
+<tr>
+<td align="left">localvimrc</td>
+<td align="left">source local vimrc file</td>
+</tr>
+<tr>
+<td align="left">DoxygenToolkit.vim</td>
+<td align="left">Provide shortcuts to generate doxygen comment skeletons</td>
+</tr>
+<tr>
+<td align="left">Shebang</td>
+<td align="left">make file executable and insert shebang</td>
+</tr>
+<tr>
+<td align="left">ctrlp.vim</td>
+<td align="left">search for files with regexp and mru</td>
+</tr>
+<tr>
+<td align="left">Align</td>
+<td align="left">align code to specified characters</td>
+</tr>
+<tr>
+<td align="left">a.vim</td>
+<td align="left">switch between source code and header files</td>
+</tr>
+<tr>
+<td align="left">errormarker.vim</td>
+<td align="left">mark compiler errors with signs and highlighted lines</td>
+</tr>
+<tr>
+<td align="left">TaskList.vim</td>
+<td align="left">provide a tag-based tasklist</td>
+</tr>
+<tr>
+<td align="left">python.vim</td>
+<td align="left">indentation for python source code files</td>
+</tr>
+<tr>
+<td align="left">Conque Shell</td>
+<td align="left">Run interactive commands inside a Vim buffer</td>
+</tr>
+</table><p>There are some color schemes included as well:</p>
+
+<table>
+<tr>
+<th align="left">name</th>
+</tr>
+<tr>
+<td align="left">solarized</td>
+</tr>
+</table><h2>Key mappings</h2>
+
+<table>
+<tr>
+<th align="left">shortcut</th>
+<th align="left">description</th>
+</tr>
+<tr>
+<td align="left"><code>F2</code></td>
+<td align="left">change between source and header file in C, C++, etc. <code>(see plugin a.vim)</code>
+</td>
+</tr>
+<tr>
+<td align="left"><code>Shift + F2</code></td>
+<td align="left">clear search highlighting</td>
+</tr>
+<tr>
+<td align="left"><code>F3</code></td>
+<td align="left">toggle the nerd tree <code>(see plugin nerdtree)</code>
+</td>
+</tr>
+<tr>
+<td align="left"><code>F4</code></td>
+<td align="left">toggle the taglist <code>(see plugin taglist)</code>
+</td>
+</tr>
+<tr>
+<td align="left"><code>F5</code></td>
+<td align="left">depends on the filetype: if c or cpp execute make, if python start open file and if shell script start script in the shell you are using</td>
+</tr>
+<tr>
+<td align="left"><code>Shift + F5</code></td>
+<td align="left">show the error at the current cursor position <code>(see plugin errormarker.vim)</code>
+</td>
+</tr>
+<tr>
+<td align="left"><code>F6</code></td>
+<td align="left">make file executable and insert shebang <code>(see plugin Shebang)</code>
+</td>
+</tr>
+<tr>
+<td align="left"><code>F7</code></td>
+<td align="left">insert doxygen comment skeleton <code>(see plugin DoxygenToolkit.vim)</code>
+</td>
+</tr>
+<tr>
+<td align="left"><code>F8</code></td>
+<td align="left">generate exuberant-ctags</td>
+</tr>
+<tr>
+<td align="left"><code>Shift + F8</code></td>
+<td align="left">update taglist <code>(see plugin taglist)</code>
+</td>
+</tr>
+<tr>
+<td align="left"><code>F9</code></td>
+<td align="left">check spelling</td>
+</tr>
+<tr>
+<td align="left"><code>F10</code></td>
+<td align="left">jump to next error of make <code>(see vim command :cn)</code>
+</td>
+</tr>
+<tr>
+<td align="left"><code>Shift + F10</code></td>
+<td align="left">align selected lines by the <code>=</code> <code>(see plugin Align)</code>
+</td>
+</tr>
+<tr>
+<td align="left"><code>F11</code></td>
+<td align="left">indent entiry source file</td>
+</tr>
+<tr>
+<td align="left"><code>Shift + F11</code></td>
+<td align="left">start ipython in horizontal conque shell</td>
+</tr>
+<tr>
+<td align="left"><code>Shift + F12</code></td>
+<td align="left">start bash in horizontal conque shell</td>
+</tr>
+<tr>
+<td align="left">
+<code>Alt+Left-Arrow</code> / <code>Alt+Right-Arrow</code>
+</td>
+<td align="left">show previous/next buffer <code>(see vim commands :bp and :bn)</code>
+</td>
+</tr>
+<tr>
+<td align="left"><code>Ctrl+Space</code></td>
+<td align="left">show completion buffer</td>
+</tr>
+</table><p><em>Note: maybe some more keys are mapped by the plugins itself</em></p>
+
+<h2>Each plugin in detail</h2>
+
+<h3>vundle</h3>
+
+<p><a href="https://github.com/gmarik/vundle">vundle on GitHub</a>
+<code>vundle</code> is a plugin manager. You can easily configure a set of bundles in your <code>vimrc</code> you want to use in your daily life.
+Note: The plugins must be available in a git repository.
+Specify your plugins like this in your <code>vimrc</code>:</p>
+
+<div class="highlight">
+<pre><span class="c">" plugin from the vim-scripts GitHub account</span>
+Bundle <span class="s1">'xmledit'</span>
+Bundle <span class="s1">'a.vim'</span>
+
+<span class="c">" plugin from another GitHub account</span>
+Bundle <span class="s1">'tpope/vim-fugitive'</span>
+Bundle <span class="s1">'scrooloose/nerdcommenter'</span>
+
+<span class="c">" plugin from another git server</span>
+Bundle <span class="s1">'git://git.wincent.com/command-t.git'</span>
+</pre>
+</div>
+
+
+<p>After you have specified the plugins you want, open an empty vim instance and call ...</p>
+
+<div class="highlight">
+<pre><span class="p">:</span>BundleInstall
+</pre>
+</div>
+
+
+<p>... to install the plugins in your vimrc. The plugins will be loaded automatically during each startup.
+You are be able to update all the plugins as well with the following command:</p>
+
+<div class="highlight">
+<pre><span class="p">:</span>BundleInstall<span class="p">!</span>
+</pre>
+</div>
+
+
+<p>Some more useful commands which are provided:</p>
+
+<div class="highlight">
+<pre><span class="c">" List all configured bundles</span>
+<span class="p">:</span>BundleList
+
+<span class="c">" search (or refresh cache first) for a plugin (for example for plugin 'foo')</span>
+<span class="p">:</span>BundleSearch<span class="p">(!)</span> foo
+
+<span class="c">" confirm (or auto-approve) removal of unused bundles</span>
+<span class="p">:</span>BundleClean<span class="p">(!)</span>
+</pre>
+</div>
+
+
+<h3>vim-fugitive</h3>
+
+<p><a href="https://github.com/tpope/vim-fugitive">vim-fugitive on GitHub</a>
+The author of <code>vim-fugitive</code> descripes his plugin like this:</p>
+
+<p><em>I'm not going to lie to you; fugitive.vim may very well be the best Git wrapper of all time.</em></p>
+
+<p>... I think it's true ;)</p>
+
+<p>With this plugin you can do all things with git directly in vim. Thus, you can watch <code>git diff</code> with <code>:Gdiff</code> or see the output of <code>git status</code> with <code>:Gstatus</code>.
+Check out all the feature on the <code>GitHub page</code> of <code>vim-fugitive</code></p>
+
+<h3>vim-markdown</h3>
+
+<p><a href="https://github.com/tpope/vim-markdown">vim-markdown on GitHub</a>
+This is not a real plugin - It's just a better syntax highlighting for markdown files as vim provieds by default.</p>
+
+<h3>nerdcommenter</h3>
+
+<p><a href="https://github.com/scrooloose/nerdcommenter">nerdcommenter on GitHub</a>
+<code>nerdcommenter</code> is a very helpful plugin in daily life. You can easily comment and uncomment lines in your buffer. There are functions
+to <code>comment out the current line or text selected in visual mode</code> or <code>comment the current line from the cursor to the end of line</code>.
+Check out the full manual on the link above.</p>
+
+<h3>nerdtree</h3>
+
+<p><a href="https://github.com/scrooloose/nerdtree">nerdtree on GitHub</a>
+The NERDtree allows you to explore your filesystem and to open files and directories.
+It presents the filesystem to you in the form of a tree which you manipulate with the keyboard and/or mouse. It also allows you to perform simple filesystem operations.
+To show the <code>nerdtree</code> you can simply press <code>F3</code> if you are using the <code>vimrc</code> from this repository.</p>
+
+<h3>OmniCppComplete</h3>
+
+<p><a href="https://github.com/vim-scripts/OmniCppComplete">OmniCppComplete on GitHub</a>
+This plugin provides you code completion for C and C++. With <code>F8</code> (mapped in my <code>vimrc</code>) you can generate tags from your current source (exuberant-ctags are used)-
+It's not finished yet but now you can:</p>
+
+<ul>
+<li>Complete namespaces, classes, structs and union members.</li>
+<li>Complete inherited members for classes and structs (single and multiple inheritance).</li>
+<li>Complete attribute members.</li>
+<li>Complete type returned by a function.</li>
+<li>Complete the "this" pointer.</li>
+<li>Complete a typedef.</li>
+<li>Complete the current scope (global and class scope).</li>
+<li>Complete an object after a cast (C and C++ cast).</li>
+<li>Complete anonymous types (eg: struct {int a; int b;}g_Var; g_Var.???). It also works for a typedef of an anonymous type.</li>
+</ul><h3>taglist.vim</h3>
+
+<p><a href="https://github.com/vim-scripts/taglist.vim">taglist.vim on GitHub</a>
+With this smart plugin can you browser your source code. It shows you every <code>class</code>, <code>method</code>, <code>function</code> and a lot more structures of your code.
+You can move with your arrow-keys and jump to a structure with simply press Enter.
+In my <code>vimrc</code> you can open the browser with <code>F4</code> - it will appear in a seperate buffer in the right of the current.</p>
+
+<h3>xmledit</h3>
+
+<p><a href="https://github.com/sukima/xmledit/">xmledit on GitHub</a>
+<code>xmledit</code> is a file type plugin to help edit XML documents. It includes tag completion and tag jumping.
+Another useful feature of this plugin is the automatically closing  mechanism of the current tag when you close this tag with <code>&gt;</code>.</p>
+
+<h3>localvimrc</h3>
+
+<p><a href="https://github.com/vim-scripts/localvimrc">localvimrc on GitHub</a>
+Sometimes, when you work on different projects, you have the problem, that you have to follow different code guidelines, for example for indentation.
+So you can simply create another <code>vimrc</code> file as your normally used <code>~/.vimrc</code>. This <code>vimrc</code> file is called <code>.lvimrc</code>. This vim-script file will be sourced in every start of vim.
+If you are using git while you have to create a <code>local vimrc</code> you can put <code>.lvimrc</code> in your <code>.gitignore</code> file to ignore this file.</p>
+
+<h3>DoxygenToolkit.vim</h3>
+
+<p><a href="https://github.com/vim-scripts/DoxygenToolkit.vim">DoxygenToolkit.vim on GitHub</a>
+The <code>DoxygenToolkit.vim</code> plugin provides some shortcut commands to generate skeletons of <code>doxygen</code> comments.
+The supported languages are <code>C, C++ and Python</code>. For functions these tags are generated: <code>@brief</code>, <code>@param (for each argument)</code> and <code>@return</code>.
+To generate the <code>doxygen skeleton</code> go to the method or function you want to descripe with the cursor and execute <code>:Dox</code>.</p>
+
+<h3>Shebang</h3>
+
+<p><a href="https://github.com/vim-scripts/Shebang">Shebang on GitHub</a>
+This plugin tries to reduce the repetitive work it is to make a file executable. It makes the current opened file executable and inserts the <code>Shebang</code> if it is not set yet.
+This functionality is mapped to <code>F6</code> with my <code>vimrc</code>.</p>
+
+<h3>ctrlp.vim</h3>
+
+<p><a href="https://github.com/kien/ctrlp.vim">ctrlp.vim on GitHub</a>
+This plugin is a full path fuzzy file, buffer, mru and tag finder. It supports <code>vim's regexp as search pattern</code>, <code>Most recently used (MRU) files monitoring</code>, <code>project's root finder</code>, <code>open multiple files at once</code>, <code>create new files and directories</code>. As the name says: it is mapped to <code>ctrlp</code>.
+For the whole usage manual check out the repository link to GitHub.</p>
+
+<h3>Align</h3>
+
+<p><a href="https://github.com/vim-scripts/Align">Align on GitHub</a>
+Align and AlignMaps lets you align statements on their equal signs, make comment boxes, align comments, align declarations, etc.
+There are often situation in your daily life in which you want to align, for example, some variable declarations with the <code>=</code>.
+For this problem the shortcut <code>Shift + F10</code> is mapped to solve it. Thus, you can select these declarations in visual mode and press the shortcut - and this plugin will align your code.</p>
+
+<h3>a.vim</h3>
+
+<p><a href="https://github.com/vim-scripts/a.vim">a.vim on GitHub</a>
+<code>a.vim</code> provides some commands to switch between the source code and header files of C and C++ projects. The <code>F2</code> key is mapped to make this work.
+There are also some more variants to switch between these two files, like <code>:AS - to splits and switches</code>, <code>:AV - to split vertical and switches</code>, <code>:AT</code> - creates a new tab and switches. There are many more - check out the link above for more details.</p>
+
+<h3>errormarker.vim</h3>
+
+<p><a href="https://github.com/vim-scripts/errormarker.vim">errormarker.vim on GitHub</a>
+Hooks the make quickfix command and converts all compiler errors into signs that are placed next to the line with the error. Additionally, lines with errors are highlighted.
+The <code>make</code> command is mapped to <code>F5</code> and to jump to the next error simply press <code>Shift + F5</code> or <code>F10</code>.</p>
+
+<h3>TaskList.vim</h3>
+
+<p><a href="https://github.com/vim-scripts/TaskList.vim">TaskList.vim on GitHub</a>
+TaskList.vim is a very useful plugin. It searches for strings like "FIXME" and "TODO" and shows the found lines in a seperate buffer.
+You can move over this list and jump to the correspondent line in the source file.</p>
+
+<h3>python.vim</h3>
+
+<p><a href="https://github.com/gg/python.vim">python.vim on GitHub</a>
+This plugin provieds better code indentation for python source files.</p>
+
+<h3>Conque Shell</h3>
+
+<p><a href="https://github.com/alejandrogomez/Conque-Shell">Conque Shell on Github</a>
+With this plugin you can run interactive programs in a vim buffer - for instance a shell or ipython..</p>
+
+<h2>Colorschemes</h2>
+
+<h3>solarized</h3>
+
+<p><a href="http://github.com/altercation/vim-colors-solarized">solarized on GitHub</a></p>
+
+<p><strong>Screenshot:</strong><br><img src="https://github.com/altercation/solarized/raw/master/img/solarized-vim.png" alt="solarized dark"></p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/timofurrer">timofurrer</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
