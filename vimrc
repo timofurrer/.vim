@@ -74,6 +74,9 @@ Bundle 'gg/python.vim'
 " colorscheme solarized
 Bundle 'altercation/vim-colors-solarized'
 
+" Conque Shell
+Bundle 'alejandrogomez/Conque-Shell'
+
 
 " --------------------------
 " ---- General settings ----
@@ -301,6 +304,10 @@ imap <S-F10>   <ESC>:Align =<CR>
 " shortcut to auto indent entire file
 map  <F11>     1G=G''
 imap <F11>     <ESC>1G=Ga''
+
+" Conque Shell horizontal split -> start bash
+map  <S-F12>   :ConqueTermSplit bash<CR>
+imap <S-F12>   <ESC>:ConqueTermSplit bash<CR>
 
 " window changing
 map  <a-left>       :bp<CR>
