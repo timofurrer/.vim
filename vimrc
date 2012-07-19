@@ -110,7 +110,7 @@ set smartindent
 " folding
 set nofoldenable
 
-" set c1ipboard to x-windows selection
+" set clipboard to x-windows selection
 set clipboard=unnamed
 
 " turn on incremental search with ignore case (except explicit caps) and
