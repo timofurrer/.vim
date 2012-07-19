@@ -66,6 +66,7 @@ For more details see [the next section](https://github.com/timofurrer/.vim#each-
 | errormarker.vim | mark compiler errors with signs and highlighted lines |
 | TaskList.vim | provide a tag-based tasklist |
 | python.vim | indentation for python source code files |
+| Conque Shell | Run interactive commands inside a Vim buffer |
 
 There are some color schemes included as well:
 
@@ -80,7 +81,7 @@ There are some color schemes included as well:
 | `Shift + F2` | clear search highlighting |
 | `F3` | toggle the nerd tree `(see plugin nerdtree)` |
 | `F4` | toggle the taglist `(see plugin taglist)` |
-| `F5` | save current file and execute `make` |
+| `F5` | depends on the filetype: if c or cpp execute make, if python start open file and if shell script start script in the shell you are using |
 | `Shift + F5` | show the error at the current cursor position `(see plugin errormarker.vim)` |
 | `F6` | make file executable and insert shebang `(see plugin Shebang)` |
 | `F7` | insert doxygen comment skeleton `(see plugin DoxygenToolkit.vim)` |
@@ -90,6 +91,8 @@ There are some color schemes included as well:
 | `F10` | jump to next error of make `(see vim command :cn)` |
 | `Shift + F10` | align selected lines by the `=` `(see plugin Align)` |
 | `F11` | indent entiry source file |
+| `Shift + F11` | start ipython in horizontal conque shell |
+| `Shift + F12` | start bash in horizontal conque shell |
 | `Alt+Left-Arrow` / `Alt+Right-Arrow` | show previous/next buffer `(see vim commands :bp and :bn)` |
 | `Ctrl+Space` | show completion buffer |
 
@@ -240,6 +243,10 @@ You can move over this list and jump to the correspondent line in the source fil
 ### python.vim
 [python.vim on GitHub](https://github.com/gg/python.vim)
 This plugin provieds better code indentation for python source files.
+
+### Conque Shell
+[Conque Shell on Github](https://github.com/alejandrogomez/Conque-Shell)
+With this plugin you can run interactive programs in a vim buffer - for instance a shell or ipython..
 
 ## Colorschemes
 

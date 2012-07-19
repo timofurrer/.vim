@@ -71,11 +71,11 @@ Bundle 'TaskList.vim'
 " python indenting - http://www.vim.org/scripts/script.php?script_id=974
 Bundle 'gg/python.vim'
 
-" colorscheme solarized
-Bundle 'altercation/vim-colors-solarized'
-
 " Conque Shell
 Bundle 'alejandrogomez/Conque-Shell'
+
+" colorscheme solarized
+Bundle 'altercation/vim-colors-solarized'
 
 
 " --------------------------
