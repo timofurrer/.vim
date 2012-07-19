@@ -220,6 +220,21 @@ if has("autocmd")
 
   " Delete .netrwhist ( netrw history file ) after leaving vim
   autocmd VimLeave * if filereadable(".netrwhist") | call delete(".netrwhist") | endif
+
+  " --------
+  "  map F5
+  " --------
+
+  " if FileType is c or cpp then execute make
+  autocmd FileType c,cpp  map  <F5> :w<CR>:make<CR>
+  autocmd FileType c,cpp  imap <F5> <ESC>:w<CR>:make<CR>
+
+  " if FileType is python then start python
+  autocmd FileType python map  <F5> :w<CR>:!python "%"<CR>
+  autocmd FileType python imap <F5> <ESC>:w<CR>:!python "%"<CR>
+
+  autocmd FileType sh     map  <F5> :w<CR>:!$SHELL "%"<CR>
+  autocmd FileType sh     imap <F5> <ESC>:w<CR>:!$SHELL "%"<CR>
 endif
 
 
@@ -249,9 +264,7 @@ imap <F3>      <ESC>:NERDTreeToggle<CR>
 map  <F4>      :TlistToggle<CR><C-W><a-right>
 imap <F4>      <ESC>:TlistOpen<CR><C-W><a-right>
 
-" make
-map  <F5>      :w<CR>:make<CR>
-imap <F5>      <ESC>:w<CR>:make<CR>
+" Attention: F5 is already mapped in autocmd section
 
 " errormarker
 map  <S-F5>    :ErrorAtCursor<CR>
