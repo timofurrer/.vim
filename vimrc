@@ -305,6 +305,10 @@ imap <S-F10>   <ESC>:Align =<CR>
 map  <F11>     1G=G''
 imap <F11>     <ESC>1G=Ga''
 
+" Conque shell horizontal split -> start ipython
+map  <S-F11>   :ConqueTermSplit ipython<CR>
+imap <S-F11>   <ESC>:ConqueTermSplit ipython<CR>
+
 " Conque Shell horizontal split -> start bash
 map  <S-F12>   :ConqueTermSplit bash<CR>
 imap <S-F12>   <ESC>:ConqueTermSplit bash<CR>
