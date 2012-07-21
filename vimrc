@@ -267,7 +267,7 @@ imap <F3>      <ESC>:NERDTreeToggle<CR>
 map  <F4>      :TlistToggle<CR><C-W><a-right>
 imap <F4>      <ESC>:TlistOpen<CR><C-W><a-right>
 
-" Attention: F5 is already mapped in autocmd section
+" Note: F5 is already mapped in autocmd section
 
 " errormarker
 map  <S-F5>    :ErrorAtCursor<CR>
