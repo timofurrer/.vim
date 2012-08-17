@@ -74,6 +74,9 @@ Bundle 'gg/python.vim'
 " Conque Shell
 Bundle 'alejandrogomez/Conque-Shell'
 
+" eregex.vim
+Bundle 'othree/eregex.vim'
+
 " colorscheme solarized
 Bundle 'altercation/vim-colors-solarized'
 
