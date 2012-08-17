@@ -67,6 +67,7 @@ For more details see [the next section](https://github.com/timofurrer/.vim#each-
 | TaskList.vim | provide a tag-based tasklist |
 | python.vim | indentation for python source code files |
 | Conque Shell | Run interactive commands inside a Vim buffer |
+| eregex.vim | provide search and replace functions to use perl regex instead of the vim's |
 
 There are some color schemes included as well:
 
@@ -247,6 +248,11 @@ This plugin provieds better code indentation for python source files.
 ### Conque Shell
 [Conque Shell on Github](https://github.com/alejandrogomez/Conque-Shell)
 With this plugin you can run interactive programs in a vim buffer - for instance a shell or ipython..
+
+### eregex.vim
+[eregex.vim on GitHub](https://github.com/othree/eregex.vim)
+This plugin provides some search and replace functions which uses the perl and not the internal vim-script regex-syntax.
+For example you can do a search and replace with `:%S//` and using the perl syntax instead of the vim-script-sytax variant with `:%s//'..
 
 ## Colorschemes
 
