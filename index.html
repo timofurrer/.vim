@@ -34,7 +34,9 @@
 <p>The perfect vim configuration</p>
 </blockquote>
 
-<hr><h2>How to use?</h2>
+<hr><p><strong>Homepage:</strong> <a href="http://timofurrer.github.com/.vim/">the perfect vim configuration</a></p>
+
+<h2>How to use?</h2>
 
 <p>First you have to install the <code>exuberant-ctags</code>. It's needed in some plugins which we'll install later.
 When you have done this you have to clone this repository with the following command:</p>
@@ -66,17 +68,14 @@ Thus, open vim and run <code>:BundleInstall</code> in command mode.</p>
 
 <h3>Copy &amp; Paste Installation</h3>
 
-<div class="highlight">
-<pre>mv ~/.vim ~/.vim.old
+<div class="highlight"><pre>mv ~/.vim ~/.vim.old
 mv ~/.vimrc ~/.vimrc.old
 git clone git://github.com/timofurrer/.vim.git ~/.vim
 <span class="nb">cd</span> ~/.vim
 git submodule init
 git submodule update
 ln -s ~/.vim/vimrc ~/.vimrc
-</pre>
-</div>
-
+</pre></div>
 
 <h2>Which plugins will be installed?</h2>
 
@@ -158,6 +157,10 @@ ln -s ~/.vim/vimrc ~/.vimrc
 <tr>
 <td align="left">Conque Shell</td>
 <td align="left">Run interactive commands inside a Vim buffer</td>
+</tr>
+<tr>
+<td align="left">eregex.vim</td>
+<td align="left">provide search and replace functions to use perl regex instead of the vim's</td>
 </tr>
 </table><p>There are some color schemes included as well:</p>
 
@@ -270,8 +273,7 @@ ln -s ~/.vim/vimrc ~/.vimrc
 Note: The plugins must be available in a git repository.
 Specify your plugins like this in your <code>vimrc</code>:</p>
 
-<div class="highlight">
-<pre><span class="c">" plugin from the vim-scripts GitHub account</span>
+<div class="highlight"><pre><span class="c">" plugin from the vim-scripts GitHub account</span>
 Bundle <span class="s1">'xmledit'</span>
 Bundle <span class="s1">'a.vim'</span>
 
@@ -281,31 +283,22 @@ Bundle <span class="s1">'scrooloose/nerdcommenter'</span>
 
 <span class="c">" plugin from another git server</span>
 Bundle <span class="s1">'git://git.wincent.com/command-t.git'</span>
-</pre>
-</div>
-
+</pre></div>
 
 <p>After you have specified the plugins you want, open an empty vim instance and call ...</p>
 
-<div class="highlight">
-<pre><span class="p">:</span>BundleInstall
-</pre>
-</div>
-
+<div class="highlight"><pre><span class="p">:</span>BundleInstall
+</pre></div>
 
 <p>... to install the plugins in your vimrc. The plugins will be loaded automatically during each startup.
 You are be able to update all the plugins as well with the following command:</p>
 
-<div class="highlight">
-<pre><span class="p">:</span>BundleInstall<span class="p">!</span>
-</pre>
-</div>
-
+<div class="highlight"><pre><span class="p">:</span>BundleInstall<span class="p">!</span>
+</pre></div>
 
 <p>Some more useful commands which are provided:</p>
 
-<div class="highlight">
-<pre><span class="c">" List all configured bundles</span>
+<div class="highlight"><pre><span class="c">" List all configured bundles</span>
 <span class="p">:</span>BundleList
 
 <span class="c">" search (or refresh cache first) for a plugin (for example for plugin 'foo')</span>
@@ -313,9 +306,7 @@ You are be able to update all the plugins as well with the following command:</p
 
 <span class="c">" confirm (or auto-approve) removal of unused bundles</span>
 <span class="p">:</span>BundleClean<span class="p">(!)</span>
-</pre>
-</div>
-
+</pre></div>
 
 <h3>vim-fugitive</h3>
 
@@ -438,13 +429,20 @@ This plugin provieds better code indentation for python source files.</p>
 <p><a href="https://github.com/alejandrogomez/Conque-Shell">Conque Shell on Github</a>
 With this plugin you can run interactive programs in a vim buffer - for instance a shell or ipython..</p>
 
+<h3>eregex.vim</h3>
+
+<p><a href="https://github.com/othree/eregex.vim">eregex.vim on GitHub</a>
+This plugin provides some search and replace functions which uses the perl and not the internal vim-script regex-syntax.
+For example you can do a search and replace with <code>:%S//</code> and using the perl syntax instead of the vim-script-sytax variant with `:%s//'..</p>
+
 <h2>Colorschemes</h2>
 
 <h3>solarized</h3>
 
 <p><a href="http://github.com/altercation/vim-colors-solarized">solarized on GitHub</a></p>
 
-<p><strong>Screenshot:</strong><br><img src="https://github.com/altercation/solarized/raw/master/img/solarized-vim.png" alt="solarized dark"></p>
+<p><strong>Screenshot:</strong><br>othree/eregex.vim
+<img src="https://github.com/altercation/solarized/raw/master/img/solarized-vim.png" alt="solarized dark"></p>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/timofurrer">timofurrer</a></p>
