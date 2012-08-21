@@ -7,7 +7,7 @@
 
 ## How to use?
 
-First you have to install the `exuberant-ctags`. It's needed in some plugins which we'll install later.
+First you have to install the `exuberant-ctags` and `pandoc`. They're needed in some plugins which we'll install later.
 When you have done this you have to clone this repository with the following command:
 
     git clone git://github.com/timofurrer/.vim.git ~/.vim
@@ -68,6 +68,7 @@ For more details see [the next section](https://github.com/timofurrer/.vim#each-
 | python.vim | indentation for python source code files |
 | Conque Shell | Run interactive commands inside a Vim buffer |
 | eregex.vim | provide search and replace functions to use perl regex instead of the vim's |
+| vim-pandoc | syntax highlighting for pandoc's extended markdown language; converts markdown to PDF |
 
 There are some color schemes included as well:
 
@@ -253,6 +254,11 @@ With this plugin you can run interactive programs in a vim buffer - for instance
 [eregex.vim on GitHub](https://github.com/othree/eregex.vim)
 This plugin provides some search and replace functions which uses the perl and not the internal vim-script regex-syntax.
 For example you can do a search and replace with `:%S//` and using the perl syntax instead of the vim-script-sytax variant with `:%s//'..
+
+### vim-pandoc
+[vim-pandoc on GitHub](https://github.com/vim-pandoc/vim-pandoc)
+With these plugin you have syntax highlighting for the pandoc extended markdown language.
+But the reason why I have included this to my vim repository is, that it can convert markdown to PDF files which can be very useful if you want a local documentation of your project which was originally written in markdown.
 
 ## Colorschemes
 

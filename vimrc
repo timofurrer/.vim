@@ -77,6 +77,9 @@ Bundle 'alejandrogomez/Conque-Shell'
 " eregex.vim
 Bundle 'othree/eregex.vim'
 
+" vim-pandoc
+Bundle 'vim-pandoc/vim-pandoc'
+
 " colorscheme solarized
 Bundle 'altercation/vim-colors-solarized'
 
