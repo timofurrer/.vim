@@ -69,6 +69,7 @@ For more details see [the next section](https://github.com/timofurrer/.vim#each-
 | Conque Shell | Run interactive commands inside a Vim buffer |
 | eregex.vim | provide search and replace functions to use perl regex instead of the vim's |
 | vim-pandoc | syntax highlighting for pandoc's extended markdown language; converts markdown to PDF |
+| sudoku.vim | plugin to solve sudoku files |
 
 There are some color schemes included as well:
 
@@ -259,6 +260,10 @@ For example you can do a search and replace with `:%S//` and using the perl synt
 [vim-pandoc on GitHub](https://github.com/vim-pandoc/vim-pandoc)
 With these plugin you have syntax highlighting for the pandoc extended markdown language.
 But the reason why I have included this to my vim repository is, that it can convert markdown to PDF files which can be very useful if you want a local documentation of your project which was originally written in markdown.
+
+### sudoku.vim
+[sudoku.vim on GitHub](https://github.com/timofurrer/sudoku.vim)
+These plugin maps Shift + F6 for sudoku files (files with extenstion `.sdk` or `.sudoku`) to solve them.
 
 ## Colorschemes
 

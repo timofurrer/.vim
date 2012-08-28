@@ -83,6 +83,9 @@ Bundle 'vim-pandoc/vim-pandoc'
 " colorscheme solarized
 Bundle 'altercation/vim-colors-solarized'
 
+" sudoku.vim
+Bundle 'timofurrer/sudoku.vim'
+
 
 " --------------------------
 " ---- General settings ----
