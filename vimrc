@@ -79,6 +79,9 @@ Bundle 'othree/eregex.vim'
 
 " vim-pandoc
 Bundle 'vim-pandoc/vim-pandoc'
+"
+" vim-less
+Bundle 'groenewege/vim-less'
 
 " colorscheme solarized
 Bundle 'altercation/vim-colors-solarized'
@@ -265,8 +268,8 @@ map  <F2>      :A<CR>
 imap <F2>      <ESC>:A<CR>
 
 " clear search pattern
-map  <S-F2>     :let @/ = ""<CR>
-imap <S-F2>     <ESC>:let @/ = ""<CR>
+map  <S-F2>     :nohlsearch<CR>
+imap <S-F2>     <ESC>:nohlsearch<CR>
 
 " nerdtree
 map  <F3>      :NERDTreeToggle<CR>
