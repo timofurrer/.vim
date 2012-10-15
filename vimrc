@@ -214,6 +214,7 @@ highlight PmenuThumb                  ctermfg=0         ctermbg=7
 if has("autocmd")
   " set filetypes
   autocmd BufNewFile,BufRead *.gv set filetype=dot
+  autocmd BufNewFile,BufRead *.feature set filetype=feature
 
   " open files at the last opened position
   autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -248,8 +249,13 @@ if has("autocmd")
   autocmd FileType python map  <F5> :w<CR>:!python "%"<CR>
   autocmd FileType python imap <F5> <ESC>:w<CR>:!python "%"<CR>
 
+  " if FileType is shell script then start shell script
   autocmd FileType sh     map  <F5> :w<CR>:!$SHELL "%"<CR>
   autocmd FileType sh     imap <F5> <ESC>:w<CR>:!$SHELL "%"<CR>
+
+  " if FileType is feature then start radish
+  autocmd FileType feature map  <F5> :w<CR>:make radish_dry_run FILES="%"<CR>
+  autocmd FileType feature imap <F5> <ESC>:w<CR>:make radish_dry_run FILES="%s"<CR>
 endif
 
 
