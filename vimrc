@@ -214,7 +214,7 @@ highlight PmenuThumb                  ctermfg=0         ctermbg=7
 if has("autocmd")
   " set filetypes
   autocmd BufNewFile,BufRead *.gv set filetype=dot
-  autocmd BufNewFile,BufRead *.feature set filetype=feature
+  autocmd BufNewFile,BufRead *.feature set filetype=cucumber
 
   " open files at the last opened position
   autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -254,8 +254,8 @@ if has("autocmd")
   autocmd FileType sh     imap <F5> <ESC>:w<CR>:!$SHELL "%"<CR>
 
   " if FileType is feature then start radish
-  autocmd FileType feature map  <F5> :w<CR>:make radish_dry_run FILES="%"<CR>
-  autocmd FileType feature imap <F5> <ESC>:w<CR>:make radish_dry_run FILES="%s"<CR>
+  autocmd FileType cucumber map  <F5> :w<CR>:make radish_dry_run FILES="%"<CR>
+  autocmd FileType cucumber imap <F5> <ESC>:w<CR>:make radish_dry_run FILES="%s"<CR>
 endif
 
 
