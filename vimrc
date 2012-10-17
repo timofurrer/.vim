@@ -258,7 +258,7 @@ endif
 
 function! SetRadishAsMP()
   let l:basedir=system('find -name radish -type d')
-  execute "set mp=radish\\ -d\\ %\\ -b\\ ".l:basedir
+  execute "setl mp=radish\\ -d\\ %\\ -b\\ ".l:basedir
 endfunction
 
 
