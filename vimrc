@@ -269,9 +269,10 @@ nnoremap <leader>2 2
 nnoremap <leader>3 3
 nnoremap <leader>4 4
 
-" a.vim
-map  <F2>      :A<CR>
-imap <F2>      <ESC>:A<CR>
+" ctrlp.vim :CtrlPBuffer - show all open buffers
+map  <F2>       :CtrlPBuffer<CR>
+map  <leader>b  :CtrlPBuffer<CR>
+imap <F2>       <ESC>:CtrlPBuffer<CR>
 
 " clear search pattern
 map  <S-F2>     :nohlsearch<CR>
@@ -291,9 +292,13 @@ imap <F4>      <ESC>:TlistOpen<CR><C-W><a-right>
 map  <S-F5>    :ErrorAtCursor<CR>
 imap <S-F5>    <ESC>:ErrorAtCursor<CR>
 
+" a.vim
+map  <F6>      :A<CR>
+imap <F6>      <ESC>:A<CR>
+
 " Shebang
-map  <F6>      :call SetExecutable()<CR>
-imap <F6>      <ESC>:call SetExecutable()<CR>
+map  <S-F6>    :call SetExecutable()<CR>
+imap <S-F6>    <ESC>:call SetExecutable()<CR>
 
 " Doxygen
 map  <F7>      :Dox<CR>

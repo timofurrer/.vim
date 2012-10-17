@@ -80,13 +80,14 @@ There are some color schemes included as well:
 ## Key mappings
 | shortcut | description |
 |:--|:--|
-| `F2` | change between source and header file in C, C++, etc. `(see plugin a.vim)` |
+| `F2` | show open buffers with ctrlp |
 | `Shift + F2` | clear search highlighting |
 | `F3` | toggle the nerd tree `(see plugin nerdtree)` |
 | `F4` | toggle the taglist `(see plugin taglist)` |
 | `F5` | depends on the filetype: if c or cpp execute make, if python start open file and if shell script start script in the shell you are using |
 | `Shift + F5` | show the error at the current cursor position `(see plugin errormarker.vim)` |
-| `F6` | make file executable and insert shebang `(see plugin Shebang)` |
+| `F6` | change between source and header file in C, C++, etc. `(see plugin a.vim)` |
+| `Shift + F6` | make file executable and insert shebang `(see plugin Shebang)` |
 | `F7` | insert doxygen comment skeleton `(see plugin DoxygenToolkit.vim)` |
 | `F8` | generate exuberant-ctags |
 | `Shift + F8` | update taglist `(see plugin taglist)` |
