@@ -242,8 +242,8 @@ if has("autocmd")
   " --------
 
   " if FileType is c or cpp then execute make
-  autocmd FileType c,cpp  map  <F5> :w<CR>:make<CR>
-  autocmd FileType c,cpp  imap <F5> <ESC>:w<CR>:make<CR>
+  autocmd FileType c,cpp,cucumber  map  <F5> :w<CR>:make<CR>
+  autocmd FileType c,cpp,cucumber  imap <F5> <ESC>:w<CR>:make<CR>
 
   " if FileType is python then start python
   autocmd FileType python map  <F5> :w<CR>:!python "%"<CR>
@@ -253,10 +253,13 @@ if has("autocmd")
   autocmd FileType sh     map  <F5> :w<CR>:!$SHELL "%"<CR>
   autocmd FileType sh     imap <F5> <ESC>:w<CR>:!$SHELL "%"<CR>
 
-  " if FileType is feature then start radish
-  autocmd FileType cucumber map  <F5> :w<CR>:make radish_dry_run FILES="%"<CR>
-  autocmd FileType cucumber imap <F5> <ESC>:w<CR>:make radish_dry_run FILES="%s"<CR>
+  autocmd FileType cucumber :call SetRadishAsMP()
 endif
+
+function! SetRadishAsMP()
+  let l:basedir=system('find -name radish -type d')
+  execute "set mp=radish\\ -d\\ %\\ -b\\ ".l:basedir
+endfunction
 
 
 " ------------------
