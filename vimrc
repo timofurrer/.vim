@@ -374,6 +374,9 @@ let g:localvimrc_ask = 0
 " ignore some directories and files in ctrlp plugin
 let g:ctrlp_custom_ignore = '\.git/*'
 
+" open files in new hidden buffer in ctrlp plugin
+let g:ctrlp_open_multiple_files = 'ijr'
+
 " errormarker settings
 let errormarker_errorgroup   = "ErrorMsg"
 let errormarker_warninggroup = "Todo"
