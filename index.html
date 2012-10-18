@@ -38,8 +38,13 @@
 
 <h2>How to use?</h2>
 
-<p>First you have to install the <code>exuberant-ctags</code>. It's needed in some plugins which we'll install later.
-When you have done this you have to clone this repository with the following command:</p>
+<p>First you have to install the <code>exuberant-ctags</code>, <code>cscope</code>, <code>pyflakes</code>, <code>flake8</code> and <code>pandoc</code>. They're needed in some plugins which we'll install later.</p>
+
+<pre><code>sudo apt-get install exuberant-ctags cscope pyflakes pandoc
+sudo pip install flake8
+</code></pre>
+
+<p>When you have done this you have to clone this repository with the following command:</p>
 
 <pre><code>git clone git://github.com/timofurrer/.vim.git ~/.vim
 </code></pre>
@@ -162,6 +167,26 @@ ln -s ~/.vim/vimrc ~/.vimrc
 <td align="left">eregex.vim</td>
 <td align="left">provide search and replace functions to use perl regex instead of the vim's</td>
 </tr>
+<tr>
+<td align="left">vim-pandoc</td>
+<td align="left">syntax highlighting for pandoc's extended markdown language; converts markdown to PDF</td>
+</tr>
+<tr>
+<td align="left">sudoku.vim</td>
+<td align="left">plugin to solve sudoku files</td>
+</tr>
+<tr>
+<td align="left">cscope.vim</td>
+<td align="left">create cscope database and connect to existing proper database automatically</td>
+</tr>
+<tr>
+<td align="left">SearchComplete</td>
+<td align="left">Tab completion of words inside of a search ('/')</td>
+</tr>
+<tr>
+<td align="left">vim-flake8</td>
+<td align="left">plugin that runs the currently open file through Flake8, a static syntax and style checker for Python source code. It supersedes both vim-pyflakes and vim-pep8.</td>
+</tr>
 </table><p>There are some color schemes included as well:</p>
 
 <table>
@@ -180,8 +205,7 @@ ln -s ~/.vim/vimrc ~/.vimrc
 </tr>
 <tr>
 <td align="left"><code>F2</code></td>
-<td align="left">change between source and header file in C, C++, etc. <code>(see plugin a.vim)</code>
-</td>
+<td align="left">show open buffers with ctrlp</td>
 </tr>
 <tr>
 <td align="left"><code>Shift + F2</code></td>
@@ -208,6 +232,11 @@ ln -s ~/.vim/vimrc ~/.vimrc
 </tr>
 <tr>
 <td align="left"><code>F6</code></td>
+<td align="left">change between source and header file in C, C++, etc. <code>(see plugin a.vim)</code>
+</td>
+</tr>
+<tr>
+<td align="left"><code>Shift + F6</code></td>
 <td align="left">make file executable and insert shebang <code>(see plugin Shebang)</code>
 </td>
 </tr>
@@ -215,6 +244,10 @@ ln -s ~/.vim/vimrc ~/.vimrc
 <td align="left"><code>F7</code></td>
 <td align="left">insert doxygen comment skeleton <code>(see plugin DoxygenToolkit.vim)</code>
 </td>
+</tr>
+<tr>
+<td align="left"><code>Shift + F7</code></td>
+<td align="left">run flake8</td>
 </tr>
 <tr>
 <td align="left"><code>F8</code></td>
@@ -435,14 +468,24 @@ With this plugin you can run interactive programs in a vim buffer - for instance
 This plugin provides some search and replace functions which uses the perl and not the internal vim-script regex-syntax.
 For example you can do a search and replace with <code>:%S//</code> and using the perl syntax instead of the vim-script-sytax variant with `:%s//'..</p>
 
+<h3>vim-pandoc</h3>
+
+<p><a href="https://github.com/vim-pandoc/vim-pandoc">vim-pandoc on GitHub</a>
+With these plugin you have syntax highlighting for the pandoc extended markdown language.
+But the reason why I have included this to my vim repository is, that it can convert markdown to PDF files which can be very useful if you want a local documentation of your project which was originally written in markdown.</p>
+
+<h3>sudoku.vim</h3>
+
+<p><a href="https://github.com/timofurrer/sudoku.vim">sudoku.vim on GitHub</a>
+These plugin maps Shift + F6 for sudoku files (files with extenstion <code>.sdk</code> or <code>.sudoku</code>) to solve them.</p>
+
 <h2>Colorschemes</h2>
 
 <h3>solarized</h3>
 
 <p><a href="http://github.com/altercation/vim-colors-solarized">solarized on GitHub</a></p>
 
-<p><strong>Screenshot:</strong><br>othree/eregex.vim
-<img src="https://github.com/altercation/solarized/raw/master/img/solarized-vim.png" alt="solarized dark"></p>
+<p><strong>Screenshot:</strong><br><img src="https://github.com/altercation/solarized/raw/master/img/solarized-vim.png" alt="solarized dark"></p>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/timofurrer">timofurrer</a></p>
