@@ -134,6 +134,9 @@ set nofoldenable
 " set clipboard to x-windows selection
 set clipboard=unnamed
 
+" set fileformat to unix
+set fileformat=unix
+
 " turn on incremental search with ignore case (except explicit caps) and
 " highlighting
 set hlsearch
