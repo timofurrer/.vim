@@ -70,7 +70,8 @@ For more details see [the next section](https://github.com/timofurrer/.vim#each-
 | eregex.vim | provide search and replace functions to use perl regex instead of the vim's |
 | vim-pandoc | syntax highlighting for pandoc's extended markdown language; converts markdown to PDF |
 | sudoku.vim | plugin to solve sudoku files |
-| brookhong/cscope.vim | create cscope database and connect to existing proper database automatically |
+| cscope.vim | create cscope database and connect to existing proper database automatically |
+| SearchComplete | Tab completion of words inside of a search ('/') |
 
 There are some color schemes included as well:
 

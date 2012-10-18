@@ -92,6 +92,9 @@ Bundle 'timofurrer/sudoku.vim'
 " cscope.vim
 Bundle 'brookhong/cscope.vim'
 
+" SearchComplete
+Bundle 'SearchComplete'
+
 
 " --------------------------
 " ---- General settings ----
