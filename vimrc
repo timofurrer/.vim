@@ -89,6 +89,9 @@ Bundle 'altercation/vim-colors-solarized'
 " sudoku.vim
 Bundle 'timofurrer/sudoku.vim'
 
+" cscope.vim
+Bundle 'brookhong/cscope.vim'
+
 
 " --------------------------
 " ---- General settings ----

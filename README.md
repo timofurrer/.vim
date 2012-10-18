@@ -7,7 +7,7 @@
 
 ## How to use?
 
-First you have to install the `exuberant-ctags` and `pandoc`. They're needed in some plugins which we'll install later.
+First you have to install the `exuberant-ctags`, `cscope` and `pandoc`. They're needed in some plugins which we'll install later.
 When you have done this you have to clone this repository with the following command:
 
     git clone git://github.com/timofurrer/.vim.git ~/.vim
@@ -70,6 +70,7 @@ For more details see [the next section](https://github.com/timofurrer/.vim#each-
 | eregex.vim | provide search and replace functions to use perl regex instead of the vim's |
 | vim-pandoc | syntax highlighting for pandoc's extended markdown language; converts markdown to PDF |
 | sudoku.vim | plugin to solve sudoku files |
+| brookhong/cscope.vim | create cscope database and connect to existing proper database automatically |
 
 There are some color schemes included as well:
 
