@@ -7,7 +7,11 @@
 
 ## How to use?
 
-First you have to install the `exuberant-ctags`, `cscope` and `pandoc`. They're needed in some plugins which we'll install later.
+First you have to install the `exuberant-ctags`, `cscope`, `pyflakes`, `flake8` and `pandoc`. They're needed in some plugins which we'll install later.
+
+    sudo apt-get install exuberant-ctags cscope pyflakes pandoc
+    sudo pip install flake8
+
 When you have done this you have to clone this repository with the following command:
 
     git clone git://github.com/timofurrer/.vim.git ~/.vim
@@ -72,6 +76,7 @@ For more details see [the next section](https://github.com/timofurrer/.vim#each-
 | sudoku.vim | plugin to solve sudoku files |
 | cscope.vim | create cscope database and connect to existing proper database automatically |
 | SearchComplete | Tab completion of words inside of a search ('/') |
+| vim-flake8 | plugin that runs the currently open file through Flake8, a static syntax and style checker for Python source code. It supersedes both vim-pyflakes and vim-pep8. |
 
 There are some color schemes included as well:
 
@@ -91,6 +96,7 @@ There are some color schemes included as well:
 | `F6` | change between source and header file in C, C++, etc. `(see plugin a.vim)` |
 | `Shift + F6` | make file executable and insert shebang `(see plugin Shebang)` |
 | `F7` | insert doxygen comment skeleton `(see plugin DoxygenToolkit.vim)` |
+| `Shift + F7` | run flake8 |
 | `F8` | generate exuberant-ctags |
 | `Shift + F8` | update taglist `(see plugin taglist)` |
 | `F9` | check spelling |

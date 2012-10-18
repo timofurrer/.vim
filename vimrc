@@ -96,6 +96,9 @@ Bundle 'brookhong/cscope.vim'
 Bundle 'SearchComplete'
 
 
+" vim-flake8
+Bundle 'nvie/vim-flake8'
+
 " --------------------------
 " ---- General settings ----
 " --------------------------
@@ -243,8 +246,11 @@ if has("autocmd")
   " Delete .netrwhist ( netrw history file ) after leaving vim
   autocmd VimLeave * if filereadable(".netrwhist") | call delete(".netrwhist") | endif
 
+  " set radish as makeprg
+  autocmd FileType cucumber :call SetRadishAsMP()
+
   " --------
-  "  map F5
+  "  mappings
   " --------
 
   " if FileType is c or cpp then execute make
@@ -252,14 +258,16 @@ if has("autocmd")
   autocmd FileType c,cpp,cucumber  imap <F5> <ESC>:w<CR>:make<CR>
 
   " if FileType is python then start python
-  autocmd FileType python map  <F5> :w<CR>:!python "%"<CR>
-  autocmd FileType python imap <F5> <ESC>:w<CR>:!python "%"<CR>
+  autocmd FileType python          map  <F5> :w<CR>:!python "%"<CR>
+  autocmd FileType python          imap <F5> <ESC>:w<CR>:!python "%"<CR>
+
+  " if fileType is python then map Shift + F7 to vim-flake8
+  autocmd FileType python          map  <S-F7> :call Flake8()<CR>
+  autocmd FileType python          imap <S-F7> <ESC>:call Flake8()<CR>
 
   " if FileType is shell script then start shell script
-  autocmd FileType sh     map  <F5> :w<CR>:!$SHELL "%"<CR>
-  autocmd FileType sh     imap <F5> <ESC>:w<CR>:!$SHELL "%"<CR>
-
-  autocmd FileType cucumber :call SetRadishAsMP()
+  autocmd FileType sh              map  <F5> :w<CR>:!$SHELL "%"<CR>
+  autocmd FileType sh              imap <F5> <ESC>:w<CR>:!$SHELL "%"<CR>
 endif
 
 function! SetRadishAsMP()
@@ -312,6 +320,8 @@ imap <S-F6>    <ESC>:call SetExecutable()<CR>
 " Doxygen
 map  <F7>      :Dox<CR>
 imap <F7>      <ESC>:Dox<CR>
+
+" Note: Shift + F7 is already mapped in autocmd section
 
 " ctags
 map  <F8>      :!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --links=no .<CR>
