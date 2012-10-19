@@ -95,9 +95,11 @@ Bundle 'brookhong/cscope.vim'
 " SearchComplete
 Bundle 'SearchComplete'
 
-
 " vim-flake8
 Bundle 'nvie/vim-flake8'
+
+" vim-visual-increment
+Bundle 'triglav/vim-visual-increment'
 
 " --------------------------
 " ---- General settings ----
@@ -170,8 +172,8 @@ set wildignore+=*.o,*.obj,.git,*.pyc,*.so,*/.git/*
 set laststatus=2 " Always show the statusline
 set statusline=%4*---%1*\ %F%m%r%h%w\ %2*%{fugitive#statusline()}%1*\ %{&ff}\ %Y\ \[0x\%02.2B=\%03.3b]\ [%l,%v\ %p%%\ %Lb]\ %3*\[%F\]%1*
 
-" errorformat for make and errormarker
-let &errorformat="%f:%l:%c: %t%*[^:]:%m,%f:%l: %t%*[^:]:%m," . &errorformat
+" set number formats for Ctrl+A and Ctrl+X
+set nrformats=alpha,octal,hex
 
 " ---------------------
 " ---- Colorscheme ----
@@ -402,6 +404,9 @@ let g:ctrlp_open_multiple_files = 'ijr'
 " errormarker settings
 let errormarker_errorgroup   = "ErrorMsg"
 let errormarker_warninggroup = "Todo"
+
+" errorformat for make and errormarker
+let &errorformat="%f:%l:%c: %t%*[^:]:%m,%f:%l: %t%*[^:]:%m," . &errorformat
 
 " smart home - if you press the home key it will jump to the first nonblank character
 " on the line

@@ -77,6 +77,7 @@ For more details see [the next section](https://github.com/timofurrer/.vim#each-
 | cscope.vim | create cscope database and connect to existing proper database automatically |
 | SearchComplete | Tab completion of words inside of a search ('/') |
 | vim-flake8 | plugin that runs the currently open file through Flake8, a static syntax and style checker for Python source code. It supersedes both vim-pyflakes and vim-pep8. |
+| vim-visual-increment | use CTRL+A/X to create increasing sequence of numbers or letters via visual mode |
 
 There are some color schemes included as well:
 
