@@ -266,9 +266,12 @@ if has("autocmd")
   autocmd FileType python          map  <F5> :w<CR>:!python "%"<CR>
   autocmd FileType python          imap <F5> <ESC>:w<CR>:!python "%"<CR>
 
-  " if fileType is python then map Shift + F7 to vim-flake8
+  " if FileType is python then map Shift + F7 to vim-flake8
   autocmd FileType python          map  <S-F7> :call Flake8()<CR>
   autocmd FileType python          imap <S-F7> <ESC>:call Flake8()<CR>
+
+  " if FileType is python then indent with 4 spaces instead of 2
+  autocmd FileType python          setl tabstop=4 softtabstop=4 shiftwidth=4
 
   " if FileType is shell script then start shell script
   autocmd FileType sh              map  <F5> :w<CR>:!$SHELL "%"<CR>
@@ -407,6 +410,9 @@ let errormarker_warninggroup = "Todo"
 
 " errorformat for make and errormarker
 let &errorformat="%f:%l:%c: %t%*[^:]:%m,%f:%l: %t%*[^:]:%m," . &errorformat
+
+" vim-flake8 max line length for PEP8
+let g:flake8_max_line_length = 150
 
 " smart home - if you press the home key it will jump to the first nonblank character
 " on the line
