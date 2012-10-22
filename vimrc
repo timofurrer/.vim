@@ -11,6 +11,9 @@ filetype off
 " Do you want to use the colorscheme solarized? Thus, set to 1 else to 0
 let use_cs_solarized = 1
 
+" Do you want to use PEP8 for python files?
+let use_pep8 = 0
+
 
 " -----------------
 " ---- Bundles ----
@@ -270,8 +273,13 @@ if has("autocmd")
   autocmd FileType python          map  <S-F7> :call Flake8()<CR>
   autocmd FileType python          imap <S-F7> <ESC>:call Flake8()<CR>
 
-  " if FileType is python then indent with 4 spaces instead of 2
-  autocmd FileType python          setl tabstop=4 softtabstop=4 shiftwidth=4
+  if use_pep8 == 1
+    " if FileType is python then indent with 4 spaces instead of 2
+    autocmd FileType python          setl tabstop=4 softtabstop=4 shiftwidth=4
+
+    " call flake8 after writing a python file
+    autocmd BufWritePost *.py call Flake8()
+  endif
 
   " if FileType is shell script then start shell script
   autocmd FileType sh              map  <F5> :w<CR>:!$SHELL "%"<CR>
