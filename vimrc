@@ -95,9 +95,6 @@ Bundle 'timofurrer/sudoku.vim'
 " cscope.vim
 Bundle 'brookhong/cscope.vim'
 
-" SearchComplete
-Bundle 'SearchComplete'
-
 " vim-flake8
 Bundle 'nvie/vim-flake8'
 
