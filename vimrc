@@ -315,6 +315,11 @@ imap <S-F2>     <ESC>:nohlsearch<CR>
 map  <F3>      :NERDTreeToggle<CR>
 imap <F3>      <ESC>:NERDTreeToggle<CR>
 
+" signatures
+map  <S-F3>    :SignatureToggle<CR>
+map  <leader>m :SignatureToggle<CR>
+imap <S-F3>    <ESC>:SignatureToggle<CR>
+
 " Taglist
 map  <F4>      :TlistToggle<CR><C-W><a-right>
 imap <F4>      <ESC>:TlistOpen<CR><C-W><a-right>
