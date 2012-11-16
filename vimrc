@@ -101,6 +101,9 @@ Bundle 'nvie/vim-flake8'
 " vim-visual-increment
 Bundle 'triglav/vim-visual-increment'
 
+" vim-signature
+Bundle 'kshenoy/vim-signature'
+
 " --------------------------
 " ---- General settings ----
 " --------------------------
