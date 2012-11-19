@@ -7,6 +7,12 @@
 
 ## How to use?
 
+### Easy way
+
+Just download the file [setup script](https://raw.github.com/timofurrer/.vim/master/setup.sh) and execute it.
+
+### Long way
+
 First you have to install the `exuberant-ctags`, `cscope`, `pyflakes`, `flake8` and `pandoc`. They're needed in some plugins which we'll install later.
 
     sudo apt-get install exuberant-ctags cscope pyflakes pandoc
