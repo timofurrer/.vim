@@ -38,6 +38,12 @@
 
 <h2>How to use?</h2>
 
+<h3>Easy way</h3>
+
+<p>Just download the file <a href="https://raw.github.com/timofurrer/.vim/master/setup.sh">setup script</a> and execute it.</p>
+
+<h3>Long way</h3>
+
 <p>First you have to install the <code>exuberant-ctags</code>, <code>cscope</code>, <code>pyflakes</code>, <code>flake8</code> and <code>pandoc</code>. They're needed in some plugins which we'll install later.</p>
 
 <pre><code>sudo apt-get install exuberant-ctags cscope pyflakes pandoc
@@ -187,6 +193,18 @@ ln -s ~/.vim/vimrc ~/.vimrc
 <td align="left">vim-flake8</td>
 <td align="left">plugin that runs the currently open file through Flake8, a static syntax and style checker for Python source code. It supersedes both vim-pyflakes and vim-pep8.</td>
 </tr>
+<tr>
+<td align="left">vim-visual-increment</td>
+<td align="left">use CTRL+A/X to create increasing sequence of numbers or letters via visual mode</td>
+</tr>
+<tr>
+<td align="left">vim-signature</td>
+<td align="left">Plugin to toggle, display and navigate marks</td>
+</tr>
+<tr>
+<td align="left">jedi-vim</td>
+<td align="left">awesome Python autocompletion with VIM</td>
+</tr>
 </table><p>There are some color schemes included as well:</p>
 
 <table>
@@ -215,6 +233,10 @@ ln -s ~/.vim/vimrc ~/.vimrc
 <td align="left"><code>F3</code></td>
 <td align="left">toggle the nerd tree <code>(see plugin nerdtree)</code>
 </td>
+</tr>
+<tr>
+<td align="left"><code>Shift + F3</code></td>
+<td align="left">toggle the marks and signs</td>
 </tr>
 <tr>
 <td align="left"><code>F4</code></td>
