@@ -85,6 +85,7 @@ For more details see [the next section](https://github.com/timofurrer/.vim#each-
 | vim-flake8 | plugin that runs the currently open file through Flake8, a static syntax and style checker for Python source code. It supersedes both vim-pyflakes and vim-pep8. |
 | vim-visual-increment | use CTRL+A/X to create increasing sequence of numbers or letters via visual mode |
 | vim-signature | Plugin to toggle, display and navigate marks |
+| jedi-vim | awesome Python autocompletion with VIM |
 
 There are some color schemes included as well:
 

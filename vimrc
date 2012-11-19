@@ -104,6 +104,9 @@ Bundle 'triglav/vim-visual-increment'
 " vim-signature
 Bundle 'kshenoy/vim-signature'
 
+" jedi-vim
+Bundle 'davidhalter/jedi-vim'
+
 " --------------------------
 " ---- General settings ----
 " --------------------------
@@ -427,6 +430,15 @@ let &errorformat="%f:%l:%c: %t%*[^:]:%m,%f:%l: %t%*[^:]:%m," . &errorformat
 
 " vim-flake8 max line length for PEP8
 let g:flake8_max_line_length = 150
+
+" Jedi automatically starts the completion, if you type a dot, e.g. str., if
+" you don't want this, set it to "0"
+let g:jedi#popup_on_dot = 1
+
+
+" -----------------------
+" --- Useful functions --
+" -----------------------
 
 " smart home - if you press the home key it will jump to the first nonblank character
 " on the line
