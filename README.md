@@ -78,6 +78,7 @@ For more details see [the next section](https://github.com/timofurrer/.vim#each-
 | SearchComplete | Tab completion of words inside of a search ('/') |
 | vim-flake8 | plugin that runs the currently open file through Flake8, a static syntax and style checker for Python source code. It supersedes both vim-pyflakes and vim-pep8. |
 | vim-visual-increment | use CTRL+A/X to create increasing sequence of numbers or letters via visual mode |
+| vim-signature | Plugin to toggle, display and navigate marks |
 
 There are some color schemes included as well:
 
@@ -91,6 +92,7 @@ There are some color schemes included as well:
 | `F2` | show open buffers with ctrlp |
 | `Shift + F2` | clear search highlighting |
 | `F3` | toggle the nerd tree `(see plugin nerdtree)` |
+| `Shift + F3` | toggle the marks and signs |
 | `F4` | toggle the taglist `(see plugin taglist)` |
 | `F5` | depends on the filetype: if c or cpp execute make, if python start open file and if shell script start script in the shell you are using |
 | `Shift + F5` | show the error at the current cursor position `(see plugin errormarker.vim)` |
