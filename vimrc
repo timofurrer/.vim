@@ -204,8 +204,6 @@ if use_cs_solarized == 1
 
   " use colorscheme solarized
   colorscheme solarized
-
-  let g:Powerline_colorscheme='tux'
 endif
 
 
@@ -439,6 +437,9 @@ let g:flake8_max_line_length = 150
 " Jedi automatically starts the completion, if you type a dot, e.g. str., if
 " you don't want this, set it to "0"
 let g:jedi#popup_on_dot = 1
+
+" use the tux-colorscheme for powerline
+let g:Powerline_colorscheme='tux'
 
 
 " -----------------------
