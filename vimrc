@@ -26,6 +26,9 @@ call vundle#rc()
 " vundle - required!
 Bundle 'gmarik/vundle'
 
+" vim-powerline
+Bundle 'Lokaltog/vim-powerline'
+
 " vim-fugitive
 Bundle 'tpope/vim-fugitive'
 
@@ -176,7 +179,7 @@ set wildignore+=*.o,*.obj,.git,*.pyc,*.so,*/.git/*
 
 " status line settings
 set laststatus=2 " Always show the statusline
-set statusline=%4*---%1*\ %F%m%r%h%w\ %2*%{fugitive#statusline()}%1*\ %{&ff}\ %Y\ \[0x\%02.2B=\%03.3b]\ [%l,%v\ %p%%\ %Lb]\ %3*\[%F\]%1*
+"set statusline=%4*---%1*\ %F%m%r%h%w\ %2*%{fugitive#statusline()}%1*\ %{&ff}\ %Y\ \[0x\%02.2B=\%03.3b]\ [%l,%v\ %p%%\ %Lb]\ %3*\[%F\]%1*
 
 " set number formats for Ctrl+A and Ctrl+X
 set nrformats=alpha,octal,hex
@@ -215,10 +218,10 @@ highlight DiffChange       cterm=none ctermfg=Black     ctermbg=Yellow  gui=none
 highlight DiffText         cterm=none ctermfg=Black     ctermbg=Magenta gui=none guifg=Black guibg=Magenta
 
 " status line highlighting
-highlight! User1           cterm=bold ctermfg=LightGrey ctermbg=52               guifg=Black guibg=#665555
-highlight! User2           cterm=bold ctermfg=DarkGreen ctermbg=52               guifg=Green guibg=#443333
-highlight! User3           cterm=bold ctermfg=DarkCyan  ctermbg=52               guifg=Cyan  guibg=#443333
-highlight! User4           cterm=bold ctermfg=DarkCyan  ctermbg=52               guifg=Cyan  guibg=#443333
+"highlight! User1           cterm=bold ctermfg=LightGrey ctermbg=52               guifg=Black guibg=#665555
+"highlight! User2           cterm=bold ctermfg=DarkGreen ctermbg=52               guifg=Green guibg=#443333
+"highlight! User3           cterm=bold ctermfg=DarkCyan  ctermbg=52               guifg=Cyan  guibg=#443333
+"highlight! User4           cterm=bold ctermfg=DarkCyan  ctermbg=52               guifg=Cyan  guibg=#443333
 
 " completion highlighting
 highlight Pmenu                       ctermfg=0         ctermbg=2
