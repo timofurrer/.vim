@@ -26,8 +26,14 @@ call vundle#rc()
 " vundle - required!
 Bundle 'gmarik/vundle'
 
+" colorscheme solarized
+Bundle 'altercation/vim-colors-solarized'
+
 " vim-powerline
 Bundle 'Lokaltog/vim-powerline'
+
+" vim-solarized-powerline colortheme
+"Bundle 'stephenmckinney/vim-solarized-powerline'
 
 " vim-fugitive
 Bundle 'tpope/vim-fugitive'
@@ -88,9 +94,6 @@ Bundle 'vim-pandoc/vim-pandoc'
 "
 " vim-less
 Bundle 'groenewege/vim-less'
-
-" colorscheme solarized
-Bundle 'altercation/vim-colors-solarized'
 
 " sudoku.vim
 Bundle 'timofurrer/sudoku.vim'
@@ -204,6 +207,8 @@ if use_cs_solarized == 1
 
   " use colorscheme solarized
   colorscheme solarized
+
+  let g:Powerline_colorscheme='solarized256'
 endif
 
 
