@@ -30,10 +30,7 @@ Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
 
 " vim-powerline
-Bundle 'Lokaltog/vim-powerline'
-
-" vim-solarized-powerline colortheme
-"Bundle 'stephenmckinney/vim-solarized-powerline'
+Bundle 'timofurrer/vim-powerline'
 
 " vim-fugitive
 Bundle 'tpope/vim-fugitive'
@@ -208,7 +205,7 @@ if use_cs_solarized == 1
   " use colorscheme solarized
   colorscheme solarized
 
-  let g:Powerline_colorscheme='solarized256'
+  let g:Powerline_colorscheme='tux'
 endif
 
 
