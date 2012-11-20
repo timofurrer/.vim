@@ -177,6 +177,9 @@ set spelllang=de_ch
 " wildignore
 set wildignore+=*.o,*.obj,.git,*.pyc,*.so,*/.git/*
 
+" Don't show currect mode
+set noshowmode
+
 " status line settings
 set laststatus=2 " Always show the statusline
 "set statusline=%4*---%1*\ %F%m%r%h%w\ %2*%{fugitive#statusline()}%1*\ %{&ff}\ %Y\ \[0x\%02.2B=\%03.3b]\ [%l,%v\ %p%%\ %Lb]\ %3*\[%F\]%1*
