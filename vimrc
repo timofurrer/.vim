@@ -80,9 +80,6 @@ Bundle 'TaskList.vim'
 " python indenting - http://www.vim.org/scripts/script.php?script_id=974
 Bundle 'gg/python.vim'
 
-" Conque Shell
-Bundle 'alejandrogomez/Conque-Shell'
-
 " eregex.vim
 Bundle 'othree/eregex.vim'
 
@@ -91,9 +88,6 @@ Bundle 'vim-pandoc/vim-pandoc'
 "
 " vim-less
 Bundle 'groenewege/vim-less'
-
-" sudoku.vim
-Bundle 'timofurrer/sudoku.vim'
 
 " cscope.vim
 Bundle 'brookhong/cscope.vim'
@@ -107,8 +101,17 @@ Bundle 'triglav/vim-visual-increment'
 " vim-signature
 Bundle 'kshenoy/vim-signature'
 
-" jedi-vim
-Bundle 'davidhalter/jedi-vim'
+" plugins requiring python
+if has("python")
+  " jedi-vim
+  Bundle 'davidhalter/jedi-vim'
+
+  " Conque Shell
+  Bundle 'alejandrogomez/Conque-Shell'
+
+  " sudoku.vim
+  Bundle 'timofurrer/sudoku.vim'
+endif
 
 " --------------------------
 " ---- General settings ----
