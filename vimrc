@@ -9,7 +9,7 @@ set nocompatible
 filetype off
 
 " Do you want to use the colorscheme solarized? Thus, set to 1 else to 0
-let use_cs_solarized = 0
+let use_cs_solarized = 1
 
 " Do you want to use PEP8 for python files?
 let use_pep8 = 0
@@ -396,7 +396,7 @@ imap <a-right> <ESC>:bn<CR>
 
 " remap code completion to Ctrl+Space
 inoremap <Nul> <C-x><C-o>
-inoremap <Tab> <C-R>=SuperCleverTab()<CR>
+inoremap <C-@> <C-R>=SuperCleverTab()<CR>
 
 " smart home function
 nnoremap <silent> <Home> :call SmartHome()<CR>
