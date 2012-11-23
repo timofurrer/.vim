@@ -402,6 +402,9 @@ inoremap <Tab> <C-R>=SuperCleverTab()<CR>
 nnoremap <silent> <Home> :call SmartHome()<CR>
 inoremap <silent> <Home> <C-O>:call SmartHome()<CR>
 
+" map highlighting group under cursor
+map <C-S-H> :call <SID>SynStack()<CR>
+
 
 " -----------------------
 " ---- Plugin config ----
@@ -482,3 +485,11 @@ function! SuperCleverTab()
     endif
   endif
 endfunction
+
+" Show syntax highlighting groups for word under cursor
+function! <SID>SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
