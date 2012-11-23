@@ -178,7 +178,7 @@ set viminfo='1000,\"2000,s2000,h
 set spelllang=de_ch
 
 " wildignore
-set wildignore+=*.o,*.obj,.git,*.pyc,*.so,*/.git/*
+set wildignore+=*.o,*.lo,*.la,*.obj,.git,*.pyc,*.so,*/.git/*
 
 " Don't show currect mode
 set noshowmode
