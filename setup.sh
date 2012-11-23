@@ -8,7 +8,7 @@ function silent( )
 
 echo -n "Installing dependencies..."
 silent sudo apt-get install exuberant-ctags cscope pyflakes pandoc python-pip --yes
-silent sudo pip install flake8
+silent sudo pip install flake8 jedi
 echo -e "\rInstalled dependencies\033[K"
 
 echo -n "Moving configuration files from .vim[rc] to .vim[rc].old..."

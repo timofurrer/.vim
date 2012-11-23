@@ -16,7 +16,7 @@ Just download the file [setup script](https://raw.github.com/timofurrer/.vim/mas
 First you have to install the `exuberant-ctags`, `cscope`, `pyflakes`, `flake8` and `pandoc`. They're needed in some plugins which we'll install later.
 
     sudo apt-get install exuberant-ctags cscope pyflakes pandoc
-    sudo pip install flake8
+    sudo pip install flake8 jedi
 
 When you have done this you have to clone this repository with the following command:
 
