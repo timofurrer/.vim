@@ -101,6 +101,9 @@ Bundle 'triglav/vim-visual-increment'
 " vim-signature
 Bundle 'kshenoy/vim-signature'
 
+" Tetris in vim
+Bundle 'TeTrIs.vim'
+
 " plugins requiring python
 if has("python")
   " jedi-vim
