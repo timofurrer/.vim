@@ -391,6 +391,10 @@ imap <S-F11>   <ESC>:ConqueTermSplit ipython<CR>
 map  <S-F12>   :ConqueTermSplit bash<CR>
 imap <S-F12>   <ESC>:ConqueTermSplit bash<CR>
 
+" toggle paste mode
+map  <S-x>     :set paste!<CR>
+imap <S-x>     <ESC>:set paste!<CR>
+
 " window changing
 map  <a-left>       :bp<CR>
 imap <a-left>  <ESC>:bp<CR>
