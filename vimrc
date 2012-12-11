@@ -9,7 +9,7 @@ set nocompatible
 filetype off
 
 " Do you want to use the colorscheme solarized? Thus, set to 1 else to 0
-let use_cs_solarized = 0
+let use_cs_solarized = 1
 
 " Do you want to use PEP8 for python files?
 let use_pep8 = 0
@@ -393,7 +393,6 @@ imap <S-F12>   <ESC>:ConqueTermSplit bash<CR>
 
 " toggle paste mode
 map  <S-x>     :set paste!<CR>
-imap <S-x>     <ESC>:set paste!<CR>
 
 " window changing
 map  <a-left>       :bp<CR>
