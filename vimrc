@@ -54,7 +54,7 @@ Bundle 'OmniCppComplete'
 Bundle 'taglist.vim'
 
 " xmledit
-Bundle 'xmledit'
+Bundle 'timofurrer/xmledit'
 
 " localvimrc
 Bundle 'localvimrc'
