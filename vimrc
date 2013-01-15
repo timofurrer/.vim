@@ -104,6 +104,9 @@ Bundle 'kshenoy/vim-signature'
 " Tetris in vim
 Bundle 'TeTrIs.vim'
 
+" show completion popup when typing
+Bundle 'AutoComplPop'
+
 " plugins requiring python
 if has("python")
   " jedi-vim
@@ -402,7 +405,7 @@ imap <a-right> <ESC>:bn<CR>
 
 " remap code completion to Ctrl+Space
 inoremap <Nul> <C-x><C-o>
-inoremap <C-@> <C-R>=SuperCleverTab()<CR>
+"inoremap <C-@> <C-R>=SuperCleverTab()<CR>
 
 " smart home function
 nnoremap <silent> <Home> :call SmartHome()<CR>
