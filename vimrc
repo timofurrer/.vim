@@ -80,9 +80,6 @@ Bundle 'TaskList.vim'
 " python indenting - http://www.vim.org/scripts/script.php?script_id=974
 Bundle 'gg/python.vim'
 
-" eregex.vim
-Bundle 'othree/eregex.vim'
-
 " vim-pandoc
 Bundle 'vim-pandoc/vim-pandoc'
 "
@@ -101,9 +98,6 @@ Bundle 'triglav/vim-visual-increment'
 " vim-signature
 Bundle 'kshenoy/vim-signature'
 
-" Tetris in vim
-Bundle 'TeTrIs.vim'
-
 " show completion popup when typing
 Bundle 'AutoComplPop'
 
@@ -114,9 +108,6 @@ if has("python")
 
   " Conque Shell
   Bundle 'alejandrogomez/Conque-Shell'
-
-  " sudoku.vim
-  Bundle 'timofurrer/sudoku.vim'
 endif
 
 " --------------------------
