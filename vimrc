@@ -9,7 +9,7 @@ set nocompatible
 filetype off
 
 " Do you want to use the colorscheme solarized? Thus, set to 1 else to 0
-let use_cs_solarized = 0
+let use_cs_solarized = 1
 
 " Do you want to use PEP8 for python files?
 let use_pep8 = 0
@@ -100,6 +100,9 @@ Bundle 'kshenoy/vim-signature'
 
 " show completion popup when typing
 Bundle 'AutoComplPop'
+
+" a git commit browser / git log wrapper that extends fugitive.vim
+Bundle 'int3/vim-extradite'
 
 " plugins requiring python
 if has("python")
@@ -364,6 +367,10 @@ imap <S-F8>    <ESC>:TlistUpdate<CR>
 " Spelling
 map  <F9>      :set spell!<CR>
 imap <F9>      <ESC>:set spell!<CR>
+
+" extradite.vim
+map  <S-F9>    :Extradite<CR>
+imap <S-F9>    <ESC>:Extradite<CR>
 
 " Next error to F10
 map  <F10>     :cn<CR>
