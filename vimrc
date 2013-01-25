@@ -98,9 +98,6 @@ Bundle 'triglav/vim-visual-increment'
 " vim-signature
 Bundle 'kshenoy/vim-signature'
 
-" show completion popup when typing
-Bundle 'AutoComplPop'
-
 " a git commit browser / git log wrapper that extends fugitive.vim
 Bundle 'int3/vim-extradite'
 
@@ -268,6 +265,9 @@ if has("autocmd")
 
   " set radish as makeprg
   autocmd FileType cucumber :call SetRadishAsMP()
+
+  " show completion popup when typing
+  autocmd FileType c,cpp Bundle 'AutoComplPop'
 
   " --------
   "  mappings
