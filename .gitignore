@@ -4,3 +4,6 @@ bundle/*
 
 # vim swap files
 *.swp
+
+# fucking history file
+.netrwhist
