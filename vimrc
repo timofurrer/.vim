@@ -101,6 +101,9 @@ Bundle 'kshenoy/vim-signature'
 " a git commit browser / git log wrapper that extends fugitive.vim
 Bundle 'int3/vim-extradite'
 
+" shows a git diff in the 'gutter' (sign column)
+Bundle 'airblade/vim-gitgutter'
+
 " plugins requiring python
 if has("python")
   " jedi-vim
@@ -336,6 +339,10 @@ imap <S-F3>    <ESC>:SignatureToggle<CR>
 map  <F4>      :TlistToggle<CR><C-W><a-right>
 imap <F4>      <ESC>:TlistOpen<CR><C-W><a-right>
 
+" git gutter
+map  <S-F4>    :ToggleGitGutter<CR>
+imap <S-F4>    <ESC>:ToggleGitGutter<CR>
+
 " Note: F5 is already mapped in autocmd section
 
 " errormarker
@@ -456,6 +463,9 @@ let g:jedi#popup_on_dot = 1
 
 " use the tux-colorscheme for powerline
 let g:Powerline_colorscheme='tux'
+
+" git gutter
+let g:gitgutter_enabled = 0
 
 
 " -----------------------
