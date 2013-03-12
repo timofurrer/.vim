@@ -8,3 +8,6 @@ bundle/*
 # undodir content
 undodir/*
 !undodir/.gitkeep
+
+# fucking history file
+.netrwhist
