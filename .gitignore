@@ -4,3 +4,7 @@ bundle/*
 
 # vim swap files
 *.swp
+
+# undodir content
+undodir/*
+!undodir/.gitkeep
