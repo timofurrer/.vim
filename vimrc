@@ -163,6 +163,7 @@ set nobackup
 
 " show list instead of just completing
 set wildmenu
+set wildmode=longest,list
 
 " complete options
 set completeopt=menuone,menu,longest,preview
