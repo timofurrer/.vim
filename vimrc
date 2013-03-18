@@ -104,6 +104,12 @@ Bundle 'int3/vim-extradite'
 " shows a git diff in the 'gutter' (sign column)
 Bundle 'airblade/vim-gitgutter'
 
+" tabular
+Bundle 'godlygeek/tabular'
+
+" table mode (tabular must be loaded)
+Bundle 'dhruvasagar/vim-table-mode'
+
 " plugins requiring python
 if has("python")
   " jedi-vim
