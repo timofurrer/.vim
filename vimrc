@@ -364,6 +364,10 @@ imap <F6>      <ESC>:A<CR>
 map  <S-F6>    :call SetExecutable()<CR>
 imap <S-F6>    <ESC>:call SetExecutable()<CR>
 
+" toggle paste mode
+map  <C-F6>     :set paste!<CR>i
+imap <C-F6>     <ESC>:set paste!<CR>i
+
 " Doxygen
 map  <F7>      :Dox<CR>
 imap <F7>      <ESC>:Dox<CR>
@@ -405,9 +409,6 @@ imap <S-F11>   <ESC>:ConqueTermSplit ipython<CR>
 " Conque Shell horizontal split -> start bash
 map  <S-F12>   :ConqueTermSplit bash<CR>
 imap <S-F12>   <ESC>:ConqueTermSplit bash<CR>
-
-" toggle paste mode
-map  <S-x>     :set paste!<CR>
 
 " window changing
 map  <a-left>       :bp<CR>
