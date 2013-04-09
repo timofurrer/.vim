@@ -152,7 +152,10 @@ set smartindent
 set nofoldenable
 
 " set clipboard to x-windows selection
-set clipboard=unnamed
+"set clipboard=unnamed
+" Note: in vim 7.3.74 and higher you can set clipboard=unnamedplus to alias
+" unnamed register to the + register, which is the X Window clipboard.
+"set clipboard=unnamedplus
 
 " set fileformat to unix
 set fileformat=unix
