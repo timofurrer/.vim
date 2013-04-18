@@ -463,6 +463,7 @@ let g:ctrlp_custom_ignore = '\.git/*'
 
 " open files in new hidden buffer in ctrlp plugin
 let g:ctrlp_open_multiple_files = 'ijr'
+let g:ctrlp_open_new_file = 'ijr'
 
 " errormarker settings
 let errormarker_errorgroup   = "ErrorMsg"
