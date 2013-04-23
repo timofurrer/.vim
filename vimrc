@@ -9,10 +9,13 @@ set nocompatible
 filetype off
 
 " Do you want to use the colorscheme solarized? Thus, set to 1 else to 0
-let use_cs_solarized = 0
+let use_cs_solarized = 1
 
 " Do you want to use PEP8 for python files?
 let use_pep8 = 0
+
+" Do you want to use syntastic?
+let use_syntastic = 0
 
 
 " -----------------
@@ -117,6 +120,11 @@ if has("python")
 
   " Conque Shell
   Bundle 'alejandrogomez/Conque-Shell'
+endif
+
+if use_syntastic == 1
+  " syntastic
+  Bundle 'scrooloose/syntastic'
 endif
 
 " --------------------------
@@ -318,8 +326,7 @@ if has("autocmd")
 endif
 
 function! SetRadishAsMP()
-  let l:basedir=system('find -name radish -type d')
-  execute "setl mp=radish\\ -d\\ %\\ -b\\ ".l:basedir
+  execute "setl mp=radish\\ -d\\ %\\ -b\\ $RADISHBASE"
 endfunction
 
 
