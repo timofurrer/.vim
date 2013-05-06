@@ -135,6 +135,9 @@ filetype plugin indent on
 " enable 256 colors
 set t_Co=256
 
+" disbale background color erase (BCE)
+set t_ut=
+
 " map leader key to comma (,)
 let mapleader=","
 
