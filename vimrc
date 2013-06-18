@@ -47,8 +47,11 @@ Bundle 'scrooloose/nerdtree'
 " ctrlp
 Bundle 'kien/ctrlp.vim'
 
-" omnicppcomplete
-Bundle 'OmniCppComplete'
+" clang complete
+Bundle 'Rip-Rip/clang_complete'
+
+" auto completion
+Bundle 'AutoComplPop'
 
 " taglist
 Bundle 'taglist.vim'
@@ -288,9 +291,6 @@ if has("autocmd")
   " set radish as makeprg
   autocmd FileType cucumber :call SetRadishAsMP()
 
-  " show completion popup when typing
-  autocmd FileType c,cpp Bundle 'AutoComplPop'
-
   " --------
   "  mappings
   " --------
@@ -450,13 +450,13 @@ let Tlist_WinWidth         = 60
 let Tlist_Close_On_Select  = 1
 
 " OmniCompletion
-let OmniCpp_NamespaceSearch   = 1
-let OmniCpp_GlobalScopeSearch = 1
-let OmniCpp_ShowAccess        = 1
-let OmniCpp_MayCompleteDot    = 1
-let OmniCpp_MayCompleteArrow  = 1
-let OmniCpp_MayCompleteScope  = 1
-let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
+"let OmniCpp_NamespaceSearch   = 1
+"let OmniCpp_GlobalScopeSearch = 1
+"let OmniCpp_ShowAccess        = 1
+"let OmniCpp_MayCompleteDot    = 1
+"let OmniCpp_MayCompleteArrow  = 1
+"let OmniCpp_MayCompleteScope  = 1
+"let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
 
 " support local vim config in .lvimrc
 let g:localvimrc_ask = 0
@@ -480,13 +480,22 @@ let g:flake8_max_line_length = 150
 
 " Jedi automatically starts the completion, if you type a dot, e.g. str., if
 " you don't want this, set it to "0"
-let g:jedi#popup_on_dot = 1
+let g:jedi#popup_on_dot = 0
+let g:jedi#popup_select_first = 0
 
 " use the tux-colorscheme for powerline
 let g:Powerline_colorscheme='tux'
 
 " git gutter
 let g:gitgutter_enabled = 0
+
+" clang complete
+let g:clang_auto_select = 1
+let g:clang_complete_copen = 1
+"let g:clang_snippets = 1
+"let g:clang_close_preview = 1
+let g:clang_complete_macros = 1
+let g:clang_complete_patterns = 1
 
 
 " -----------------------
