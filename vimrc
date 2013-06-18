@@ -158,7 +158,7 @@ set nofoldenable
 "set clipboard=unnamed
 " Note: in vim 7.3.74 and higher you can set clipboard=unnamedplus to alias
 " unnamed register to the + register, which is the X Window clipboard.
-"set clipboard=unnamedplus
+set clipboard=unnamedplus
 
 " set fileformat to unix
 set fileformat=unix
@@ -237,10 +237,10 @@ endif
 " ----------------------
 
 " diff highlighting
-highlight DiffAdd          cterm=none ctermfg=Black     ctermbg=Green   gui=none guifg=Black guibg=Green
-highlight DiffDelete       cterm=none ctermfg=Black     ctermbg=Red     gui=none guifg=Black guibg=Red
-highlight DiffChange       cterm=none ctermfg=Black     ctermbg=Yellow  gui=none guifg=Black guibg=Yellow
-highlight DiffText         cterm=none ctermfg=Black     ctermbg=Magenta gui=none guifg=Black guibg=Magenta
+"highlight DiffAdd          cterm=none ctermfg=Black     ctermbg=Green   gui=none guifg=Black guibg=Green
+"highlight DiffDelete       cterm=none ctermfg=Black     ctermbg=Red     gui=none guifg=Black guibg=Red
+"highlight DiffChange       cterm=none ctermfg=Black     ctermbg=Yellow  gui=none guifg=Black guibg=Yellow
+"highlight DiffText         cterm=none ctermfg=Black     ctermbg=Magenta gui=none guifg=Black guibg=Magenta
 
 " status line highlighting
 "highlight! User1           cterm=bold ctermfg=LightGrey ctermbg=52               guifg=Black guibg=#665555
@@ -249,10 +249,10 @@ highlight DiffText         cterm=none ctermfg=Black     ctermbg=Magenta gui=none
 "highlight! User4           cterm=bold ctermfg=DarkCyan  ctermbg=52               guifg=Cyan  guibg=#443333
 
 " completion highlighting
-highlight Pmenu                       ctermfg=0         ctermbg=2
-highlight PmenuSel                    ctermfg=0         ctermbg=7
-highlight PmenuSbar                   ctermfg=7         ctermbg=0
-highlight PmenuThumb                  ctermfg=0         ctermbg=7
+"highlight Pmenu                       ctermfg=0         ctermbg=2
+"highlight PmenuSel                    ctermfg=0         ctermbg=7
+"highlight PmenuSbar                   ctermfg=7         ctermbg=0
+"highlight PmenuThumb                  ctermfg=0         ctermbg=7
 
 
 " ----------------------
