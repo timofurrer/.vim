@@ -117,6 +117,9 @@ Bundle 'godlygeek/tabular'
 " table mode (tabular must be loaded)
 Bundle 'dhruvasagar/vim-table-mode'
 
+" show color under cursor
+Bundle 'SyntaxAttr.vim'
+
 " plugins requiring python
 if has("python")
   " jedi-vim
