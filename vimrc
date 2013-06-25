@@ -9,7 +9,8 @@ set nocompatible
 filetype off
 
 " Do you want to use the colorscheme solarized? Thus, set to 1 else to 0
-let use_cs_solarized = 0
+let use_cs_solarized = 1
+let use_cs_mustag = 0
 
 " Do you want to use PEP8 for python files?
 let use_pep8 = 0
@@ -28,6 +29,9 @@ Bundle 'gmarik/vundle'
 
 " colorscheme solarized
 Bundle 'altercation/vim-colors-solarized'
+
+" colorscheme mustang
+Bundle 'croaker/mustang-vim'
 
 " vim-powerline
 Bundle 'timofurrer/vim-powerline'
@@ -217,7 +221,7 @@ endif
 " ---------------------
 
 if use_cs_solarized == 1
-  "let g:solarized_termtrans                = 1
+  let g:solarized_termtrans                = 1
 
   " set termcolors to 256 instead of std 16
   let g:solarized_termcolors                = 256
@@ -232,6 +236,8 @@ if use_cs_solarized == 1
 
   " use colorscheme solarized
   colorscheme solarized
+elseif use_cs_mustag == 1
+  colorscheme mustang
 endif
 
 
@@ -280,7 +286,7 @@ if has("autocmd")
   autocmd BufWritePre * :%s/\s\+$//e
 
   " source the vimrc file after saving it
-  autocmd BufWritePost .\=vimrc source $MYVIMRC
+  "autocmd BufWritePost .\=vimrc source $MYVIMRC
 
   " update taglist
   autocmd BufWritePost * :TlistUpdate
@@ -439,6 +445,8 @@ inoremap <silent> <Home> <C-O>:call SmartHome()<CR>
 " map highlighting group under cursor
 map <C-S-H> :call <SID>SynStack()<CR>
 
+" resource vimrc
+map <C-S-R> :source $MYVIMRC<cR>
 
 " -----------------------
 " ---- Plugin config ----
