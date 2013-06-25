@@ -10,7 +10,6 @@ filetype off
 
 " Do you want to use the colorscheme solarized? Thus, set to 1 else to 0
 let use_cs_solarized = 1
-let use_cs_mustag = 0
 
 " Do you want to use PEP8 for python files?
 let use_pep8 = 0
@@ -29,9 +28,6 @@ Bundle 'gmarik/vundle'
 
 " colorscheme solarized
 Bundle 'altercation/vim-colors-solarized'
-
-" colorscheme mustang
-Bundle 'croaker/mustang-vim'
 
 " vim-powerline
 Bundle 'timofurrer/vim-powerline'
@@ -239,8 +235,6 @@ if use_cs_solarized == 1
 
   " use colorscheme solarized
   colorscheme solarized
-elseif use_cs_mustag == 1
-  colorscheme mustang
 endif
 
 
