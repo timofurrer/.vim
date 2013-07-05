@@ -59,6 +59,9 @@ Bundle 'taglist.vim'
 " xmledit
 Bundle 'timofurrer/xmledit'
 
+" matchit
+Bundle 'matchit.zip'
+
 " localvimrc
 Bundle 'localvimrc'
 
