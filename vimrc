@@ -365,8 +365,8 @@ imap <F7>      <ESC>:Dox<CR>
 " Note: Shift + F7 is already mapped in autocmd section
 
 " ctags
-"map  <F8>      :!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --links=no .<CR>
-"imap <F8>      <ESC>:!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --links=no .<CR>
+map  <F8>      :!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --links=no .<CR>
+imap <F8>      <ESC>:!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --links=no .<CR>
 
 " taglist update
 map  <S-F8>    :TlistUpdate<CR>
