@@ -20,7 +20,7 @@ First you have to install the `exuberant-ctags`, `cscope`, `pyflakes`, `flake8` 
 
 When you have done this you have to clone this repository with the following command:
 
-    git clone git://github.com/timofurrer/.vim.git ~/.vim
+    git clone https://github.com/timofurrer/.vim.git ~/.vim
 
 If this worked correctly you should have now this repository in your home at: `~/.vim`.
 So lets change in this directory:
@@ -46,7 +46,7 @@ Thus, open vim and run `:BundleInstall` in command mode.
 ```bash
 mv ~/.vim ~/.vim.old
 mv ~/.vimrc ~/.vimrc.old
-git clone git://github.com/timofurrer/.vim.git ~/.vim
+git clone https://github.com/timofurrer/.vim.git ~/.vim
 cd ~/.vim
 git submodule init
 git submodule update
