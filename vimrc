@@ -32,6 +32,9 @@ Bundle 'altercation/vim-colors-solarized'
 " vim-powerline
 Bundle 'timofurrer/vim-powerline'
 
+" vim-bufferline
+Bundle 'bling/vim-bufferline'
+
 " vim-fugitive
 Bundle 'tpope/vim-fugitive'
 
@@ -60,7 +63,7 @@ Bundle 'taglist.vim'
 Bundle 'timofurrer/xmledit'
 
 " matchit
-Bundle 'matchit.zip'
+"Bundle 'matchit.zip'
 
 " localvimrc
 Bundle 'localvimrc'
@@ -81,7 +84,7 @@ Bundle 'a.vim'
 Bundle 'errormarker.vim'
 
 " TaskList.vim
-Bundle 'TaskList.vim'
+"Bundle 'TaskList.vim'
 
 " python indenting - http://www.vim.org/scripts/script.php?script_id=974
 Bundle 'gg/python.vim'
@@ -90,7 +93,7 @@ Bundle 'gg/python.vim'
 Bundle 'vim-pandoc/vim-pandoc'
 
 " vim-less
-Bundle 'groenewege/vim-less'
+"Bundle 'groenewege/vim-less'
 
 " cscope.vim
 Bundle 'brookhong/cscope.vim'
@@ -106,16 +109,16 @@ Bundle 'kshenoy/vim-signature'
 
 " a git commit browser / git log wrapper that extends fugitive.vim
 " (:Extradite)
-Bundle 'int3/vim-extradite'
+"Bundle 'int3/vim-extradite'
 
 " shows a git diff in the 'gutter' (sign column)
-Bundle 'airblade/vim-gitgutter'
+"Bundle 'airblade/vim-gitgutter'
 
 " tabular
-Bundle 'godlygeek/tabular'
+"Bundle 'godlygeek/tabular'
 
 " table mode (tabular must be loaded)
-Bundle 'dhruvasagar/vim-table-mode'
+"Bundle 'dhruvasagar/vim-table-mode'
 
 " show color under cursor
 Bundle 'SyntaxAttr.vim'
@@ -311,6 +314,7 @@ endfunction
 " ---- Mappings ----
 " ------------------
 
+
 " change window
 nnoremap <leader>1 1
 nnoremap <leader>2 2
@@ -421,7 +425,7 @@ inoremap <silent> <Home> <C-O>:call SmartHome()<CR>
 map <C-S-H> :call <SID>SynStack()<CR>
 
 " resource vimrc
-map <C-S-R> :source $MYVIMRC<cR>
+"map <C-S-R> :source $MYVIMRC<cR>
 
 " -----------------------
 " ---- Plugin config ----
@@ -441,6 +445,9 @@ let g:ctrlp_custom_ignore = '\.git/*'
 " open files in new hidden buffer in ctrlp plugin
 let g:ctrlp_open_multiple_files = 'ijr'
 let g:ctrlp_open_new_file = 'ijr'
+
+" bufferline
+let g:bufferline_show_bufnr = 0
 
 " errormarker settings
 let errormarker_errorgroup = "ErrorMsg"
@@ -514,3 +521,11 @@ function! <SID>SynStack()
   endif
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
+
+if &term =~ '^screen'
+  " tmux will send xterm-style keys when its xterm-keys option is on
+  execute "set <xUp>=\e[1;*A"
+  execute "set <xDown>=\e[1;*B"
+  execute "set <xRight>=\e[1;*C"
+  execute "set <xLeft>=\e[1;*D"
+endif
