@@ -25,110 +25,39 @@ call vundle#rc()
 
 " vundle - required!
 Bundle 'gmarik/vundle'
-
-" colorscheme solarized
 Bundle 'altercation/vim-colors-solarized'
-
-" vim-powerline
 Bundle 'timofurrer/vim-powerline'
-
-" vim-bufferline
-Bundle 'bling/vim-bufferline'
-
-" vim-fugitive
-Bundle 'tpope/vim-fugitive'
-
-" vim-markdown
-Bundle 'tpope/vim-markdown'
-
-" nerdcommenter
-Bundle 'scrooloose/nerdcommenter'
-
-" nerdtree
-Bundle 'scrooloose/nerdtree'
-
-" ctrlp
-Bundle 'kien/ctrlp.vim'
-
-" clang complete
-Bundle 'Rip-Rip/clang_complete'
-
-" auto completion
-Bundle 'AutoComplPop'
-
-" taglist
-Bundle 'taglist.vim'
-
-" xmledit
 Bundle 'timofurrer/xmledit'
-
-" matchit
-"Bundle 'matchit.zip'
-
-" localvimrc
-Bundle 'localvimrc'
-
-" DoxygenToolKit
-Bundle 'DoxygenToolkit.vim'
-
-" shebang
-Bundle 'Shebang'
-
-" Align
-Bundle 'Align'
-
-" a.vim
-Bundle 'a.vim'
-
-" errormarker.vim
-Bundle 'errormarker.vim'
-
-" TaskList.vim
-"Bundle 'TaskList.vim'
-
-" python indenting - http://www.vim.org/scripts/script.php?script_id=974
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-markdown'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/nerdtree'
+Bundle 'kien/ctrlp.vim'
+Bundle 'bling/vim-bufferline'
+Bundle 'Rip-Rip/clang_complete'
 Bundle 'gg/python.vim'
-
-" vim-pandoc
 Bundle 'vim-pandoc/vim-pandoc'
-
-" vim-less
-"Bundle 'groenewege/vim-less'
-
-" cscope.vim
 Bundle 'brookhong/cscope.vim'
-
-" vim-flake8
 Bundle 'nvie/vim-flake8'
-
-" vim-visual-increment
 Bundle 'triglav/vim-visual-increment'
-
-" vim-signature
 Bundle 'kshenoy/vim-signature'
-
-" a git commit browser / git log wrapper that extends fugitive.vim
-" (:Extradite)
-"Bundle 'int3/vim-extradite'
-
-" shows a git diff in the 'gutter' (sign column)
-"Bundle 'airblade/vim-gitgutter'
-
-" tabular
-"Bundle 'godlygeek/tabular'
-
-" table mode (tabular must be loaded)
-"Bundle 'dhruvasagar/vim-table-mode'
-
-" show color under cursor
+Bundle 'localvimrc'
+Bundle 'DoxygenToolkit.vim'
+Bundle 'Shebang'
+Bundle 'Align'
+Bundle 'a.vim'
+Bundle 'errormarker.vim'
+Bundle 'AutoComplPop'
+Bundle 'taglist.vim'
 Bundle 'SyntaxAttr.vim'
+"Bundle 'groenewege/vim-less'
+"Bundle 'TaskList.vim'
+"Bundle 'godlygeek/tabular'
+"Bundle 'dhruvasagar/vim-table-mode'
 
 " plugins requiring python
 if has("python")
-  " jedi-vim
   Bundle 'davidhalter/jedi-vim'
-
-  " Conque Shell
   Bundle 'alejandrogomez/Conque-Shell'
 endif
 
