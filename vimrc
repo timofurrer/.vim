@@ -9,7 +9,7 @@ set nocompatible
 filetype off
 
 " Do you want to use the colorscheme solarized? Thus, set to 1 else to 0
-let use_cs_solarized = 0
+let use_cs_solarized = 1
 
 " Do you want to use PEP8 for python files?
 let use_pep8 = 0
@@ -41,6 +41,8 @@ Bundle 'brookhong/cscope.vim'
 Bundle 'nvie/vim-flake8'
 Bundle 'triglav/vim-visual-increment'
 Bundle 'kshenoy/vim-signature'
+Bundle 'mattn/webapi-vim'
+Bundle 'mattn/gist-vim'
 Bundle 'localvimrc'
 Bundle 'DoxygenToolkit.vim'
 Bundle 'Shebang'
