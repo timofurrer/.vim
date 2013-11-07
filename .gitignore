@@ -11,3 +11,8 @@ undodir/*
 
 # fucking history file
 .netrwhist
+
+# no spell checking files
+spell/*
+!spell/.gitkeep
+
