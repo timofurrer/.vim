@@ -132,7 +132,7 @@ set tags+=~/.vim/tags/stl_tags
 set viminfo='1000,\"2000,s2000,h
 
 " Set spell language
-set spelllang=de_ch
+set spelllang=en_us
 
 " wildignore
 set wildignore+=*.o,*.lo,*.la,*.obj,.git,*.pyc,*.so,*/.git/*
@@ -233,6 +233,9 @@ if has("autocmd")
   " if FileType is shell script then start shell script
   autocmd FileType sh map  <F5> :w<CR>:!$SHELL "%"<CR>
   autocmd FileType sh imap <F5> <ESC>:w<CR>:!$SHELL "%"<CR>
+
+  " if FileType tex then enable spell checking by default
+  autocmd FileType tex set spell
 endif
 
 function! SetRadishAsMP()
@@ -464,3 +467,5 @@ if &term =~ '^screen'
   execute "set <xRight>=\e[1;*C"
   execute "set <xLeft>=\e[1;*D"
 endif
+
+let g:tex_verbspell = 1
