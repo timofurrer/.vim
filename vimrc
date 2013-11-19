@@ -14,6 +14,9 @@ let use_cs_solarized = 1
 " Do you want to use PEP8 for python files?
 let use_pep8 = 0
 
+" Do you want to use syntastic?
+let use_syntastic = 0
+
 
 " -----------------
 " ---- Bundles ----
@@ -31,6 +34,9 @@ Bundle 'timofurrer/xmledit'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-markdown'
 Bundle 'Valloric/YouCompleteMe'
+if use_syntastic == 1
+  Bundle 'scrooloose/syntastic'
+endif
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Lokaltog/vim-easymotion'
@@ -38,7 +44,6 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'bling/vim-bufferline'
 Bundle 'gg/python.vim'
 Bundle 'vim-pandoc/vim-pandoc'
-"Bundle 'brookhong/cscope.vim'
 Bundle 'nvie/vim-flake8'
 Bundle 'triglav/vim-visual-increment'
 Bundle 'kshenoy/vim-signature'
@@ -50,7 +55,6 @@ Bundle 'Shebang'
 Bundle 'Align'
 Bundle 'a.vim'
 Bundle 'errormarker.vim'
-"Bundle 'AutoComplPop'
 Bundle 'taglist.vim'
 Bundle 'SyntaxAttr.vim'
 "Bundle 'groenewege/vim-less'
@@ -277,10 +281,6 @@ imap <S-F3>    <ESC>:SignatureToggle<CR>
 map  <F4>      :TlistToggle<CR><C-W><a-right>
 imap <F4>      <ESC>:TlistOpen<CR><C-W><a-right>
 
-" git gutter
-map  <S-F4>    :ToggleGitGutter<CR>
-imap <S-F4>    <ESC>:ToggleGitGutter<CR>
-
 " Note: F5 is already mapped in autocmd section
 
 " errormarker
@@ -405,16 +405,17 @@ let g:jedi#popup_select_first = 0
 " use the tux-colorscheme for powerline
 let g:Powerline_colorscheme = 'tux'
 
-" git gutter
-let g:gitgutter_enabled = 0
-
 " clang complete
-let g:clang_auto_select = 1
-let g:clang_complete_copen = 1
+"let g:clang_auto_select = 1
+"let g:clang_complete_copen = 1
 "let g:clang_snippets = 1
 "let g:clang_close_preview = 1
-let g:clang_complete_macros = 1
-let g:clang_complete_patterns = 1
+"let g:clang_complete_macros = 1
+"let g:clang_complete_patterns = 1
+
+" YouCompleteMe options
+let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_config.py'
+let g:ycm_confirm_extra_conf = 0
 
 
 " -----------------------
