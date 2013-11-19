@@ -15,7 +15,7 @@ let use_cs_solarized = 1
 let use_pep8 = 0
 
 " Do you want to use syntastic?
-let use_syntastic = 0
+let use_syntastic = 1
 
 
 " -----------------
@@ -44,7 +44,6 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'bling/vim-bufferline'
 Bundle 'gg/python.vim'
 Bundle 'vim-pandoc/vim-pandoc'
-Bundle 'nvie/vim-flake8'
 Bundle 'triglav/vim-visual-increment'
 Bundle 'kshenoy/vim-signature'
 Bundle 'mattn/webapi-vim'
@@ -222,16 +221,9 @@ if has("autocmd")
   autocmd FileType python map  <F5> :w<CR>:!python "%"<CR>
   autocmd FileType python imap <F5> <ESC>:w<CR>:!python "%"<CR>
 
-  " if FileType is python then map Shift + F7 to vim-flake8
-  autocmd FileType python map  <S-F7> :call Flake8()<CR>
-  autocmd FileType python imap <S-F7> <ESC>:call Flake8()<CR>
-
   if use_pep8 == 1
     " if FileType is python then indent with 4 spaces instead of 2
     autocmd FileType python setl tabstop=4 softtabstop=4 shiftwidth=4
-
-    " call flake8 after writing a python file
-    autocmd BufWritePost *.py call Flake8()
   endif
 
   " if FileType is shell script then start shell script
@@ -395,9 +387,6 @@ let errormarker_warninggroup = "Todo"
 
 " errorformat for make and errormarker
 let &errorformat="%f:%l:%c: %t%*[^:]:%m,%f:%l: %t%*[^:]:%m," . &errorformat
-
-" vim-flake8 max line length for PEP8
-let g:flake8_max_line_length = 150
 
 " Jedi automatically starts the completion, if you type a dot, e.g. str., if
 " you don't want this, set it to "0"
