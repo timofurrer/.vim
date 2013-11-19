@@ -365,6 +365,8 @@ map <C-S-H> :call <SID>SynStack()<CR>
 " resource vimrc
 "map <C-S-R> :source $MYVIMRC<cR>
 
+map <C-]> :YcmCompleter GoToDeclaration<CR>
+
 " -----------------------
 " ---- Plugin config ----
 " -----------------------
