@@ -291,11 +291,13 @@ imap <S-F6>    <ESC>:call SetExecutable()<CR>
 map  <C-F6>     :set paste!<CR>i
 imap <C-F6>     <ESC>:set paste!<CR>i
 
-" Doxygen
-map  <F7>      :Dox<CR>
-imap <F7>      <ESC>:Dox<CR>
+" Syntastic error window
+map  <F7>       :call ToggleErrors()<CR>
+imap <F7>       <ESC>:call ToggleErrors()<CR>
 
-" Note: Shift + F7 is already mapped in autocmd section
+" Doxygen
+map  <S-F7>      :Dox<CR>
+imap <S-F7>      <ESC>:Dox<CR>
 
 " ctags
 map  <F8>      :!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --links=no .<CR>
@@ -396,17 +398,12 @@ let g:jedi#popup_select_first = 0
 " use the tux-colorscheme for powerline
 let g:Powerline_colorscheme = 'tux'
 
-" clang complete
-"let g:clang_auto_select = 1
-"let g:clang_complete_copen = 1
-"let g:clang_snippets = 1
-"let g:clang_close_preview = 1
-"let g:clang_complete_macros = 1
-"let g:clang_complete_patterns = 1
-
-" YouCompleteMe options
+" YouCompleteMe config
 let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_config.py'
 let g:ycm_confirm_extra_conf = 0
+
+" syntastic config
+let g:syntastic_python_flake8_args = '--ignore=E501'
 
 
 " -----------------------
@@ -459,5 +456,14 @@ if &term =~ '^screen'
   execute "set <xRight>=\e[1;*C"
   execute "set <xLeft>=\e[1;*D"
 endif
+
+function! ToggleErrors()
+  let old_last_winnr = winnr('$')
+  lclose
+  if old_last_winnr == winnr('$')
+    " Nothing was closed, open syntastic error location panel
+    Errors
+  endif
+endfunction
 
 let g:tex_verbspell = 1
