@@ -16,3 +16,5 @@ undodir/*
 spell/*
 !spell/.gitkeep
 
+# python bytecode files
+*.pyc
