@@ -32,7 +32,6 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'timofurrer/vim-powerline'
 Bundle 'timofurrer/xmledit'
 Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-markdown'
 Bundle 'Valloric/YouCompleteMe'
 if use_syntastic == 1
   Bundle 'scrooloose/syntastic'
@@ -41,7 +40,6 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'kien/ctrlp.vim'
-Bundle 'bling/vim-bufferline'
 Bundle 'gg/python.vim'
 Bundle 'vim-pandoc/vim-pandoc'
 Bundle 'triglav/vim-visual-increment'
@@ -50,7 +48,6 @@ Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
 Bundle 'localvimrc'
 Bundle 'DoxygenToolkit.vim'
-Bundle 'Shebang'
 Bundle 'Align'
 Bundle 'a.vim'
 Bundle 'errormarker.vim'
@@ -146,7 +143,6 @@ set noshowmode
 
 " status line settings
 set laststatus=2 " Always show the statusline
-"set statusline=%4*---%1*\ %F%m%r%h%w\ %2*%{fugitive#statusline()}%1*\ %{&ff}\ %Y\ \[0x\%02.2B=\%03.3b]\ [%l,%v\ %p%%\ %Lb]\ %3*\[%F\]%1*
 
 " set number formats for Ctrl+A and Ctrl+X
 set nrformats=alpha,octal,hex
@@ -187,7 +183,6 @@ endif
 if has("autocmd")
   " set filetypes
   autocmd BufNewFile,BufRead *.gv set filetype=dot
-  autocmd BufNewFile,BufRead *.feature set filetype=cucumber
 
   " open files at the last opened position
   autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -211,9 +206,9 @@ if has("autocmd")
   "  mappings
   " --------
 
-  " if FileType is c, cpp or cucumber then execute make
-  autocmd FileType c,cpp,cucumber map  <F5> :w<CR>:make<CR>
-  autocmd FileType c,cpp,cucumber imap <F5> <ESC>:w<CR>:make<CR>
+  " if FileType is c, cpp then execute make
+  autocmd FileType c,cpp map  <F5> :w<CR>:make<CR>
+  autocmd FileType c,cpp imap <F5> <ESC>:w<CR>:make<CR>
 
   " if FileType is python then start python
   autocmd FileType python map  <F5> :w<CR>:!python "%"<CR>
@@ -398,6 +393,9 @@ let g:ycm_confirm_extra_conf = 0
 " syntastic config
 let g:syntastic_python_flake8_args = '--ignore=E501'
 
+" spell check in tex files
+let g:tex_verbspell = 1
+
 
 " -----------------------
 " --- Useful functions --
@@ -458,5 +456,3 @@ function! ToggleErrors()
     Errors
   endif
 endfunction
-
-let g:tex_verbspell = 1
