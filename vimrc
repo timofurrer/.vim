@@ -56,6 +56,7 @@ Bundle 'a.vim'
 Bundle 'errormarker.vim'
 Bundle 'taglist.vim'
 Bundle 'SyntaxAttr.vim'
+Bundle 'realtimeprojects/vim-radish'
 "Bundle 'groenewege/vim-less'
 "Bundle 'TaskList.vim'
 "Bundle 'godlygeek/tabular'
@@ -206,9 +207,6 @@ if has("autocmd")
   " Delete .netrwhist ( netrw history file ) after leaving vim
   autocmd VimLeave * if filereadable(".netrwhist") | call delete(".netrwhist") | endif
 
-  " set radish as makeprg
-  autocmd FileType cucumber :call SetRadishAsMP()
-
   " --------
   "  mappings
   " --------
@@ -233,11 +231,6 @@ if has("autocmd")
   " if FileType tex then enable spell checking by default
   autocmd FileType tex set spell
 endif
-
-function! SetRadishAsMP()
-  let l:basedir=system('find -name radish -type d')
-  execute "setl mp=radish\\ -d\\ %\\ -b\\ ".l:basedir
-endfunction
 
 
 " ------------------
