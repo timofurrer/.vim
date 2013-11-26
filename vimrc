@@ -351,6 +351,14 @@ map <C-S-H> :call <SID>SynStack()<CR>
 
 map <C-]> :YcmCompleter GoToDeclaration<CR>
 
+" fugitive mappings
+nmap <leader>gs :Gstatus<CR>
+nmap <leader>gd :Gdiff<CR>
+nmap <leader>gc :Gcommit<CR>
+nmap <leader>gb :Gblame<CR>
+nmap <leader>gl :Glog<CR>
+
+
 " -----------------------
 " ---- Plugin config ----
 " -----------------------
