@@ -15,7 +15,7 @@ Just download the file [setup script](https://raw.github.com/timofurrer/.vim/mas
 
 First you have to install the `exuberant-ctags`, `cscope`, `pyflakes`, `flake8` and `pandoc`. They're needed in some plugins which we'll install later.
 
-    sudo apt-get install exuberant-ctags cscope pyflakes pandoc python-pip
+    sudo apt-get install exuberant-ctags cscope pyflakes pandoc python-pip python-dev
     sudo pip install flake8 jedi
 
 When you have done this you have to clone this repository with the following command:
@@ -36,10 +36,15 @@ Now you got `vundle` in `bundle/vundle` directory.
 When you have done the previous steps you have to link the vimrc from the cloned repository into your home directory:
 **Note:** if you have an old vimrc, delete (`rm -f ~/.vimrc`) or move (`mv ~/.vimrc ~/.vimrc.old`) it first.
 
-    ln -s ~/.vim/vimrc ~/.vimrc
+    ln -s .vim/vimrc ~/.vimrc
 
 After this you can install the plugins which are prepared for vundle in the `vimrc`:
 Thus, open vim and run `:BundleInstall` in command mode.
+
+The YouCompleteMe module needs some installation as well:
+
+    cd ~/.vim/bundle/YouCompleteMe
+    ./install.sh --clang-completer
 
 ### Copy & Paste Installation
 
@@ -50,7 +55,11 @@ git clone https://github.com/timofurrer/.vim.git ~/.vim
 cd ~/.vim
 git submodule init
 git submodule update
-ln -s ~/.vim/vimrc ~/.vimrc
+ln -s .vim/vimrc ~/.vimrc
+vi ~/.vimrc # :BundleInstall
+cd ~/.vim/bundle/YouCompleteMe
+./install.sh --clang-completer
+cd
 ```
 
 ## Which plugins will be installed?
