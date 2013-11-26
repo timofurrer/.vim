@@ -29,7 +29,9 @@ call vundle#rc()
 " vundle - required!
 Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'timofurrer/vim-powerline'
+"Bundle 'timofurrer/vim-powerline'
+Bundle 'bling/vim-bufferline'
+Bundle 'bling/vim-airline'
 Bundle 'timofurrer/xmledit'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Valloric/YouCompleteMe'
@@ -396,6 +398,7 @@ let g:syntastic_python_flake8_args = '--ignore=E501'
 " spell check in tex files
 let g:tex_verbspell = 1
 
+let g:bufferline_echo = 0
 
 " -----------------------
 " --- Useful functions --
