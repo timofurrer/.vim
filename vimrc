@@ -61,11 +61,6 @@ Bundle 'realtimeprojects/vim-radish'
 "Bundle 'godlygeek/tabular'
 "Bundle 'dhruvasagar/vim-table-mode'
 
-" plugins requiring python
-if has("python")
-  Bundle 'alejandrogomez/Conque-Shell'
-endif
-
 " --------------------------
 " ---- General settings ----
 " --------------------------
