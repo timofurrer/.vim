@@ -17,7 +17,7 @@ silent mv ~/.vimrc ~/.vimrc.old
 echo -e "\rMoved configuration files from .vim[rc] to .vim[rc].old\033[K"
 
 echo -n "Downloading vim project from github..."
-silent git clone git://github.com/timofurrer/.vim.git ~/.vim
+silent git clone https://github.com/timofurrer/.vim.git ~/.vim
 echo -e "\rDownloaded current revision from github\033[K"
 
 echo -n "Downloading submodules from github..."
@@ -30,7 +30,7 @@ echo -n "Linking vimrc..."
 silent ln -s ~/.vim/vimrc ~/.vimrc
 echo -e "\rLinked vimrc\033[K"
 
-echo -n "Installing bundles..."
-silent vi -c BundleInstall -c :q! -c :q!
-echo -e "\rInstalled bundles\033[K"
+echo -n "Installing plugins"
+silent vi -c PluginInstall -c :q! -c :q!
+echo -e "\rInstalled plugins\033[K"
 echo "Setup done!"
