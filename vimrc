@@ -11,55 +11,54 @@ filetype off
 " Do you want to use the colorscheme solarized? Thus, set to 1 else to 0
 let use_cs_solarized = 1
 
-" Do you want to use PEP8 for python files?
-let use_pep8 = 0
-
-" Do you want to use syntastic?
-let use_syntastic = 1
-
 
 " -----------------
-" ---- Bundles ----
+" ---- Plugins ----
 " -----------------
 
 " vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " vundle - required!
-Bundle 'gmarik/vundle'
-Bundle 'altercation/vim-colors-solarized'
-"Bundle 'timofurrer/vim-powerline'
-Bundle 'bling/vim-bufferline'
-Bundle 'bling/vim-airline'
-Bundle 'timofurrer/xmledit'
-Bundle 'tpope/vim-fugitive'
-Bundle 'Valloric/YouCompleteMe'
-if use_syntastic == 1
-  Bundle 'scrooloose/syntastic'
-endif
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/nerdtree'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'kien/ctrlp.vim'
-Bundle 'gg/python.vim'
-Bundle 'vim-pandoc/vim-pandoc'
-Bundle 'triglav/vim-visual-increment'
-Bundle 'kshenoy/vim-signature'
-Bundle 'mattn/webapi-vim'
-Bundle 'mattn/gist-vim'
-Bundle 'localvimrc'
-Bundle 'DoxygenToolkit.vim'
-Bundle 'Align'
-Bundle 'a.vim'
-Bundle 'errormarker.vim'
-Bundle 'taglist.vim'
-Bundle 'SyntaxAttr.vim'
-Bundle 'realtimeprojects/vim-radish'
-"Bundle 'groenewege/vim-less'
-"Bundle 'TaskList.vim'
-"Bundle 'godlygeek/tabular'
-"Bundle 'dhruvasagar/vim-table-mode'
+Plugin 'gmarik/Vundle.vim'
+
+" colorschemes
+Plugin 'altercation/vim-colors-solarized'
+
+" status line, CtrlP and menus
+Plugin 'bling/vim-bufferline'
+Plugin 'bling/vim-airline'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'taglist.vim'
+Plugin 'localvimrc'
+
+" complete and syntax
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'scrooloose/syntastic'
+Plugin 'gg/python.vim'
+Plugin 'timofurrer/xmledit'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'errormarker.vim'
+
+" external tool integration
+Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'tpope/vim-fugitive'
+Plugin 'DoxygenToolkit.vim'
+Plugin 'realtimeprojects/vim-radish'
+Plugin 'mattn/webapi-vim'
+Plugin 'mattn/gist-vim'
+
+" mappings to improve moving etc
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'triglav/vim-visual-increment'
+Plugin 'kshenoy/vim-signature'
+Plugin 'Align'
+Plugin 'a.vim'
+Plugin 'SyntaxAttr.vim'
+
+call vundle#end()
 
 " --------------------------
 " ---- General settings ----
@@ -211,10 +210,8 @@ if has("autocmd")
   autocmd FileType python map  <F5> :w<CR>:!python "%"<CR>
   autocmd FileType python imap <F5> <ESC>:w<CR>:!python "%"<CR>
 
-  if use_pep8 == 1
-    " if FileType is python then indent with 4 spaces instead of 2
-    autocmd FileType python setl tabstop=4 softtabstop=4 shiftwidth=4
-  endif
+  " if FileType is python then indent with 4 spaces instead of 2
+  autocmd FileType python setl tabstop=4 softtabstop=4 shiftwidth=4
 
   " if FileType is shell script then start shell script
   autocmd FileType sh map  <F5> :w<CR>:!$SHELL "%"<CR>
@@ -296,10 +293,6 @@ imap <S-F8>    <ESC>:TlistUpdate<CR>
 map  <F9>      :set spell!<CR>
 imap <F9>      <ESC>:set spell!<CR>
 
-" extradite.vim
-map  <S-F9>    :Extradite<CR>
-imap <S-F9>    <ESC>:Extradite<CR>
-
 " Next error to F10
 map  <F10>     :cn<CR>
 imap <F10>     <ESC>:cn<CR>
@@ -315,14 +308,6 @@ imap <F11>     <ESC>1G=Ga''
 " shortcut to replace word under cursor
 nnoremap <leader>*   :%s/<c-r><c-w>/<c-r><c-w>/gc<Left><Left><Left>
 vnoremap <leader>*   :s/<c-r><c-w>/<c-r><c-w>/gc<Left><Left><Left>
-
-" Conque shell horizontal split -> start ipython
-map  <S-F11>   :ConqueTermSplit ipython<CR>
-imap <S-F11>   <ESC>:ConqueTermSplit ipython<CR>
-
-" Conque Shell horizontal split -> start bash
-map  <S-F12>   :ConqueTermSplit bash<CR>
-imap <S-F12>   <ESC>:ConqueTermSplit bash<CR>
 
 " window changing
 map  <a-left>       :bp<CR>
@@ -387,9 +372,6 @@ let &errorformat="%f:%l:%c: %t%*[^:]:%m,%f:%l: %t%*[^:]:%m," . &errorformat
 " you don't want this, set it to "0"
 let g:jedi#popup_on_dot = 0
 let g:jedi#popup_select_first = 0
-
-" use the tux-colorscheme for powerline
-let g:Powerline_colorscheme = 'tux'
 
 " YouCompleteMe config
 let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_config.py'
