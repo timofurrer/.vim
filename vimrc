@@ -149,6 +149,9 @@ if version >= 703
   set undofile
 endif
 
+set number
+set relativenumber
+
 " ---------------------
 " ---- Colorscheme ----
 " ---------------------
