@@ -42,6 +42,8 @@ Plugin 'gg/python.vim'
 Plugin 'timofurrer/xmledit'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'errormarker.vim'
+Plugin 'moll/vim-node'
+Plugin 'hallettj/jslint.vim'
 
 " external tool integration
 Plugin 'vim-pandoc/vim-pandoc'
