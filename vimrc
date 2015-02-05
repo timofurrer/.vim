@@ -26,7 +26,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
 
 " status line, CtrlP and menus
-Plugin 'bling/vim-bufferline'
+"Plugin 'bling/vim-bufferline'
+Plugin 'timofurrer/vim-bufferline'
 Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
@@ -219,6 +220,7 @@ if has("autocmd")
 
   " if FileType is python then indent with 4 spaces instead of 2
   autocmd FileType python setl tabstop=4 softtabstop=4 shiftwidth=4
+  autocmd FileType html,javascript,html* setl tabstop=4 softtabstop=4 shiftwidth=4
 
   " if FileType is shell script then start shell script
   autocmd FileType sh map  <F5> :w<CR>:!$SHELL "%"<CR>
