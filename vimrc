@@ -11,7 +11,6 @@ filetype off
 " Do you want to use the colorscheme solarized? Thus, set to 1 else to 0
 let use_cs_solarized = 1
 
-
 " -----------------
 " ---- Plugins ----
 " -----------------
@@ -41,6 +40,8 @@ Plugin 'gg/python.vim'
 Plugin 'timofurrer/xmledit'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'errormarker.vim'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
 " external tool integration
 Plugin 'vim-pandoc/vim-pandoc'
@@ -129,7 +130,8 @@ set tags+=~/.vim/tags/stl_tags
 set viminfo='1000,\"2000,s2000,h
 
 " Set spell language
-set spelllang=en_us
+"set spelllang=en_us
+set spelllang=de
 
 " wildignore
 set wildignore+=*.o,*.lo,*.la,*.obj,.git,*.pyc,*.so,*/.git/*
@@ -173,6 +175,8 @@ if use_cs_solarized == 1
   " use colorscheme solarized
   colorscheme solarized
 endif
+
+"colorscheme pojoaque
 
 
 " ----------------------
@@ -222,6 +226,12 @@ if has("autocmd")
 
   " if FileType tex then enable spell checking by default
   autocmd FileType tex set spell
+
+  "if use_syntastic_with_python != 1
+    "autocmd FileType python :SyntasticToggleMode
+  "endif
+
+  autocmd FileType tex set cursorline
 endif
 
 
@@ -284,17 +294,21 @@ imap <F7>       <ESC>:call ToggleErrors()<CR>
 map  <S-F7>      :Dox<CR>
 imap <S-F7>      <ESC>:Dox<CR>
 
+" toggle numbering
+map  <F8>        :set number! relativenumber!<CR>
+imap <F8>        :set number! relativenumber!<CR>
+
 " ctags
-map  <F8>      :!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --links=no .<CR>
-imap <F8>      <ESC>:!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --links=no .<CR>
+"map  <F8>      :!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --links=no .<CR>
+"imap <F8>      <ESC>:!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --links=no .<CR>
 
 " taglist update
 map  <S-F8>    :TlistUpdate<CR>
 imap <S-F8>    <ESC>:TlistUpdate<CR>
 
 " Spelling
-map  <F9>      :set spell!<CR>
-imap <F9>      <ESC>:set spell!<CR>
+map  <S-F9>      :set spell!<CR>
+imap <S-F9>      <ESC>:set spell!<CR>
 
 " Next error to F10
 map  <F10>     :cn<CR>
@@ -333,6 +347,7 @@ map <C-S-H> :call <SID>SynStack()<CR>
 "map <C-S-R> :source $MYVIMRC<cR>
 
 map <C-]> :YcmCompleter GoToDeclaration<CR>
+map <C-}> :YcmCompleter GoToDefinition<CR>
 
 " fugitive mappings
 nmap <leader>gs :Gstatus<CR>
@@ -340,6 +355,9 @@ nmap <leader>gd :Gdiff<CR>
 nmap <leader>gc :Gcommit<CR>
 nmap <leader>gb :Gblame<CR>
 nmap <leader>gl :Glog<CR>
+
+" add git sign-off
+map <leader>gS :call SignOff()<CR>
 
 
 " -----------------------
@@ -382,11 +400,20 @@ let g:ycm_confirm_extra_conf = 0
 
 " syntastic config
 let g:syntastic_python_flake8_args = '--ignore=E501'
+let g:syntastic_always_populate_loc_list = 1
 
 " spell check in tex files
 let g:tex_verbspell = 1
 
 let g:bufferline_echo = 0
+
+" UltiSnips Trigger configuration
+let g:UltiSnipsExpandTrigger="<c-z>"
+let g:UltiSnipsJumpForwardTrigger="<c-z>"
+let g:UltiSnipsJumpBackwardTrigger="<c-y>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
 
 " -----------------------
 " --- Useful functions --
@@ -446,4 +473,8 @@ function! ToggleErrors()
     " Nothing was closed, open syntastic error location panel
     Errors
   endif
+endfunction
+
+function! SignOff()
+  call append(line('.'), 'Signed-off-by: Timo Furrer <timo.furrer@roche.com>')
 endfunction
