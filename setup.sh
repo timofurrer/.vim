@@ -30,7 +30,4 @@ echo -n "Linking vimrc..."
 silent ln -s ~/.vim/vimrc ~/.vimrc
 echo -e "\rLinked vimrc\033[K"
 
-echo -n "Installing plugins"
-silent vi -c PluginInstall -c :q! -c :q!
-echo -e "\rInstalled plugins\033[K"
-echo "Setup done!"
+echo "You can now install the plugins by executing :PluginInstall in vim itself!"
