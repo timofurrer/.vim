@@ -43,14 +43,17 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'errormarker.vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'ekalinin/Dockerfile.vim'
 
 " external tool integration
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'tpope/vim-fugitive'
 Plugin 'DoxygenToolkit.vim'
-Plugin 'realtimeprojects/vim-radish'
+"Plugin 'realtimeprojects/vim-radish'
 Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
+" online compiler
+Plugin 'rhysd/wandbox-vim'
 
 " mappings to improve moving etc
 Plugin 'Lokaltog/vim-easymotion'
@@ -59,6 +62,10 @@ Plugin 'kshenoy/vim-signature'
 Plugin 'Align'
 Plugin 'a.vim'
 Plugin 'SyntaxAttr.vim'
+"Plugin 'godlygeek/tabular'
+Plugin 'dhruvasagar/vim-table-mode'
+Plugin 'aklt/plantuml-syntax'
+Plugin 'terryma/vim-multiple-cursors'
 
 call vundle#end()
 
@@ -131,8 +138,8 @@ set tags+=~/.vim/tags/stl_tags
 set viminfo='1000,\"2000,s2000,h
 
 " Set spell language
-"set spelllang=en_us
-set spelllang=de
+set spelllang=en_us
+"set spelllang=de
 
 " wildignore
 set wildignore+=*.o,*.lo,*.la,*.obj,.git,*.pyc,*.so,*/.git/*
@@ -234,6 +241,10 @@ if has("autocmd")
   "endif
 
   autocmd FileType tex set cursorline
+
+  " if FileType is plantuml,plant,uml,pu then execute make
+  autocmd FileType plantuml,plant,uml,pu map <F5> :w<CR>:make<CR>
+  let g:plantuml_executable_script='java -jar /usr/share/plantuml/plantuml.jar'
 endif
 
 
@@ -289,12 +300,16 @@ map  <C-F6>     :set paste!<CR>i
 imap <C-F6>     <ESC>:set paste!<CR>i
 
 " Syntastic error window
-map  <F7>       :call ToggleErrors()<CR>
-imap <F7>       <ESC>:call ToggleErrors()<CR>
+"map  <F7>       :call ToggleErrors()<CR>
+"imap <F7>       <ESC>:call ToggleErrors()<CR>
+map  <F7>       :Wandbox --compiler=gcc-head --options=warnings<CR>
+imap <F7>       <ESC>::Wandbox --compiler=gcc-head --options=warnings<CR>
 
 " Doxygen
-map  <S-F7>      :Dox<CR>
-imap <S-F7>      <ESC>:Dox<CR>
+"map  <S-F7>      :Dox<CR>
+"imap <S-F7>      <ESC>:Dox<CR>
+map  <S-F7>      :Wandbox --compiler=clang-head --options=warnings<CR>
+imap <S-F7>      <ESC>::Wandbox --compiler=clang-head --options=warnings<CR>
 
 " toggle numbering
 map  <F8>        :set number! relativenumber!<CR>
@@ -399,10 +414,19 @@ let g:jedi#popup_select_first = 0
 " YouCompleteMe config
 let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_config.py'
 let g:ycm_confirm_extra_conf = 0
+let g:ycm_server_log_level = 'debug'
+let g:ycm_semantic_triggers =  {
+      \ 'cucumber': ['re!.'],
+      \}
+"let g:ycm_server_use_vim_stdout = 1
 
 " syntastic config
-let g:syntastic_python_flake8_args = '--ignore=E501'
+let g:syntastic_python_checkers = ['pylint']
+"let g:syntastic_python_flake8_args = '--ignore=E501'
 let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
 
 " spell check in tex files
 let g:tex_verbspell = 1
@@ -416,6 +440,9 @@ let g:UltiSnipsJumpBackwardTrigger="<c-y>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
+
+let g:table_mode_corner_corner='+'
+let g:table_mode_header_fillchar='='
 
 " -----------------------
 " --- Useful functions --
