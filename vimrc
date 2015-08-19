@@ -66,6 +66,7 @@ Plugin 'SyntaxAttr.vim'
 Plugin 'dhruvasagar/vim-table-mode'
 Plugin 'aklt/plantuml-syntax'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'bogado/file-line'
 
 call vundle#end()
 
@@ -176,6 +177,8 @@ if use_cs_solarized == 1
   let g:solarized_bold = 1
   let g:solarized_underline = 1
   let g:solarized_italic = 1
+
+  let g:solarized_contrast="high"
 
   " set dark background
   set background=dark
