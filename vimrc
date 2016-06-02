@@ -45,6 +45,8 @@ Plugin 'errormarker.vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'ekalinin/Dockerfile.vim'
+Plugin 'hdima/python-syntax'
+Plugin 'leafgarland/typescript-vim'
 
 " external tool integration
 Plugin 'vim-pandoc/vim-pandoc'
@@ -55,6 +57,7 @@ Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
 " online compiler
 Plugin 'rhysd/wandbox-vim'
+Plugin 'suan/vim-instant-markdown'
 
 " mappings to improve moving etc
 Plugin 'Lokaltog/vim-easymotion'
@@ -68,6 +71,9 @@ Plugin 'dhruvasagar/vim-table-mode'
 Plugin 'aklt/plantuml-syntax'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'bogado/file-line'
+
+" Experimental
+Plugin 'junegunn/goyo.vim'
 
 call vundle#end()
 
@@ -95,8 +101,8 @@ let mapleader=","
 
 " tab settings
 set expandtab
-set shiftwidth=2
-set softtabstop=2
+set shiftwidth=4
+set softtabstop=4
 
 " indenting
 set cindent
@@ -380,6 +386,9 @@ nmap <leader>gl :Glog<CR>
 " add git sign-off
 map <leader>gS :call SignOff()<CR>
 
+" toggle goyo mode
+map <leader>gg :Goyo<CR>
+imap <leader>gg :Goyo<CR>
 
 " -----------------------
 " ---- Plugin config ----
@@ -416,6 +425,7 @@ let g:jedi#popup_on_dot = 0
 let g:jedi#popup_select_first = 0
 
 " YouCompleteMe config
+let g:ycm_python_binary_path = '/usr/bin/python3'
 let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_config.py'
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_server_log_level = 'debug'
@@ -447,6 +457,9 @@ let g:UltiSnipsEditSplit="vertical"
 
 let g:table_mode_corner_corner='+'
 let g:table_mode_header_fillchar='='
+
+" goyo
+let g:goyo_width = "60%"
 
 " -----------------------
 " --- Useful functions --
