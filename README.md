@@ -52,7 +52,7 @@ git submodule update
 ln -s .vim/vimrc ~/.vimrc
 vi ~/.vimrc # :PluginInstall
 cd ~/.vim/bundle/YouCompleteMe
-./install.sh --clang-completer
+./install.py --clang-completer
 cd
 ```
 
