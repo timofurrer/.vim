@@ -19,3 +19,15 @@
 [submodule "pack/programming/start/taglist.vim"]
 	path = pack/programming/start/taglist.vim
 	url = https://github.com/vim-scripts/taglist.vim
+[submodule "pack/programming/start/YouCompleteMe"]
+	path = pack/programming/start/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe
+[submodule "pack/programming/start/ale"]
+	path = pack/programming/start/ale
+	url = https://github.com/w0rp/ale
+[submodule "pack/general/start/ctrlp.vim"]
+	path = pack/general/start/ctrlp.vim
+	url = https://github.com/ctrlpvim/ctrlp.vim
+[submodule "pack/python/start/python-mode"]
+	path = pack/python/start/python-mode
+	url = https://github.com/python-mode/python-mode

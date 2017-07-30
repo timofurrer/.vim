@@ -14,6 +14,9 @@
 " disable compatibility mode to improve vim experience
 set nocompatible
 
+" Use comma as the leader key
+let mapleader=","
+
 " use 256 ANSI color palette
 set t_Co=256
 
@@ -26,50 +29,55 @@ highlight clear
 " detect filetypes
 filetype plugin indent on
 
-" indentation settings
+" indentation settings {{{
 set expandtab
 set shiftwidth=4
 set softtabstop=4
 set cindent
 set autoindent
 set smartindent
+" }}}
 
 " enable folding
 set foldmethod=marker
-set foldenable
+set nofoldenable
 
-" clipboard settings
+" clipboard settings {{{
 set clipboard=unnamedplus
+" }}}
 
 " use UNIX fileformat
 set fileformat=unix
 
-" search settings
+" search settings {{{
 set hlsearch  " highlight search matches
 set incsearch  " incremental search 
 set ignorecase  " ignore case by default
 set smartcase  " if upper carachters are used the search becomes case sensitive
+" }}}
 
 " disable backup files
 set nobackup
 
-" wild menu and completion settings
+" wild menu and completion settings {{{
 set wildmenu
 set wildmode=longest,list
 set completeopt=menuone,menu,longest,preview
+" }}}
 
 " language settings
 set spelllang=en_US
 
 " ignore some file endings for various searches
-set wildignore+=*.o,*.lo,*.la,*.obj,.git,*.pyc,*.so,*/.git/*
+set wildignore+=*.o,*.lo,*.la,*.obj,.git,*.pyc,*.so,*/.git/*,*.zip,*.tar.gz,*__pycache__/*,
 
 " set correct number formats for Ctrl+A and Ctrl+X
 set nrformats=alpha,octal,hex
 
-" configure undo files
+" configure undo files {{{
 set undodir=~/.vim/undodir
 set undofile
+" }}}
 
 " enable line numbering
 set number
@@ -83,4 +91,14 @@ set number
     let g:solarized_contrast="high"
     set background=dark
     colorscheme solarized
+" }}}
+
+" load config modules {{{
+runtime! config/**/*.vim
+" }}}
+
+" Load all plugins {{{
+packloadall
+" generate all helptag documentation
+silent! helptags ALL
 " }}}
