@@ -40,7 +40,7 @@ set smartindent
 
 " enable folding
 set foldmethod=marker
-set nofoldenable
+set foldenable
 
 " clipboard settings {{{
 set clipboard=unnamedplus
@@ -79,6 +79,10 @@ set undodir=~/.vim/undodir
 set undofile
 " }}}
 
+" configure tags {{{
+set tags=~/.vim/tags/
+" }}}
+
 " enable line numbering
 set number
 
@@ -91,6 +95,36 @@ set number
     let g:solarized_contrast="high"
     set background=dark
     colorscheme solarized
+" }}}
+
+" general Key Bindings {{{
+    " Navigate buffers {{{
+        map  <a-left>  :bp<CR>
+        imap <a-left>  <ESC>:bp<CR>
+        map  <a-right> :bn<CR>
+        imap <a-right> <ESC>:bn<CR>
+    " }}}
+
+    " Line numbering {{{
+        map  <F8> :set number! relativenumber!<CR>
+        imap <F8> :set number! relativenumber!<CR>
+    " }}}
+  
+    " Spelling {{{
+        map  <S-F9> :set spell!<CR>
+        imap <S-F9> <ESC>:set spell!<CR>
+    " }}}
+
+    " Search and Replace {{{
+        " Search and Replace word under cursor
+        nnoremap <leader>*   :%s/<c-r><c-w>/<c-r><c-w>/gc<Left><Left><Left>
+        vnoremap <leader>*   :s/<c-r><c-w>/<c-r><c-w>/gc<Left><Left><Left>
+    " }}}
+
+    " Code Completion {{{
+        " completion to Ctrl+Space
+        inoremap <Nul> <C-x><C-o>
+    " }}}
 " }}}
 
 " load config modules {{{
