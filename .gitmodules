@@ -46,3 +46,6 @@
 [submodule "pack/programming/start/plantuml-syntax"]
 	path = pack/programming/start/plantuml-syntax
 	url = https://github.com/aklt/plantuml-syntax
+[submodule "pack/general/start/fzf.vim"]
+	path = pack/general/start/fzf.vim
+	url = https://github.com/junegunn/fzf.vim

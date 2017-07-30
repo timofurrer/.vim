@@ -86,6 +86,9 @@ set tags=~/.vim/tags/
 " enable line numbering
 set number
 
+" disable to show mode (airline does it)
+set noshowmode
+
 " Colorscheme {{{
     let g:solarized_termtrans = 1
     let g:solarized_termcolors = 256
