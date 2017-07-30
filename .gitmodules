@@ -52,3 +52,6 @@
 [submodule "pack/python/start/vim-isort"]
 	path = pack/python/start/vim-isort
 	url = https://github.com/fisadev/vim-isort
+[submodule "pack/writing/start/goyo.vim"]
+	path = pack/writing/start/goyo.vim
+	url = https://github.com/junegunn/goyo.vim
