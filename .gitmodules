@@ -49,3 +49,6 @@
 [submodule "pack/general/start/fzf.vim"]
 	path = pack/general/start/fzf.vim
 	url = https://github.com/junegunn/fzf.vim
+[submodule "pack/python/start/vim-isort"]
+	path = pack/python/start/vim-isort
+	url = https://github.com/fisadev/vim-isort

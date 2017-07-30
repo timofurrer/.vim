@@ -8,3 +8,5 @@ cd ~/.vim
 git submodule update --init --recursive
 ln -s ~/.vim/vimrc ~/.vimrc
 ```
+
+**Note**: make sure to install the dependencies of the plugins you want to use.
