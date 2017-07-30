@@ -1,3 +1,6 @@
 [submodule "pack/colorschemes/vim-colors-solarized"]
 	path = pack/colorschemes/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized
+[submodule "pack/colorschemes/opt/vim-colors-solarized"]
+	path = pack/colorschemes/opt/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized
