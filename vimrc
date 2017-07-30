@@ -36,7 +36,7 @@ set smartindent
 
 " enable folding
 set foldmethod=marker
-set nofoldenable
+set foldenable
 
 " clipboard settings
 set clipboard=unnamedplus

@@ -10,3 +10,12 @@
 [submodule "pack/general/start/vim-airline-themes"]
 	path = pack/general/start/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes
+[submodule "pack/general/start/nerdcommenter"]
+	path = pack/general/start/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter
+[submodule "pack/general/start/nerdtree"]
+	path = pack/general/start/nerdtree
+	url = https://github.com/scrooloose/nerdtree
+[submodule "pack/programming/start/taglist.vim"]
+	path = pack/programming/start/taglist.vim
+	url = https://github.com/vim-scripts/taglist.vim
