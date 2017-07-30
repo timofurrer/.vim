@@ -31,3 +31,18 @@
 [submodule "pack/python/start/python-mode"]
 	path = pack/python/start/python-mode
 	url = https://github.com/python-mode/python-mode
+[submodule "pack/general/start/vim-fugitive"]
+	path = pack/general/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
+[submodule "pack/general/start/webapi-vim"]
+	path = pack/general/start/webapi-vim
+	url = https://github.com/mattn/webapi-vim
+[submodule "pack/general/start/gist-vim"]
+	path = pack/general/start/gist-vim
+	url = https://github.com/mattn/gist-vim
+[submodule "pack/general/start/vim-table-mode"]
+	path = pack/general/start/vim-table-mode
+	url = https://github.com/dhruvasagar/vim-table-mode
+[submodule "pack/programming/start/plantuml-syntax"]
+	path = pack/programming/start/plantuml-syntax
+	url = https://github.com/aklt/plantuml-syntax

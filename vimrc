@@ -1,14 +1,14 @@
 "
-"  _   _                  __                           __      _           
-"  | |_(_)_ __ ___   ___  / _|_   _ _ __ _ __ ___ _ __ / /_   _(_)_ __ ___  
-"  | __| | '_ ` _ \ / _ \| |_| | | | '__| '__/ _ \ '__/ /\ \ / / | '_ ` _ \ 
+"  _   _                  __                           __      _
+"  | |_(_)_ __ ___   ___  / _|_   _ _ __ _ __ ___ _ __ / /_   _(_)_ __ ___
+"  | __| | '_ ` _ \ / _ \| |_| | | | '__| '__/ _ \ '__/ /\ \ / / | '_ ` _ \
 "  | |_| | | | | | | (_) |  _| |_| | |  | | |  __/ | / /_ \ V /| | | | | | |
 "   \__|_|_| |_| |_|\___/|_|  \__,_|_|  |_|  \___|_|/_/(_) \_/ |_|_| |_| |_|
 "
 "
-"                       Timo Furrer's vim configuration. 
+"                       Timo Furrer's vim configuration.
 "                      https://github.com/timofurrer/.vim
-"                                                                            
+"
 "
 
 " disable compatibility mode to improve vim experience
@@ -51,7 +51,7 @@ set fileformat=unix
 
 " search settings {{{
 set hlsearch  " highlight search matches
-set incsearch  " incremental search 
+set incsearch  " incremental search
 set ignorecase  " ignore case by default
 set smartcase  " if upper carachters are used the search becomes case sensitive
 " }}}
@@ -109,7 +109,7 @@ set number
         map  <F8> :set number! relativenumber!<CR>
         imap <F8> :set number! relativenumber!<CR>
     " }}}
-  
+
     " Spelling {{{
         map  <S-F9> :set spell!<CR>
         imap <S-F9> <ESC>:set spell!<CR>
@@ -149,10 +149,8 @@ set number
 
     autocmd FileType sh map  <F5> :w<CR>:!$SHELL "%"<CR>
     autocmd FileType sh imap <F5> <ESC>:w<CR>:!$SHELL "%"<CR>
-
-    autocmd FileType plantuml,plant,uml,pu map <F5> :w<CR>:make<CR>
     " }}}
-    
+
     " configure options for tex files {{{
     autocmd FileType tex setl spell cursorline
     " }}}
