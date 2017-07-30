@@ -127,6 +127,37 @@ set number
     " }}}
 " }}}
 
+" general autocmd commands {{{
+    " set otherwise unsupported filetypes
+    autocmd BufNewFile,BufRead *.gv set filetype=dot
+
+    " open files at last opened position
+    autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+    " automatically open and close the popup menu
+    autocmd CursorMovedI,InsertLeave * if pumvisible() == 0 | silent! pclose | endif
+
+    " remove trailing whitespaces on write
+    autocmd BufWritePre * :%s/\s\+$//e
+
+    " set <F5> filetype to proper tool {{{
+    autocmd FileType c,cpp map  <F5> :w<CR>:make<CR>
+    autocmd FileType c,cpp imap <F5> <ESC>:w<CR>:make<CR>
+
+    autocmd FileType python map  <F5> :w<CR>:!python "%"<CR>
+    autocmd FileType python imap <F5> <ESC>:w<CR>:!python "%"<CR>
+
+    autocmd FileType sh map  <F5> :w<CR>:!$SHELL "%"<CR>
+    autocmd FileType sh imap <F5> <ESC>:w<CR>:!$SHELL "%"<CR>
+
+    autocmd FileType plantuml,plant,uml,pu map <F5> :w<CR>:make<CR>
+    " }}}
+    
+    " configure options for tex files {{{
+    autocmd FileType tex setl spell cursorline
+    " }}}
+" }}}
+
 " load config modules {{{
 runtime! config/**/*.vim
 " }}}
