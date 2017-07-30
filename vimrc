@@ -49,6 +49,9 @@ set clipboard=unnamedplus
 " use UNIX fileformat
 set fileformat=unix
 
+" use utf-8 encoding
+set encoding=utf-8
+
 " search settings {{{
 set hlsearch  " highlight search matches
 set incsearch  " incremental search
