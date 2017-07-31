@@ -11,3 +11,10 @@ let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:ale_lint_on_text_changed = "always"
 let g:ale_lint_on_insert_leave = 1
 " }}}
+
+" Ale Key Bindings {{{
+    map  <F8> :ALENext<CR>
+    imap <F8> <ESC>:ALENext<CR>
+    map  <S-F8> :ALEPrevious<CR>
+    imap <S-F8> <ESC>:ALEPrevious<CR>
+" }}}

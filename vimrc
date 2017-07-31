@@ -112,8 +112,8 @@ set noshowmode
     " }}}
 
     " Line numbering {{{
-        map  <F8> :set number! relativenumber!<CR>
-        imap <F8> :set number! relativenumber!<CR>
+        map  <S-F2> :set number! relativenumber!<CR>
+        imap <S-F2> <ESC>:set number! relativenumber!<CR>
     " }}}
 
     " Spelling {{{
