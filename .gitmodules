@@ -55,3 +55,6 @@
 [submodule "pack/writing/start/goyo.vim"]
 	path = pack/writing/start/goyo.vim
 	url = https://github.com/junegunn/goyo.vim
+[submodule "pack/writing/start/limelight.vim"]
+	path = pack/writing/start/limelight.vim
+	url = https://github.com/junegunn/limelight.vim
