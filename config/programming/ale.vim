@@ -17,4 +17,6 @@ let g:ale_lint_on_insert_leave = 1
     imap <F8> <ESC>:ALENext<CR>
     map  <S-F8> :ALEPrevious<CR>
     imap <S-F8> <ESC>:ALEPrevious<CR>
+    map  <C-F8> :ALEDetail<CR>
+    imap <C-F8> <ESC>:ALEDetail<CR>
 " }}}
