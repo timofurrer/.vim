@@ -78,8 +78,8 @@ set wildignore+=*.o,*.lo,*.la,*.obj,.git,*.pyc,*.so,*/.git/*,*.zip,*.tar.gz,*__p
 set nrformats=alpha,octal,hex
 
 " configure undo files {{{
-set undodir=~/.vim/undodir
 set undofile
+set undodir=~/.vim/undodir
 " }}}
 
 " configure tags {{{
