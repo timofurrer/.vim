@@ -123,8 +123,8 @@ set noshowmode
 
     " Search and Replace {{{
         " Search and Replace word under cursor
-        nnoremap <leader>*   :%s/<c-r><c-w>/<c-r><c-w>/gc<Left><Left><Left>
-        vnoremap <leader>*   :s/<c-r><c-w>/<c-r><c-w>/gc<Left><Left><Left>
+        nnoremap <leader>* :%s/<c-r><c-w>/<c-r><c-w>/gc<Left><Left><Left>
+        vnoremap <leader>* :s/<c-r><c-w>/<c-r><c-w>/gc<Left><Left><Left>
     " }}}
 
     " Code Completion {{{
