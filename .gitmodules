@@ -58,3 +58,6 @@
 [submodule "pack/writing/start/limelight.vim"]
 	path = pack/writing/start/limelight.vim
 	url = https://github.com/junegunn/limelight.vim
+[submodule "pack/general/start/localvimrc"]
+	path = pack/general/start/localvimrc
+	url = https://github.com/vim-scripts/localvimrc
