@@ -92,6 +92,9 @@ set number
 " disable to show mode (airline does it)
 set noshowmode
 
+" match opening and closing angle brackets
+set matchpairs+=<:>
+
 " Colorscheme {{{
     let g:solarized_termtrans = 1
     let g:solarized_termcolors = 256
