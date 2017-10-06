@@ -31,3 +31,7 @@ let g:goyo_height = '85%'
     autocmd! User GoyoEnter call <SID>goyo_enter()
     autocmd! User GoyoLeave call <SID>goyo_leave()
 " }}}
+
+" Autocmd - Entering Goyo.vim automatically when tex file {{{
+    autocmd VimEnter *.tex Goyo
+" }}}
