@@ -163,6 +163,10 @@ set matchpairs+=<:>
     " configure options for tex files {{{
     autocmd FileType tex setl spell cursorline
     " }}}
+
+    " enable spell check for rst and markdown {{{
+    autocmd FileType markdown,rst set spell
+    " }}}
 " }}}
 
 " load config modules {{{
