@@ -61,3 +61,6 @@
 [submodule "pack/general/start/localvimrc"]
 	path = pack/general/start/localvimrc
 	url = https://github.com/vim-scripts/localvimrc
+[submodule "pack/rust/start/rust.vim"]
+	path = pack/rust/start/rust.vim
+	url = https://github.com/rust-lang/rust.vim
