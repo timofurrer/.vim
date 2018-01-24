@@ -64,3 +64,6 @@
 [submodule "pack/rust/start/rust.vim"]
 	path = pack/rust/start/rust.vim
 	url = https://github.com/rust-lang/rust.vim
+[submodule "pack/general/start/vim-toml"]
+	path = pack/general/start/vim-toml
+	url = https://github.com/cespare/vim-toml
