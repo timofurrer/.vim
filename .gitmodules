@@ -67,3 +67,6 @@
 [submodule "pack/general/start/vim-toml"]
 	path = pack/general/start/vim-toml
 	url = https://github.com/cespare/vim-toml
+[submodule "pack/general/start/file-line"]
+	path = pack/general/start/file-line
+	url = https://github.com/bogado/file-line
