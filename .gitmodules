@@ -19,9 +19,6 @@
 [submodule "pack/programming/start/taglist.vim"]
 	path = pack/programming/start/taglist.vim
 	url = https://github.com/vim-scripts/taglist.vim
-[submodule "pack/programming/start/YouCompleteMe"]
-	path = pack/programming/start/YouCompleteMe
-	url = https://github.com/Valloric/YouCompleteMe
 [submodule "pack/programming/start/ale"]
 	path = pack/programming/start/ale
 	url = https://github.com/w0rp/ale
