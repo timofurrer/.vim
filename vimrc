@@ -18,7 +18,7 @@ set nocompatible
 let mapleader=","
 
 " use 256 ANSI color palette
-set t_Co=256
+"set t_Co=256
 
 " enable syntax highlighting
 syntax on
@@ -96,14 +96,19 @@ set noshowmode
 set matchpairs+=<:>
 
 " Colorscheme {{{
-    let g:solarized_termtrans = 1
-    let g:solarized_termcolors = 256
-    let g:solarized_bold = 1
-    let g:solarized_underline = 1
-    let g:solarized_italic = 1
-    let g:solarized_contrast="high"
-    set background=dark
-    colorscheme solarized
+    "let g:solarized_termtrans = 1
+    "let g:solarized_termcolors = 256
+    "let g:solarized_bold = 1
+    "let g:solarized_underline = 1
+    "let g:solarized_italic = 1
+    "let g:solarized_contrast="high"
+    "set background=dark
+    "colorscheme solarized
+    set termguicolors
+    "let ayucolor="light"  " for light version of theme
+    "let ayucolor="mirage" " for mirage version of theme
+    let ayucolor="dark"   " for dark version of theme
+    colorscheme ayu
 " }}}
 
 " general Key Bindings {{{
