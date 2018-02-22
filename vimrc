@@ -69,7 +69,7 @@ set completeopt=menuone,menu,longest,preview
 " }}}
 
 " language settings
-set spelllang=en_US
+set spelllang=en_us
 
 " ignore some file endings for various searches
 set wildignore+=*.o,*.lo,*.la,*.obj,.git,*.pyc,*.so,*/.git/*,*.zip,*.tar.gz,*__pycache__/*,
