@@ -17,6 +17,9 @@ set nocompatible
 " Use comma as the leader key
 let mapleader=","
 
+" enable modeline for in-file vim configurations
+set modeline
+
 " use 256 ANSI color palette
 set t_Co=256
 
