@@ -70,3 +70,6 @@
 [submodule "pack/general/start/file-line"]
 	path = pack/general/start/file-line
 	url = https://github.com/bogado/file-line
+[submodule "pack/programming/start/xml.vim"]
+	path = pack/programming/start/xml.vim
+	url = git@github.com:othree/xml.vim.git
