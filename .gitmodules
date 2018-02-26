@@ -73,3 +73,6 @@
 [submodule "pack/programming/start/xml.vim"]
 	path = pack/programming/start/xml.vim
 	url = git@github.com:othree/xml.vim.git
+[submodule "pack/colorschemes/opt/gruvbox"]
+	path = pack/colorschemes/opt/gruvbox
+	url = https://github.com/morhetz/gruvbox.git

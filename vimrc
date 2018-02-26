@@ -106,7 +106,8 @@ set matchpairs+=<:>
     let g:solarized_italic = 1
     let g:solarized_contrast="high"
     set background=dark
-    colorscheme solarized
+    "colorscheme solarized
+    colorscheme gruvbox
 " }}}
 
 " general Key Bindings {{{
