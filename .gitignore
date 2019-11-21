@@ -15,3 +15,5 @@ spell/*
 # python bytecode files
 *.pyc
 __pycache__/
+
+bundle/

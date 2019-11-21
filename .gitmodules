@@ -73,3 +73,9 @@
 [submodule "pack/programming/start/xml.vim"]
 	path = pack/programming/start/xml.vim
 	url = https://github.com/othree/xml.vim
+[submodule "pack/typescript/start/typescript-vim"]
+	path = pack/typescript/start/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim.git
+[submodule "pack/markdown-toc/start/markdown-toc"]
+	path = pack/markdown-toc/start/markdown-toc
+	url = https://github.com/mzlogin/vim-markdown-toc.git
